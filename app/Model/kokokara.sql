@@ -1,3 +1,4 @@
+# Model
 create table students(
   id int not null primary key auto_increment,
   name VARCHAR (255),
@@ -7,6 +8,10 @@ create table students(
 );
 
 
+# Test
+INSERT INTO students(name, password, created, modified) VALUES ('user1', 'password1', now(), now());
+INSERT INTO students(name, password, created, modified) VALUES ('user2', 'password2', now(), now());
+INSERT INTO students(name, password, created, modified) VALUES ('user3', 'password3', now(), now());
 
 
 
@@ -15,6 +20,7 @@ create table students(
 #model
 
 create table events(
+<<<<<<< HEAD
 id int auto_increment primary key,
 state int,
 title varchar(25),
@@ -37,6 +43,14 @@ insert into events (state,title,common1,common2) values(2,"[インド×教育ベ
 
 
 
+  id int auto_increment,primary key,
+  state int,
+  common1 varchar(50),
+  common2 varchar(50)
+
+);
+
+
 
 
 
@@ -44,6 +58,7 @@ insert into events (state,title,common1,common2) values(2,"[インド×教育ベ
 
 #model
 create table eventoriginal1(
+
 id int auto_increment primary key,
 eventid int,
 origin1 varchar(50)
@@ -54,10 +69,17 @@ origin1 varchar(50)
 
 insert into eventoriginal1(eventid,origin1) values(1,"これはstate1のオリジナル内容です");
 
+  id int auto_increment primary key,
+  eventid int,
+  originl1 varchar(50)
+
+);
+
 
 #model
 
 create table eventoriginal2(
+
 id int auto_increment primary key,
 eventid int,
 origin1 varchar(50),
@@ -71,4 +93,11 @@ origin2 varchar(50)
 insert into eventoriginal2(eventid,origin1,origin2) values(2,"これはstate2のオリジナル内容aです","これはstate2のオリジナル内容bです");
 
 
+
+  id int auto_increment primary key,
+  eventid int,
+  originl1 varchar(50),
+  originl2 varchar(50)
+
+);
 
