@@ -20,7 +20,6 @@ INSERT INTO students(name, password, created, modified) VALUES ('user3', 'passwo
 #model
 
 create table events(
-<<<<<<< HEAD
 id int auto_increment primary key,
 state int,
 title varchar(25),
@@ -40,17 +39,6 @@ insert into events (state,title,common1,common2) values(1,"イベント１","私
 
 insert into events (state,title,common1,common2) values(2,"[インド×教育ベンチャー]海外キャリアを歩みたい方へ","Misaoはインドの首都デリー近郊にあるインド初の日本人経営語学学校を運営する留学支援会社です。単に語学学校を運営するのだけではなく、WEBを用いたマーケティング戦略にも力を入れており、WEB×教育事業をインドで立ち上げております。その為、テレビ朝日やTechinAsiaへの掲載実績も持っており、既に100名以上の卒業生を輩出し、新興国人材の育成に力を注いでいます。","我々は語学学校の運営だけではなく、広告PR、インド体験、キャリア支援等、様々なものに着手しております。会社のメンバーは日本人、インド人を初めとした国際色豊かな面々が揃っています。 
 特に留学エージェントを用いずに自社集客に力を入れることにより、高利益率なビジネスモデルを確立しております。これからは更に多様な観点からインドを日本にPRしていき、インドと日本の架け橋となるべく、邁進していきます。") ;
-
-
-
-  id int auto_increment,primary key,
-  state int,
-  common1 varchar(50),
-  common2 varchar(50)
-
-);
-
-
 
 
 
@@ -93,11 +81,4 @@ origin2 varchar(50)
 insert into eventoriginal2(eventid,origin1,origin2) values(2,"これはstate2のオリジナル内容aです","これはstate2のオリジナル内容bです");
 
 
-
-  id int auto_increment primary key,
-  eventid int,
-  originl1 varchar(50),
-  originl2 varchar(50)
-
-);
 
