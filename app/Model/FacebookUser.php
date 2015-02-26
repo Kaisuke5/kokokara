@@ -6,5 +6,8 @@
  * Time: 0:22
  */
 class FacebookUser extends AppModel{
-
+	public $belongsTo = array('Student' => array(
+		'className' => 'Student',
+		'foreignKey' => 'student_id'
+	));
 }

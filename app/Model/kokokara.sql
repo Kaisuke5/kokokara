@@ -2,6 +2,7 @@
 create table students(
   id int not null primary key auto_increment,
   name VARCHAR (255),
+  email VARCHAR (255),
   password VARCHAR (255),
   created datetime DEFAULT NULL ,
   modified datetime DEFAULT NULL
@@ -80,5 +81,27 @@ origin2 varchar(50)
 
 insert into eventoriginal2(eventid,origin1,origin2) values(2,"これはstate2のオリジナル内容aです","これはstate2のオリジナル内容bです");
 
+
+
+#model
+
+create table facebook_users(
+  id int not null primary key auto_increment,
+  student_id int not null,
+  facebook_user_id int,
+  birthday VARCHAR (255),
+	email VARCHAR (255),
+	first_name VARCHAR (255),
+	gender VARCHAR (50),
+	last_name VARCHAR (255),
+	link VARCHAR (255),
+	locale VARCHAR (50),
+	name VARCHAR (255),
+	timezone int,
+	updated_time VARCHAR (255),
+	verified VARCHAR (50),
+	created datetime DEFAULT null,
+	modified datetime DEFAULT null
+);
 
 

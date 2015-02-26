@@ -106,3 +106,6 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+//明示的にsessionを始める
+if(!isset($_SESSION)) session_start();
