@@ -19,11 +19,16 @@ class StudentsController extends AppController{
 
 	#ユーザーインデックス
 	public function index(){
+		$this->loadModel("Event");
+
 		//Session が空だったら
 		if(!$this->Session->read('myData')){
 			$this->redirect(array('controller' => 'students', 'action' => 'login'));
 		}else{
+			$id=$this->Session->read("myData")['Student']['id'];
+
 			$this->set('myData', $this->Session->read('myData'));
+			$this->set('events', $this->Event->find("all"));
 		}
 	}
 

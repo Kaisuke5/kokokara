@@ -104,4 +104,20 @@ create table facebook_users(
 	modified datetime DEFAULT null
 );
 
+#追加分
 
+create table user_event_log(
+  id int not null primary key auto_increment,
+  counter int,
+  event_id int not null,
+  student_id int not null,
+  created datetime
+);
+
+
+create table user_event_apply(
+  id int not null primary key auto_increment,
+  event_id int not null,
+  student_id int not null,
+  created datetime
+);
