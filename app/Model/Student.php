@@ -5,6 +5,8 @@
  * Date: 2015/02/26
  * Time: 9:38
  */
+App::uses('Security', 'Utility');
+
 class Student extends AppModel{
 	public $hasOne = array("FacebookUser" => array(
 		'className' => 'FacebookUser',
@@ -24,7 +26,6 @@ class Student extends AppModel{
 		return $logs;
 
 	}
-
 
 
 	public function loadModel($model_name) {
@@ -47,6 +48,14 @@ class Student extends AppModel{
 		}
 
 		return $students;
+	}
+
+	#パスワードハッシュ化
+	public function beforeSave($options = array()){
+		if(isset($this->data['Student']['password'])){
+			$this->data['Student']['password'] = Security::hash($this->data['Student']['password'], 'sha1', true);
+		}
+		return true;
 	}
 
 }

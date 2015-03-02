@@ -5,6 +5,7 @@
  * Date: 2015/02/26
  * Time: 9:41
  */
+App::uses('Security', 'Utility');
 
 class StudentsController extends AppController{
 	#フォームヘルパー
@@ -33,12 +34,52 @@ class StudentsController extends AppController{
 	}
 
 	#新規登録処理
-	public function add(){
-
+	public function signup(){
+		//Session が入っていたら
+		if($this->Session->read('myData')){
+			$this->set('myData', $this->Session->read('myData'));
+		}else{
+			$this->set('myData', null);
+		}
+		//フォーム情報受信
+		if($this->request->is('post')){
+			//debug($this->request->data);
+			//emailがユニークかどうか
+			$user = $this->Student->find('first', array(
+				'conditions' => array('Student.email' => $this->request->data['Student']['email'])
+			));
+			if(!$user){ //新規ユーザだったら
+				if($this->Student->save($this->request->data)){
+					$this->Session->setFlash('ユーザ登録に成功しました');
+					$this->Session->write('myData', $this->request->data);
+					$this->redirect(array('action' => 'index'));
+				}else{
+					$this->Session->setFlash('ユーザ登録に失敗しました');
+				}
+			} else{ //既存のユーザがいたら
+				$this->Session->setFlash('このメールアドレスは既に登録されています');
+			}
+		}
 	}
 
 	#ログイン処理
 	public function login(){
+		if($this->request->is('post')){
+			//password ハッシュ化
+			$password = Security::hash($this->request->data['Student']['password'], 'sha1', true);
+			//ログイン処理
+			$student = $this->Student->find('first', array(
+				'conditions' => array('Student.email' => $this->request->data['Student']['email'], 'Student.password' => $password),
+				'limit' => 1
+			));
+			if($student){
+				$this->Session->setFlash('ログイン完了です');
+				$this->Session->write('myData', $student);
+				$this->redirect(array('action' => 'index'));
+			} else{
+				$this->Session->setFlash('ユーザ名かパスワードが違います');
+			}
+		}
 
 	}
 

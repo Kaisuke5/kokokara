@@ -1,9 +1,13 @@
 # Model
+/*2015/03/01 変更*/
 create table students(
   id int not null primary key auto_increment,
   name VARCHAR (255),
   email VARCHAR (255),
   password VARCHAR (255),
+  gender enum('male', 'female'),
+  birthday date,
+  email_accept int,
   created datetime DEFAULT NULL ,
   modified datetime DEFAULT NULL
 );
@@ -13,8 +17,6 @@ create table students(
 INSERT INTO students(name, password, created, modified) VALUES ('user1', 'password1', now(), now());
 INSERT INTO students(name, password, created, modified) VALUES ('user2', 'password2', now(), now());
 INSERT INTO students(name, password, created, modified) VALUES ('user3', 'password3', now(), now());
-
-
 
 
 
@@ -121,3 +123,25 @@ create table user_event_apply(
   student_id int not null,
   created datetime
 );
+
+
+#追加分byMarkTagTable
+
+
+CREATE TABLE tags(
+  id int not null primary key auto_increment,
+  name VARCHAR (255),
+  created datetime DEFAULT NULL ,
+  modified datetime DEFAULT NULL
+);
+
+
+CREATE TABLE events_tags(
+  id int not null primary key auto_increment,
+  event_id int not null,
+  tag_id int not null,
+  created datetime DEFAULT NULL ,
+  modified datetime DEFAULT NULL
+);
+
+

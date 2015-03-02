@@ -11,3 +11,4 @@ class FacebookUser extends AppModel{
 		'foreignKey' => 'student_id'
 	));
 }
+

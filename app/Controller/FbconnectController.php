@@ -35,12 +35,16 @@ class FbconnectController extends AppController{
 				$a['FacebookUser'] = $me;
 				$this->FacebookUser->save($a);
 				$facebook_user = $this->FacebookUser->findById($this->FacebookUser->getLastInsertID());
-				$this->Session->setFlash('新規登録完了！');
+
+				$this->Session->setFlash('残りの項目を埋めてください！');
+				$this->Session->write('myData',$facebook_user);	//ユーザ情報をセッションに保存
+				$this->redirect(array("controller" => "students", "action" => "signup")); //残りの情報を埋めさせるためsignpへ
 			}else{
+
 				$this->Session->setFlash('ログイン完了！');
+				$this->Session->write('myData',$facebook_user);	//ユーザ情報をセッションに保存
+				$this->redirect(array("controller" => "students", "action" => "index"));
 			}
-			$this->Session->write('myData',$facebook_user);	//ユーザ情報をセッションに保存
-			$this->redirect(array("controller" => "students", "action" => "index"));
 		}else{//認証前
 			$url = $this->facebook->getLoginUrl(array(
 				'scope' => 'email,publish_stream,user_birthday','canvas' => 1,'fbconnect' => 0));   //スコープの確認
