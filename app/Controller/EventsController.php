@@ -46,7 +46,7 @@ class EventsController extends AppController{
         //ジャンルごとのイベント情報を追加したものをcomeventに入れる
         $comevent=$this->Event->getOriginal($id);
         $this->set("myData",$myData);
-        $this->set("event",$event);
+        $this->set("event",$comevent);
         $this->render();
 
 

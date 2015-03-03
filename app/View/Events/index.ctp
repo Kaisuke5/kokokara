@@ -3,7 +3,7 @@
 
 <h2>イベント</h2>
 <h2><?echo $event['Event']['title']?></h2>
-
+<?debug($event)?>
 
 <!-- id送信-->
 <input type="hidden" class="setid" value="<?echo $event['Event']['id']?>">
