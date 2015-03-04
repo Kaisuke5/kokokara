@@ -6,6 +6,6 @@
  * Time: 11:04
  */
 class EventsLog extends AppModel{
-
+	public $useTable = "events_logs";
 
 }

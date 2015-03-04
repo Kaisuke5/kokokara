@@ -7,6 +7,6 @@
  */
 
 class EtagsEvent extends AppModel{
-
+	public $useTable = "etags_events";
 
 }

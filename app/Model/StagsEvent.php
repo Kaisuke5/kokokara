@@ -6,6 +6,6 @@
  * Time: 11:01
  */
 class StagsEvent extends AppModel{
-
+	public $useTable = "stags_events";
 
 }

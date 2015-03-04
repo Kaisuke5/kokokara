@@ -7,6 +7,6 @@
  */
 
 class Camp extends AppModel{
-    public $useTable ="Camp";
+    public $useTable ="camp";
 
 }

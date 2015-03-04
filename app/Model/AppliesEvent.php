@@ -6,6 +6,6 @@
  * Time: 11:02
  */
 class AppliesEvent extends AppModel{
-
+	public $useTable = "applies_events";
 
 }
