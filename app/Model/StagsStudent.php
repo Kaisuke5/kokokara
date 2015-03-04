@@ -5,7 +5,7 @@
  * Date: 2015/03/04
  * Time: 11:01
  */
-class StagsEvent extends AppModel{
-	public $useTable = "stags_events";
+class StagsStudent extends AppModel{
+	public $useTable = "stags_students";
 
 }
