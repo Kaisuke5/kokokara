@@ -40,6 +40,7 @@ modified datetime DEFAULT null
 
 create table intern(
   id int auto_increment primary key,
+  event_id int,
   state int,
   target VARCHAR (50),
   limit_num int,
@@ -53,6 +54,7 @@ create table intern(
 
 create table study_abroad(
   id int auto_increment primary key,
+  event_id int,
   skill VARCHAR (50),
   class VARCHAR (50),
   cost int,
@@ -66,6 +68,7 @@ create table study_abroad(
 
 create table camp(
   id int auto_increment primary key,
+  event_id int,
   fromwhere VARCHAR (50),
   limit_num int,
   food VARCHAR (255),
@@ -81,6 +84,7 @@ create table camp(
 
 create table lesson(
   id int auto_increment primary key,
+  event_id int,
   skill VARCHAR (50),
   cost int
 
@@ -89,6 +93,7 @@ create table lesson(
 
 create table funny_event(
   id int auto_increment primary key,
+  event_id int,
   limit_num int,
   limit_min int,
   deadline datetime,
@@ -100,6 +105,7 @@ create table funny_event(
 
 create table student_group(
   id int auto_increment primary key,
+  event_id int,
   cost int,
   limit_num int
 );
@@ -142,21 +148,6 @@ create table facebook_users(
 
 #追加分
 
-create table user_event_log(
-  id int not null primary key auto_increment,
-  counter int,
-  event_id int not null,
-  student_id int not null,
-  created datetime
-);
-
-
-create table user_event_apply(
-  id int not null primary key auto_increment,
-  event_id int not null,
-  student_id int not null,
-  created datetime
-);
 
 
 #追加分byMarkTagTable

@@ -16,8 +16,7 @@ class Event extends AppModel{
     }
 
     public function getOriginal($id){
-        $this->loadModel("EventOriginal1");
-        $this->loadModel("EventOriginal2");
+
 
 
         $event=$this->find("first",array("conditions"=>array("id"=>$id)));
@@ -27,7 +26,7 @@ class Event extends AppModel{
 
         switch ($state){
             case 1:
-                $original=$this->EventOriginal1->find("first",array("conditions"=>array("eventid",$id)));
+                $original=$this->Intern->find("first",array("conditions"=>array("eventid",$id)));
                 break;
 
             case 2:
