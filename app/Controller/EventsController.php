@@ -32,21 +32,22 @@ class EventsController extends AppController{
         $event=$this->Event->find("first",array("conditions"=>array("id"=>$id)));
 
         //もし不正なidなら404
+        /*
         if($event==null){
 
         }
-
+        */
 
         //$this->Log1->set(array("student_id"=>$myData['Student']['id'],"event_id"=>$id));
-        $this->Log1->write($myData["Student"]["id"],$id);
+        //$this->Log1->write($myData["Student"]["id"],$id);
         //$this->Log1->save();
 
 
         //event取得
         //ジャンルごとのイベント情報を追加したものをcomeventに入れる
-        $comevent=$this->Event->getOriginal($id);
+        //$comevent=$this->Event->getOriginal($id);
         $this->set("myData",$myData);
-        $this->set("event",$comevent);
+        $this->set("event",$event);
         $this->render();
 
 

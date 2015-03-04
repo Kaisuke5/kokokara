@@ -8,5 +8,14 @@
 
 class EtagsEvent extends AppModel{
 	public $useTable = "etags_events";
-
+	public $belongsTo = array(
+		'Event' => array(
+			'className' => 'Event',
+			'foreignKey' => 'event_id',
+		),
+		'Etag' => array(
+			'className' => 'Etag',
+			'foreignKey' => 'etag_id',
+		)
+	);
 }

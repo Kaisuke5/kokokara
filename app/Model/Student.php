@@ -9,7 +9,39 @@ App::uses('Security', 'Utility');
 
 class Student extends AppModel{
 	//タグアソシエーション
-	public $hasAndBelongsToMany = 'Stag';
+	public $hasAndBelongsToMany = array(
+		'Stag',
+		'Apply' => array(
+			'className'              => 'Event',
+			'joinTable'              => 'applies_events',
+			'foreignKey'             => 'student_id',
+			'associationForeignKey'  => 'event_id',
+			'unique'                 => false,
+			'conditions'             => '',
+			'fields'                 => '',
+			'order'                  => '',
+			'limit'                  => '',
+			'offset'                 => '',
+			'finderQuery'            => '',
+			'deleteQuery'            => '',
+			'insertQuery'            => ''
+		),
+		'Log' => array(
+			'className'              => 'Event',
+			'joinTable'              => 'events_logs',
+			'foreignKey'             => 'student_id',
+			'associationForeignKey'  => 'event_id',
+			'unique'                 => false,
+			'conditions'             => '',
+			'fields'                 => '',
+			'order'                  => '',
+			'limit'                  => '',
+			'offset'                 => '',
+			'finderQuery'            => '',
+			'deleteQuery'            => '',
+			'insertQuery'            => ''
+		)
+	);
 
 	//FBアソシエーション
 	public $hasOne = array(

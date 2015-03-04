@@ -7,5 +7,14 @@
  */
 class EventsLog extends AppModel{
 	public $useTable = "events_logs";
-
+	public $belongsTo = array(
+		'Student' => array(
+			'className' => 'Student',
+			'foreignKey' => 'student_id',
+		),
+		'Event' => array(
+			'className' => 'Event',
+			'foreignKey' => 'event_id',
+		)
+	);
 }

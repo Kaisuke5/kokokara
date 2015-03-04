@@ -8,6 +8,9 @@ create table students(
   gender enum('male', 'female'),
   birthday date,
   email_accept int,
+  university VARCHAR (255),
+  year int,
+  faculty VARCHAR (255),
   created datetime DEFAULT NULL ,
   modified datetime DEFAULT NULL
 );

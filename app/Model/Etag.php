@@ -7,5 +7,5 @@
  */
 class Etag extends AppModel{
 	public $useTable = "etags";
-
+	public $hasAndBelongsToMany = 'Event';
 }
