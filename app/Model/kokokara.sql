@@ -42,11 +42,11 @@ create table intern(
   id int auto_increment primary key,
   state int,
   target VARCHAR (50),
-  limit int,
+  limit_num int,
   skill VARCHAR (50),
   payment int,
-  condition VARCHAR (255),
-  treatment VARCHAR (255),
+  conditions VARCHAR (255),
+  treatment VARCHAR (255)
 
 
 );
@@ -54,26 +54,26 @@ create table intern(
 create table study_abroad(
   id int auto_increment primary key,
   skill VARCHAR (50),
-  class VARCHAR (50)
-  tuition int,
+  class VARCHAR (50),
+  cost int,
   stay_type VARCHAR (50),
-  condition VARCHAR (255),
+  conditions VARCHAR (255),
   envirionment text,
-  deadline datetime,
+  deadline datetime
 
 
 );
 
-create table study_abroad(
+create table camp(
   id int auto_increment primary key,
-  from VARCHAR (50),
-  limit int,
+  fromwhere VARCHAR (50),
+  limit_num int,
   food VARCHAR (255),
-  with VARCHAR (50),
+  withmen VARCHAR (50),
   tuition int,
   stay_type VARCHAR (50),
-  schedule VARCHAR text,
-  cost int,
+  schedule text,
+  cost int
 
 );
 
@@ -82,26 +82,26 @@ create table study_abroad(
 create table lesson(
   id int auto_increment primary key,
   skill VARCHAR (50),
-  cost int,
+  cost int
 
 );
 
 
 create table funny_event(
   id int auto_increment primary key,
-  limit int,
+  limit_num int,
   limit_min int,
   deadline datetime,
   cost int,
-  schedule text,
+  schedule text
 
 );
 
 
-create student_group(
+create table student_group(
   id int auto_increment primary key,
   cost int,
-  limit int,
+  limit_num int
 );
 
 
@@ -162,7 +162,14 @@ create table user_event_apply(
 #追加分byMarkTagTable
 
 
-CREATE TABLE tags(
+CREATE TABLE etags(
+  id int not null primary key auto_increment,
+  name VARCHAR (255),
+  created datetime DEFAULT NULL ,
+  modified datetime DEFAULT NULL
+);
+
+CREATE TABLE stags(
   id int not null primary key auto_increment,
   name VARCHAR (255),
   created datetime DEFAULT NULL ,
@@ -170,19 +177,15 @@ CREATE TABLE tags(
 );
 
 
-CREATE TABLE events_tags(
-  id int not null primary key auto_increment,
-  event_id int not null,
-  tag_id int not null,
-  created datetime DEFAULT NULL ,
-  modified datetime DEFAULT NULL
-);
+
 
 
 create table etags_events(
   id int not null primary key auto_increment,
   etag_id int,
-  event_id int
+  event_id int,
+  created datetime DEFAULT null,
+  modified datetime DEFAULT null
 
 
 );
@@ -192,6 +195,8 @@ create table stags_students(
   id int not null primary key auto_increment,
   stag_id int,
   student_id int,
+  created datetime DEFAULT null,
+  modified datetime DEFAULT null
 
 );
 
@@ -200,6 +205,8 @@ create table applies_events(
   id int not null primary key auto_increment,
   apply_id int,
   event_id int,
+  created datetime DEFAULT null,
+  modified datetime DEFAULT null
 
 );
 
@@ -208,6 +215,10 @@ create table events_logs(
   id int not null primary key auto_increment,
   log_id int,
   event_id int,
+  counter int,
+  created datetime DEFAULT null,
+  modified datetime DEFAULT null
+
 
 );
 
