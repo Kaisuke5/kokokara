@@ -8,10 +8,16 @@
 App::uses('Security', 'Utility');
 
 class Student extends AppModel{
-	public $hasOne = array("FacebookUser" => array(
-		'className' => 'FacebookUser',
-		'foreignKey' => 'student_id'
-	));
+	//タグアソシエーション
+	public $hasAndBelongsToMany = 'Stag';
+
+	//FBアソシエーション
+	public $hasOne = array(
+		"FacebookUser" => array(
+			'className' => 'FacebookUser',
+			'foreignKey' => 'student_id'
+		)
+	);
 
 
 

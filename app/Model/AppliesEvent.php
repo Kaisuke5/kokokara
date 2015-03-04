@@ -7,5 +7,14 @@
  */
 class AppliesEvent extends AppModel{
 	public $useTable = "applies_events";
-
+	public $belongsTo = array(
+		'Student' => array(
+			'className' => 'Student',
+			'foreignKey' => 'student_id',
+		),
+		'Event' => array(
+			'className' => 'Event',
+			'foreignKey' => 'event_id',
+		)
+	);
 }
