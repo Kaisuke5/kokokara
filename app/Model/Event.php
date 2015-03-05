@@ -10,7 +10,7 @@ class Event extends AppModel{
     public $useTable="events";
     //イベントタグアソ
     public $hasAndBelongsToMany = array(
-        'Etag',
+/*
         'Apply' => array(
             'className'              => 'Student',
             'joinTable'              => 'applies_events',
@@ -40,10 +40,8 @@ class Event extends AppModel{
             'finderQuery'            => '',
             'deleteQuery'            => '',
             'insertQuery'            => ''
-        )
-    );
-
-    public $hasAndBelongsToMany = array(
+        ),
+*/
         "Etag"=>array(
             "className"=>"Etag",
             "join_table"=>"etags_events",
@@ -51,6 +49,8 @@ class Event extends AppModel{
             "associationForeignKey"=>"etag_id"
         ),
     );
+
+
 
 
 
@@ -71,28 +71,34 @@ class Event extends AppModel{
         $original=array();
 
         if($state<4){
-
+            $this->loadModel("Intern");
+            $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
         }else{
 
             switch ($state){
-                case 1:
+                case 5:
                     $this->loadModel("StudyAbroad");
                     $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
                     break;
 
-                case 2:
+                case 6:
                     $this->loadModel("Camp");
-                    $original=$this->EventOriginal2->find("first",array("conditions"=>array("event_id",$id)));
+                    $original=$this->Camp->find("first",array("conditions"=>array("event_id",$id)));
                     break;
 
-                case 3:
+                case 7:
                     $this->loadModel("Lesson");
-                    $original=$this->EventOriginal2->find("first",array("conditions"=>array("event_id",$id)));
+                    $original=$this->Lesson->find("first",array("conditions"=>array("event_id",$id)));
                     break;
 
-                case 3:
+                case 8:
+                    $this->loadModel("FunnyEvent");
+                    $original=$this->FunnyEvent->find("first",array("conditions"=>array("event_id",$id)));
+                    break;
+
+                case 9:
                     $this->loadModel("StudyGroup");
-                    $original=$this->EventOriginal2->find("first",array("conditions"=>array("event_id",$id)));
+                    $original=$this->StudyGroup->find("first",array("conditions"=>array("event_id",$id)));
                     break;
 
 
@@ -108,6 +114,66 @@ class Event extends AppModel{
 
 
     }
+
+
+    public $hasMany=array(
+        "Image"=>array(
+            "className"=>"Attachment",
+            'foreignKey' => 'foreign_key',
+            'conditions' => array(
+                'Image.model' => 'Event',
+            ),
+
+        )
+    );
+
+
+    public function createWithAttachments($data){
+        $images = array();
+        //debug($data["Image"]);
+        if (!empty($data['Image'][0])) {
+            foreach ($data['Image'] as $i => $image) {
+
+                if (is_array($data['Image'][$i])) {
+                    // Force setting the `model` field to this model
+                    //debug($data["Image"][$i]);
+                    if($data["Image"][$i]["attachment"]["name"]==""){
+                        continue;
+                    }
+                    $image['model'] = 'Event';
+
+                    // Unset the foreign_key if the user tries to specify it
+                    if (isset($image['foreign_key'])) {
+                        unset($image['foreign_key']);
+                    }
+
+                    $images[] = $image;
+                }
+            }
+        }
+        $data['Image'] = $images;
+
+        // Try to save the data using Model::saveAll()
+        $this->create();
+        $p=$this->saveAll($data);
+
+        if ($p) {
+            return true;
+        }
+
+        // Throw an exception for the controller
+        throw new Exception(__("This post could not be saved. Please try again"));
+    }
+
+    public function nafind(){
+        $this->unbindModel(
+            array('hasMany' => array('Image'),"hasAndBelongsToMany"=>"Etag")
+        );
+        $events=$this->find("all");
+        return $events;
+    }
+
+
 
 }
 

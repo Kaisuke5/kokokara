@@ -27,6 +27,7 @@ class StudentsController extends AppController{
 			$this->redirect(array('controller' => 'students', 'action' => 'login'));
 		}else{
 			$id=$this->Session->read("myData")['Student']['id'];
+			debug($this->Student->find("first",array("condition"=>array("id"=>$id))));
 
 			$this->set('myData', $this->Session->read('myData'));
 			$this->set('events', $this->Event->find("all"));

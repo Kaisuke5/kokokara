@@ -10,7 +10,7 @@ App::uses('Security', 'Utility');
 class Student extends AppModel{
 	//タグアソシエーション
 	public $hasAndBelongsToMany = array(
-		'Stag',
+		/*
 		'Apply' => array(
 			'className'              => 'Event',
 			'joinTable'              => 'applies_events',
@@ -40,7 +40,7 @@ class Student extends AppModel{
 			'finderQuery'            => '',
 			'deleteQuery'            => '',
 			'insertQuery'            => ''
-		)
+		)*/
 	);
 
 	//FBアソシエーション
