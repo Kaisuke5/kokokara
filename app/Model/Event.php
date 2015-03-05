@@ -10,6 +10,18 @@ class Event extends AppModel{
     public $useTable="events";
 
 
+    public $hasAndBelongsToMany = array(
+        "Etag"=>array(
+            "className"=>"Etag",
+            "join_table"=>"etags_events",
+            "foreignKey"=>"event_id",
+            "associationForeignKey"=>"etag_id"
+        ),
+    );
+
+
+
+
     public function loadModel($model_name) {
         App::uses($model_name,'Model');
         $this->{$model_name} = new $model_name();
@@ -23,18 +35,38 @@ class Event extends AppModel{
         if($event==null) return null;
 
         $state=$event["Event"]["state"];
+        $original=array();
 
-        switch ($state){
-            case 1:
-                $original=$this->Intern->find("first",array("conditions"=>array("eventid",$id)));
-                break;
+        if($state<4){
 
-            case 2:
-                $original=$this->EventOriginal2->find("first",array("conditions"=>array("eventid",$id)));
-                break;
+        }else{
+
+            switch ($state){
+                case 1:
+                    $this->loadModel("StudyAbroad");
+                    $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
+                    break;
+
+                case 2:
+                    $this->loadModel("Camp");
+                    $original=$this->EventOriginal2->find("first",array("conditions"=>array("event_id",$id)));
+                    break;
+
+                case 3:
+                    $this->loadModel("Lesson");
+                    $original=$this->EventOriginal2->find("first",array("conditions"=>array("event_id",$id)));
+                    break;
+
+                case 3:
+                    $this->loadModel("StudyGroup");
+                    $original=$this->EventOriginal2->find("first",array("conditions"=>array("event_id",$id)));
+                    break;
 
 
+            }
         }
+
+
 
         //debug($original);
         $compevent=$event+$original;

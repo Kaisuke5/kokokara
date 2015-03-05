@@ -7,6 +7,6 @@
  */
 
 class StudyGroup extends AppModel{
-    public $useTable ="study_group";
+    public $useTable ="student_group";
 
 }

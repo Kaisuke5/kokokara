@@ -7,5 +7,15 @@
  */
 class Etag extends AppModel{
 	public $useTable = "etags";
+	public $hasAndBelongsToMany = array(
+		"Event"=>array(
+			"className"=>"Event",
+			"join_table"=>"etags_events",
+			"foreignKey"=>"etag_id",
+			"associationForeignKey"=>"event_id",
+		),
+	);
+
+
 
 }

@@ -21,7 +21,7 @@ class EventsController extends AppController{
 
 
     public function index(){
-        $this->loadModel("Log1");
+
 
         $myData=$this->Session->read("myData");
         /*if($myData==null){
@@ -38,15 +38,15 @@ class EventsController extends AppController{
 
 
         //$this->Log1->set(array("student_id"=>$myData['Student']['id'],"event_id"=>$id));
-        $this->Log1->write($myData["Student"]["id"],$id);
+
         //$this->Log1->save();
 
 
         //event取得
         //ジャンルごとのイベント情報を追加したものをcomeventに入れる
-        $comevent=$this->Event->getOriginal($id);
+
         $this->set("myData",$myData);
-        $this->set("event",$comevent);
+        $this->set("event",$event);
         $this->render();
 
 
