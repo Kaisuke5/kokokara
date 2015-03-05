@@ -8,6 +8,9 @@ create table students(
   gender enum('male', 'female'),
   birthday date,
   email_accept int,
+  university VARCHAR (255),
+  year int,
+  faculty VARCHAR (255),
   created datetime DEFAULT NULL ,
   modified datetime DEFAULT NULL
 );
@@ -194,7 +197,7 @@ create table stags_students(
 
 create table applies_events(
   id int not null primary key auto_increment,
-  apply_id int,
+  student_id int,
   event_id int,
   created datetime DEFAULT null,
   modified datetime DEFAULT null
@@ -204,7 +207,7 @@ create table applies_events(
 
 create table events_logs(
   id int not null primary key auto_increment,
-  log_id int,
+  student_id int,
   event_id int,
   counter int,
   created datetime DEFAULT null,

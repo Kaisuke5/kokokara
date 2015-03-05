@@ -7,5 +7,6 @@
  */
 class Stag extends AppModel{
 	public $useTable = "stags";
+	public $hasAndBelongsToMany = 'Student';
 
 }

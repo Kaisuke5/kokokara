@@ -8,7 +8,40 @@
 
 class Event extends AppModel{
     public $useTable="events";
-
+    //イベントタグアソ
+    public $hasAndBelongsToMany = array(
+        'Etag',
+        'Apply' => array(
+            'className'              => 'Student',
+            'joinTable'              => 'applies_events',
+            'foreignKey'             => 'event_id',
+            'associationForeignKey'  => 'student_id',
+            'unique'                 => false,
+            'conditions'             => '',
+            'fields'                 => '',
+            'order'                  => '',
+            'limit'                  => '',
+            'offset'                 => '',
+            'finderQuery'            => '',
+            'deleteQuery'            => '',
+            'insertQuery'            => ''
+        ),
+        'Log' => array(
+            'className'              => 'Student',
+            'joinTable'              => 'events_logs',
+            'foreignKey'             => 'event_id',
+            'associationForeignKey'  => 'student_id',
+            'unique'                 => false,
+            'conditions'             => '',
+            'fields'                 => '',
+            'order'                  => '',
+            'limit'                  => '',
+            'offset'                 => '',
+            'finderQuery'            => '',
+            'deleteQuery'            => '',
+            'insertQuery'            => ''
+        )
+    );
 
     public $hasAndBelongsToMany = array(
         "Etag"=>array(
