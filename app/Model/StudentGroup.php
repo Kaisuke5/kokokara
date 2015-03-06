@@ -6,7 +6,7 @@
  * Time: 10:57
  */
 
-class StudyGroup extends AppModel{
+class StudentGroup extends AppModel{
     public $useTable ="student_group";
 
 }

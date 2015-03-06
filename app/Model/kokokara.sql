@@ -216,6 +216,18 @@ create table events_logs(
 
 );
 
+CREATE table attachments (
+    id int NOT NULL auto_increment PRIMARY KEY,
+    model varchar(20) NOT NULL,
+    foreign_key int(11) NOT NULL,
+    attachment varchar(255) NOT NULL,
+    dir varchar(255) NOT NULL,
+    type  varchar(255) DEFAULT NULL,
+    size int(11) DEFAULT 0,
+    active tinyint(1) DEFAULT 1
+
+);
+
 
 
 

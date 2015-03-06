@@ -11,7 +11,7 @@ class Student extends AppModel{
 	//タグアソシエーション
 	public $hasAndBelongsToMany = array(
 		'Stag',
-		'WhatApplies' => array(
+		'Apply' => array(
 			'className'              => 'Event',
 			'joinTable'              => 'applies_events',
 			'foreignKey'             => 'student_id',
@@ -26,7 +26,7 @@ class Student extends AppModel{
 			'deleteQuery'            => '',
 			'insertQuery'            => ''
 		),
-		'WhatLog' => array(
+		'Log' => array(
 			'className'              => 'Event',
 			'joinTable'              => 'events_logs',
 			'foreignKey'             => 'student_id',

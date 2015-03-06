@@ -15,7 +15,6 @@ class StudentsController extends AppController{
 	public function beforeFilter(){
 		#ページタイトル設定
 		$this->set('title_for_layout', 'kokokara');
-
 	}
 
 	#ユーザーインデックス

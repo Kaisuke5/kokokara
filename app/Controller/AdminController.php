@@ -19,6 +19,66 @@ class AdminController extends AppController{
     }
 
 
+    public function addEvent(){
+        $this->loadModel("Event");
+        $state=$this->data["Event"]["state"];
+        if($this->request->is('post')){
+            try {
+                $this->Event->createWithAttachments($this->request->data);
+                $id=$this->Event->id;
+                $this->Session->setFlash(__('The message has been saved'));
+                $this->redirect(array("action"=>"addoriginal",$state,$id));
+            } catch (Exception $e) {
+                $this->Session->setFlash($e->getMessage());
+            }
+        }
+
+
+
+
+    }
+
+
+    public function addoriginal($state,$id){
+        $this->set("state",$state);
+        $this->set("id",$id);
+    }
+
+    public function goaddoriginal(){
+       $state=$this->data["State"]["state"];
+        if($state<4){
+
+        }else{
+            $this->loadModel("Intern");
+            $this->Intern->save($this->data);
+
+            switch ($state){
+                case 5:
+                    $this->loadModel("StudyAbroad");
+                    $this->StudyAbroad->save($this->data);
+                    break;
+                case 6:
+                    $this->loadModel("Camp");
+                    $this->Camp->save($this->data);
+                    break;
+                case 7:
+                    $this->loadModel("Lesson");
+                    $this->Lesson->save($this->data);
+                    break;
+                case 8:
+                    $this->loadModel("FunnyEvent");
+                    $this->FunnyEvent->save($this->data);
+                    break;
+                case 9:
+                    $this->loadModel("StudyGroup");
+                    $this->StudentGroup->save($this->data);
+                    break;
+
+            }
+        }
+    }
+
+
     //user情報一覧
     public function students(){
         /*$this->loadModel("Log1");
@@ -41,13 +101,23 @@ class AdminController extends AppController{
         $this->loadModel("Student");
         */
         $this->loadModel("Event");
-        $events=$this->Event->adminfindAll();
+        /*
+        $events=$this->Event->find("all");
+        for($i=0;$i<count($events);$i++){
+            $events[$i]=$this->Event->getOriginal($events[$i]["Event"]["id"]);
+        }*/
+        $events=$this->Event->nafind();
         $this->set("events",$events);
 
 
     }
 
-
+    public function event(){
+        $this->loadModel("Event");
+        $id=$this->request->query("id");
+        $event=$this->Event->getOriginal($id);
+        $this->set("event",$event);
+    }
 
 
 }
