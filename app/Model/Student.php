@@ -139,7 +139,7 @@ class Student extends AppModel{
 
 		$this->set(array(
 			"id"=>$id,
-			"modified"=>time()
+			"modified"=> date('Y-m-d H:i:s')
 		));
 		$this->save();
 	}
