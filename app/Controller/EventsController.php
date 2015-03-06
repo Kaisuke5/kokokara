@@ -30,6 +30,8 @@ class EventsController extends AppController{
             $this->redirect(array("controller"=>"Student","action"=>"login"));
         }*/
         $id=$this->request->query["id"];
+        //ログ
+        $this->EventsLog->goEventsLog($myData['Student']['id'], $id);
         $event=$this->Event->find("first",array("conditions"=>array("id"=>$id)));
 
         //もし不正なidなら404
@@ -39,8 +41,6 @@ class EventsController extends AppController{
         }
         */
 
-        //ログ
-        $this->EventsLog->goEventsLog($myData['Student']['id'], $id);
         //sessionのmyData更新
         /*
         $myData=$this->Student->find("first",array("conditions"=>array("Student.id"=>$myData['Student']['id'])));

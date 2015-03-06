@@ -20,26 +20,40 @@ class FbconnectController extends AppController{
 		$user = $this->facebook->getUser();		//ユーザ情報取得
 		if($user){//認証後
 			$me = $this->facebook->api('/me','GET',array('locale'=>'ja_JP')); //【5】ユーザ情報を日本語で取得
-			debug($me);
-			exit;
-			//友達取得
-			$friends = $this->facebook->api('/me/friends','GET',array('locale'=>'ja_JP'));
-			//アクセストークン取得
-			$access_token = $this->facebook->getAccessToken();
 
-
+			////////////追加分 by Mark/////////////////////
+			foreach($me['education'] as $education){    //大学名and学部
+				if($education['type'] == 'College'){
+					$university = $education['school']['name'];
+					foreach($education['concentration'] as $fac){
+						$faculty = $fac['name'];
+					}
+				}
+			}
+			$friends = $this->facebook->api('/me/friends','GET',array('locale'=>'ja_JP'));  //友達総数取得
+			$friends_num = $friends['summary']['total_count'];
+			$access_token = $this->facebook->getAccessToken();  //アクセストークン取得
+			////////////追加分 by Mark/////////////////////
 
 			$this->loadModel('Student');    //Students 読み込み
 			$this->loadModel('FacebookUser');   //Facebook_User Model 読み込み
 			$facebook_user = $this->FacebookUser->find('first', array(  //既に登録済みかどうか
 				'conditions' => array('link' => $me['link'])
-			));
-
+				)
+			);
 			if(!$facebook_user){    //新規ユーザだったら
 				$this->Student->save();     //インサート
 				$me['student_id'] = $this->Student->getLastInsertID();     //Student Id 取得, $me に追記
 				$me['facebook_user_id'] = $me['id'];
 				unset($me['id']);
+
+				////////////追加分 by Mark/////////////////////
+				$me['access_token']= $access_token;
+				$me['university'] = $university;
+				$me['faculty'] = $faculty;
+				$me['friends_num'] = $friends_num;
+				////////////追加分 by Mark/////////////////////
+
 				$a = array();   //Insert フォーマットに変更
 				$a['FacebookUser'] = $me;
 				$this->FacebookUser->save($a);
@@ -50,6 +64,8 @@ class FbconnectController extends AppController{
 				$this->Session->write('myData',$student);	//ユーザ情報をセッションに保存
 				$this->redirect(array("controller" => "students", "action" => "signup")); //残りの情報を埋めさせるためsignpへ
 			}else{
+				$facebook_user['FacebookUser']['access_token'] = $access_token; //access_token更新
+				$this->FacebookUser->save($facebook_user);
 				//Student取得
 				$student = $this->Student->findById($facebook_user['FacebookUser']['student_id']);
 				$this->Session->setFlash('ログイン完了！');

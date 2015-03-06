@@ -41,6 +41,27 @@ if($myData['FacebookUser']['birthday']){
 } else{
 	echo $this->Form->input('birthday',  array('dateFormat' => 'YMD', 'maxYear' => date('Y'), 'minYear' => date('Y')-100, 'monthNames' => false, 'label' => array('text' => '誕生日')));
 }
+//大学名
+if($myData['FacebookUser']['university']){
+	echo $this->Form->input('university', array('value' => $myData['FacebookUser']['university']));
+} else{
+	echo $this->Form->input('university');
+}
+//学部
+if($myData['FacebookUser']['faculty']){
+	echo $this->Form->input('faculty', array('value' => $myData['FacebookUser']['faculty']));
+} else{
+	echo $this->Form->input('faculty');
+}
+//年度
+$years = array(
+	'1' => '1回生',
+	'2' => '2回生',
+	'3' => '3回生',
+	'4' => '4回生'
+);
+echo $this->Form->input('year', array('type' => 'select', 'options' => $years));
+
 echo $this->Form->input('email');
 echo $this->Form->input('password');
 echo $this->Form->input('email_accept', array('type' => 'checkbox', 'value' => 1));
