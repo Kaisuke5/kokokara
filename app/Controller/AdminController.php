@@ -70,12 +70,14 @@ class AdminController extends AppController{
                     $this->FunnyEvent->save($this->data);
                     break;
                 case 9:
-                    $this->loadModel("StudyGroup");
+                    $this->loadModel("StudentGroup");
                     $this->StudentGroup->save($this->data);
+                    $this->Session->setFlash("作成完了");
                     break;
 
             }
         }
+        $this->redirect(array("controller"=>"Admin","action"=>"events"));
     }
 
 

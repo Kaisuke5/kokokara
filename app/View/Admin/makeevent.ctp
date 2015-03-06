@@ -22,7 +22,7 @@ echo $this->Form->input('Image.2.model', array('type' => 'hidden', 'value' => 'E
 echo $this->Form->input('Image.3.attachment', array('type' => 'file', 'label' => '本文3'));
 echo $this->Form->input('Image.3.model', array('type' => 'hidden', 'value' => 'Event'));
 
-echo $this->Form->input("title",array("class"=>"",'div'=>"aaa"));
+
 echo $this->Form->input("body",array("class"=>"",'div'=>"aaa","label"=>"概要"));
 echo $this->Form->input("detail",array("class"=>"",'div'=>"aaa","label"=>"詳細"));
 echo $this->Form->input("period",array("class"=>"",'div'=>"aaa","label"=>"期間"));
