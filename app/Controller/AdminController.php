@@ -92,17 +92,7 @@ class AdminController extends AppController{
     //アソシはall外しでlogとapplyのカウントだけ取得
     public function students(){
         $this->loadModel("Student");
-        $students=$this->Student->nafind();
-
-
-
-        //各ユーザーにlog,applyのカウントを足す
-        for($i=0;$i<count($students);$i++){
-            $id=$students[$i]["Student"]["id"];
-            $log=$this->Student->getLog($id);
-            $applies=$this->Student->getApply($id);
-            $students[$i]+=$log+$applies;
-        }
+        $students=$this->Student->adminfind();
         $this->set("students",$students);
 
     }

@@ -69,15 +69,6 @@ class Student extends AppModel{
 	}
 
 
-	public function nafind(){
-		$this->unbindModel(
-			array('hasOne' => array('FacebookUser'),
-				"hasAndBelongsToMany"=>array("Stag","Apply","Log"))
-		);
-
-		$students=$this->find("all");
-		return $students;
-	}
 
 
 	//ユーザーのログの総数を返す 使い方はAdminController/studentsにある
@@ -89,7 +80,7 @@ class Student extends AppModel{
 		$this->loadModel("EventsLog");
 		$logs=$this->EventsLog->find("all",
 			array( "fields" => array("sum(counter) AS `logs`"),
-			"conditions"=>array("student_id"=>$id)));
+				"conditions"=>array("student_id"=>$id)));
 		if($logs[0][0]["logs"]==null){
 			$logs[0][0]["logs"]=0;
 		}
@@ -113,6 +104,32 @@ class Student extends AppModel{
 
 		return $applies[0][0];
 	}
+
+
+	public function adminfind(){
+		$this->unbindModel(
+			array('hasOne' => array('FacebookUser'),
+				"hasAndBelongsToMany"=>array("Stag","Apply","Log"))
+		);
+
+
+		//1回studentとってくる　non asosi
+		$students=$this->find("all");
+
+
+
+		//その後そいつらのlogとapplyとってくる
+		for($i=0;$i<count($students);$i++){
+			$id=$students[$i]["Student"]["id"];
+			$log=$this->getLog($id);
+			$applies=$this->getApply($id);
+			$students[$i]+=$log+$applies;
+		}
+
+
+		return $students;
+	}
+
 
 
 
