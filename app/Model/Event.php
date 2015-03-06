@@ -88,8 +88,8 @@ class Event extends AppModel{
                     break;
 
                 case 9:
-                    $this->loadModel("StudyGroup");
-                    $original=$this->StudyGroup->find("first",array("conditions"=>array("event_id",$id)));
+                    $this->loadModel("StudentGroup");
+                    $original=$this->StudentGroup->find("first",array("conditions"=>array("event_id",$id)));
                     break;
 
 
