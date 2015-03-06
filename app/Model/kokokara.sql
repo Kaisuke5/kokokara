@@ -145,6 +145,10 @@ create table facebook_users(
 	timezone int,
 	updated_time VARCHAR (255),
 	verified VARCHAR (50),
+	university VARCHAR (255),
+	faculty VARCHAR (255),
+	friends_num int,
+	access_token VARCHAR (255),
 	created datetime DEFAULT null,
 	modified datetime DEFAULT null
 );

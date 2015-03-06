@@ -56,7 +56,7 @@ class StudentsController extends AppController{
 			if(!$user){ //新規ユーザだったら
 				if($this->Student->save($this->request->data)){
 					$this->Session->setFlash('ユーザ登録に成功しました');
-					$this->Session->write('myData', $this->request->data);
+					$this->Session->write('myData', $this->Student->findById($this->request->data['Student']['id']));
 					$this->redirect(array('action' => 'index'));
 				}else{
 					$this->Session->setFlash('ユーザ登録に失敗しました');

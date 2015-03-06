@@ -11,11 +11,11 @@ class EtagsEvent extends AppModel{
 	public $belongsTo = array(
 		'Event' => array(
 			'className' => 'Event',
-			'foreignKey' => 'event_id',
+			'foreignKey' => 'event_id'
 		),
 		'Etag' => array(
 			'className' => 'Etag',
-			'foreignKey' => 'etag_id',
+			'foreignKey' => 'etag_id'
 		)
 	);
 }
