@@ -21,15 +21,27 @@ class EventsController extends AppController{
     }
 
 
+
+    public function updateLogin(){
+        if($this->Session->read('myData')){
+            $id=$this->Session->read("myData")['Student']['id'];
+            $this->Student->updateLogin($id);
+        }
+        return;
+    }
+
     public function index(){
+
         $this->loadModel('EventsLog');
         $this->loadModel('Student');
 
         $myData=$this->Session->read("myData");
+        $this->updateLogin();
         /*if($myData==null){
             $this->redirect(array("controller"=>"Student","action"=>"login"));
         }*/
         $id=$this->request->query["id"];
+
         //ログ
         $this->EventsLog->goEventsLog($myData['Student']['id'], $id);
         $event=$this->Event->find("first",array("conditions"=>array("id"=>$id)));

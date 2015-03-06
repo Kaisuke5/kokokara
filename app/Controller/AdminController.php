@@ -51,45 +51,48 @@ class AdminController extends AppController{
         }else{
             $this->loadModel("Intern");
             $this->Intern->save($this->data);
+            if($state<4){
+                $this->loadModel("Intern");
+                $this->Intern->save($this->data);
 
-            switch ($state){
-                case 5:
-                    $this->loadModel("StudyAbroad");
-                    $this->StudyAbroad->save($this->data);
-                    break;
-                case 6:
-                    $this->loadModel("Camp");
-                    $this->Camp->save($this->data);
-                    break;
-                case 7:
-                    $this->loadModel("Lesson");
-                    $this->Lesson->save($this->data);
-                    break;
-                case 8:
-                    $this->loadModel("FunnyEvent");
-                    $this->FunnyEvent->save($this->data);
-                    break;
-                case 9:
-                    $this->loadModel("StudentGroup");
-                    $this->StudentGroup->save($this->data);
-                    $this->Session->setFlash("作成完了");
-                    break;
+            }else{
 
+                switch ($state){
+                    case 5:
+                        $this->loadModel("StudyAbroad");
+                        $this->StudyAbroad->save($this->data);
+                        break;
+                    case 6:
+                        $this->loadModel("Camp");
+                        $this->Camp->save($this->data);
+                        break;
+                    case 7:
+                        $this->loadModel("Lesson");
+                        $this->Lesson->save($this->data);
+                        break;
+                    case 8:
+                        $this->loadModel("FunnyEvent");
+                        $this->FunnyEvent->save($this->data);
+                        break;
+                    case 9:
+                        $this->loadModel("StudentGroup");
+                        $this->StudentGroup->save($this->data);
+                        $this->Session->setFlash("作成完了");
+                        break;
+
+                }
             }
+
         }
         $this->redirect(array("controller"=>"Admin","action"=>"events"));
     }
 
 
     //user情報一覧
+    //アソシはall外しでlogとapplyのカウントだけ取得
     public function students(){
-        /*$this->loadModel("Log1");
-        $this->loadModel("Apply1");
-        $this->loadModel("Event");
         $this->loadModel("Student");
-        */
-        $this->loadModel("Student");
-        $students=$this->Student->adminfindAll();
+        $students=$this->Student->adminfind();
         $this->set("students",$students);
 
     }
@@ -97,18 +100,9 @@ class AdminController extends AppController{
 
     //event情報一覧
     public function events(){
-        /*$this->loadModel("Log1");
-        $this->loadModel("Apply1");
+
         $this->loadModel("Event");
-        $this->loadModel("Student");
-        */
-        $this->loadModel("Event");
-        /*
-        $events=$this->Event->find("all");
-        for($i=0;$i<count($events);$i++){
-            $events[$i]=$this->Event->getOriginal($events[$i]["Event"]["id"]);
-        }*/
-        $events=$this->Event->nafind();
+        $events=$this->Event->adminfind();
         $this->set("events",$events);
 
 

@@ -28,6 +28,16 @@ class StudentsController extends AppController{
 		}
 	}
 
+	//ログイン時間update
+	public function updateLogin(){
+		if($this->Session->read('myData')){
+			$id=$this->Session->read("myData")['Student']['id'];
+			$this->Student->updateLogin($id);
+		}
+		return;
+	}
+
+
 	#新規登録処理
 	public function signup(){
 		//Session が入っていたら
