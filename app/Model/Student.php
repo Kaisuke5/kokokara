@@ -68,5 +68,53 @@ class Student extends AppModel{
 		return true;
 	}
 
+
+	public function nafind(){
+		$this->unbindModel(
+			array('hasOne' => array('FacebookUser'),
+				"hasAndBelongsToMany"=>array("Stag","Apply","Log"))
+		);
+
+		$students=$this->find("all");
+		return $students;
+	}
+
+
+	//ユーザーのログの総数を返す 使い方はAdminController/studentsにある
+	public function getLog($id){
+		$this->unbindModel(
+			array('hasMany' => array('Image'),
+				"hasAndBelongsToMany"=>array("Stag","Apply","Log"))
+		);
+		$this->loadModel("EventsLog");
+		$logs=$this->EventsLog->find("all",
+			array( "fields" => array("sum(counter) AS `logs`"),
+			"conditions"=>array("student_id"=>$id)));
+		if($logs[0][0]["logs"]==null){
+			$logs[0][0]["logs"]=0;
+		}
+
+		return $logs[0][0];
+	}
+
+
+	public function getApply($id){
+		$this->unbindModel(
+			array('hasMany' => array('Image'),
+				"hasAndBelongsToMany"=>array("Stag","Apply","Log"))
+		);
+		$this->loadModel("AppliesEvent");
+		$applies=$this->AppliesEvent->find("all",
+			array( "fields" => array("count(event_id) AS `applies`"),
+				"conditions"=>array("student_id"=>$id)));
+		if($applies[0][0]["applies"]==null){
+			$applies[0][0]["applies"]=0;
+		}
+
+		return $applies[0][0];
+	}
+
+
+
 }
 
