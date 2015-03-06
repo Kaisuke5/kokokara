@@ -1,4 +1,4 @@
-</h2>ユーザー一覧</h2>
+<h2>ユーザー一覧</h2>
 
 <?foreach($students as $student):?>
 	<?echo $this->Html->link($student["Student"]["name"],
