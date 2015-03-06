@@ -10,7 +10,9 @@ class Event extends AppModel{
     public $useTable="events";
     //イベントタグアソ
     public $hasAndBelongsToMany = array(
-        "Etag",
+
+        'Etag',
+
         'Apply' => array(
             'className'              => 'Student',
             'joinTable'              => 'applies_events',
@@ -46,16 +48,12 @@ class Event extends AppModel{
 
 
 
-
-
     public function loadModel($model_name) {
         App::uses($model_name,'Model');
         $this->{$model_name} = new $model_name();
     }
 
     public function getOriginal($id){
-
-
 
         $event=$this->find("first",array("conditions"=>array("id"=>$id)));
         if($event==null) return null;
@@ -97,7 +95,6 @@ class Event extends AppModel{
 
             }
         }
-
 
 
         //debug($original);

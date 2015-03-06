@@ -1,6 +1,12 @@
 <?php
-debug($myData);
-echo $this->Html->link('ログアウト', array('action' => 'logout'));
+
+if(!$myData){
+	echo $this->Html->link('ログイン', array('action' => 'login'));
+}else{
+	echo $this->Html->link('ログアウト', array('action' => 'logout'));
+	debug($myData);
+}
+
 ?>
 
 

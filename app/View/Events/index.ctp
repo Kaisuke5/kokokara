@@ -11,4 +11,3 @@
 
 
 <button onclick="eventapply()">申し込み</button>
-<?echo $this->Form->button("申し込み")?>

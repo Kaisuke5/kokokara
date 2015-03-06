@@ -15,22 +15,16 @@ class StudentsController extends AppController{
 	public function beforeFilter(){
 		#ページタイトル設定
 		$this->set('title_for_layout', 'kokokara');
-
 	}
 
 	#ユーザーインデックス
 	public function index(){
 		$this->loadModel("Event");
-
-		//Session が空だったら
-		if(!$this->Session->read('myData')){
-			$this->redirect(array('controller' => 'students', 'action' => 'login'));
-		}else{
-			$id=$this->Session->read("myData")['Student']['id'];
-			debug($this->Student->find("first",array("condition"=>array("id"=>$id))));
-
+		$this->set('events', $this->Event->find("all"));
+		//Session が空じゃなかったら
+		if($this->Session->read('myData')){
+			//$id=$this->Session->read("myData")['Student']['id'];
 			$this->set('myData', $this->Session->read('myData'));
-			$this->set('events', $this->Event->find("all"));
 		}
 	}
 
@@ -87,7 +81,7 @@ class StudentsController extends AppController{
 	#ログアウト処理
 	public function logout(){
 		$this->Session->delete('myData');
-		$this->redirect(array('action' => 'login'));
+		$this->redirect(array('action' => 'index'));
 	}
 
 	#更新処理

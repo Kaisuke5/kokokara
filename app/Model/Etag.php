@@ -15,8 +15,8 @@ class Etag extends AppModel
 			"join_table" => "etags_events",
 			"foreignKey" => "etag_id",
 			"associationForeignKey" => "event_id",
-		),
+		)
 	);
 
-
 }
+
