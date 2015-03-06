@@ -10,7 +10,7 @@ class Event extends AppModel{
     public $useTable="events";
     //イベントタグアソ
     public $hasAndBelongsToMany = array(
-/*
+        "Etag",
         'Apply' => array(
             'className'              => 'Student',
             'joinTable'              => 'applies_events',
@@ -40,14 +40,7 @@ class Event extends AppModel{
             'finderQuery'            => '',
             'deleteQuery'            => '',
             'insertQuery'            => ''
-        ),
-*/
-        "Etag"=>array(
-            "className"=>"Etag",
-            "join_table"=>"etags_events",
-            "foreignKey"=>"event_id",
-            "associationForeignKey"=>"etag_id"
-        ),
+        )
     );
 
 

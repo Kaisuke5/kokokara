@@ -67,25 +67,31 @@ class EventsController extends AppController{
 
 
     public function goapply(){
-        $this->loadModel("Apply1");
+        $this->loadModel("AppliesEvent");
+        $this->loadModel("Student");
 
         //セッション
-        $myData=$myData=$this->Session->read("myData");
+        $myData=$this->Session->read("myData");
+        if(!$myData){
+            $this->Session->setFlash('ログインしてください');
+            $this->redirect(array('controller' => 'students', 'action' => 'login'));
+        }
         //requestのgetのパラメーターをeventのidに
         $id=$this->request->query("id");
 
-        $before=$this->Apply1->find("first",array("condirion"=>array("student_id"=>$myData['Student']['id'],"event_id"=>$id)));
+        $before=$this->AppliesEvent->find("first",array("conditions"=>array("student_id"=>$myData['Student']['id'],"event_id"=>$id)));
 
         if($before!=null){
             $this->Session->setFlash("既に申し込んでいます");
             $this->redirect(array("controller"=>"Students","action"=>"index"));
         }
 
+        $this->AppliesEvent->set(array("student_id"=>$myData['Student']['id'],"event_id"=>$id));
+        $apply=$this->AppliesEvent->save();
 
-
-        $this->Apply1->set(array("student_id"=>$myData['Student']['id'],"event_id"=>$id));
-        $apply=$this->Apply1->save();
-
+        //sessionのmyData更新
+        $myData=$this->Student->find("first",array("conditions"=>array("Student.id"=>$myData['Student']['id'])));
+        $this->Session->write('myData', $myData);
 
 
         if($apply==false){
@@ -94,14 +100,11 @@ class EventsController extends AppController{
         }
         //ここにメール関数を書く
 
-
         $this->Session->setFlash("申し込み完了");
         $this->redirect(array("controller"=>"Students","action"=>"index"));
 
 
-
     }
-
 
 
 
