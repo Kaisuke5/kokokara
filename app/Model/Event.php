@@ -11,7 +11,7 @@ class Event extends AppModel{
     //イベントタグアソ
     public $hasAndBelongsToMany = array(
         'Etag',
-        'Apply' => array(
+        'WhoApplies' => array(
             'className'              => 'Student',
             'joinTable'              => 'applies_events',
             'foreignKey'             => 'event_id',
@@ -26,7 +26,7 @@ class Event extends AppModel{
             'deleteQuery'            => '',
             'insertQuery'            => ''
         ),
-        'Log' => array(
+        'WhoLog' => array(
             'className'              => 'Student',
             'joinTable'              => 'events_logs',
             'foreignKey'             => 'event_id',
@@ -42,7 +42,7 @@ class Event extends AppModel{
             'insertQuery'            => ''
         )
     );
-
+    /*
     public $hasAndBelongsToMany = array(
         "Etag"=>array(
             "className"=>"Etag",
@@ -51,7 +51,7 @@ class Event extends AppModel{
             "associationForeignKey"=>"etag_id"
         ),
     );
-
+    */
 
 
 
@@ -61,8 +61,6 @@ class Event extends AppModel{
     }
 
     public function getOriginal($id){
-
-
 
         $event=$this->find("first",array("conditions"=>array("id"=>$id)));
         if($event==null) return null;
@@ -98,7 +96,6 @@ class Event extends AppModel{
 
             }
         }
-
 
 
         //debug($original);

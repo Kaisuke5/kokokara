@@ -7,7 +7,8 @@
  */
 class Etag extends AppModel{
 	public $useTable = "etags";
-<<<<<<< HEAD
+	public $hasAndBelongsToMany = 'Event';
+	/*
 	public $hasAndBelongsToMany = array(
 		"Event"=>array(
 			"className"=>"Event",
@@ -16,10 +17,10 @@ class Etag extends AppModel{
 			"associationForeignKey"=>"event_id",
 		),
 	);
+	*/
 
 
 
-=======
-	public $hasAndBelongsToMany = 'Event';
->>>>>>> 3c592db655e42a047732dbf4fe2a9308af64c5bb
+
+
 }
