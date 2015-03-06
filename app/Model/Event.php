@@ -64,7 +64,6 @@ class Event extends AppModel{
         if($state<4){
             $this->loadModel("Intern");
             $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
-            debug($state);
         }else{
 
 
@@ -80,7 +79,7 @@ class Event extends AppModel{
 
                     case 5:
                         $this->loadModel("StudyAbroad");
-                        $original=$this->StudyAborad->find("first",array("conditions"=>array("event_id",$id)));
+                        $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
                         break;
 
                     case 6:
@@ -169,11 +168,68 @@ class Event extends AppModel{
         throw new Exception(__("This post could not be saved. Please try again"));
     }
 
-    public function nafind(){
+
+
+
+
+
+
+    //ユーザーのログの総数を返す 使い方はAdminController/studentsにある
+    public function getLog($id){
         $this->unbindModel(
-            array('hasMany' => array('Image'),"hasAndBelongsToMany"=>"Etag")
+            array('hasMany' => array('Image'),
+                "hasAndBelongsToMany"=>array("Etag","Apply","Log"))
         );
+        $this->loadModel("EventsLog");
+        $logs=$this->EventsLog->find("all",
+            array( "fields" => array("sum(counter) AS `logs`"),
+                "conditions"=>array("event_id"=>$id)));
+        if($logs[0][0]["logs"]==null){
+            $logs[0][0]["logs"]=0;
+        }
+
+        return $logs[0][0];
+    }
+
+
+    public function getApply($id){
+        $this->unbindModel(
+            array('hasMany' => array('Image'),
+                "hasAndBelongsToMany"=>array("Stag","Apply","Log"))
+        );
+        $this->loadModel("AppliesEvent");
+        $applies=$this->AppliesEvent->find("all",
+            array( "fields" => array("count(event_id) AS `applies`"),
+                "conditions"=>array("event_id"=>$id)));
+        if($applies[0][0]["applies"]==null){
+            $applies[0][0]["applies"]=0;
+        }
+
+        return $applies[0][0];
+    }
+
+
+    public function adminfind(){
+        $this->unbindModel(
+            array('hasMany' => array('Image'),
+                "hasAndBelongsToMany"=>array("Etag","Apply","Log"))
+        );
+
+
+        //1回eventとってくる　non asosi
         $events=$this->find("all");
+
+
+
+        //その後そいつらのlogとapplyとってくる
+        for($i=0;$i<count($events);$i++){
+            $id=$events[$i]["Event"]["id"];
+            $log=$this->getLog($id);
+            $applies=$this->getApply($id);
+            $events[$i]+=$log+$applies;
+        }
+
+
         return $events;
     }
 

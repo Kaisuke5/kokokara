@@ -102,7 +102,7 @@ class AdminController extends AppController{
     public function events(){
 
         $this->loadModel("Event");
-        $events=$this->Event->nafind();
+        $events=$this->Event->adminfind();
         $this->set("events",$events);
 
 

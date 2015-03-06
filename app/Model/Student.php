@@ -108,7 +108,7 @@ class Student extends AppModel{
 
 	public function adminfind(){
 		$this->unbindModel(
-			array('hasOne' => array('FacebookUser'),
+			array(//'hasOne' => array('FacebookUser'),
 				"hasAndBelongsToMany"=>array("Stag","Apply","Log"))
 		);
 
