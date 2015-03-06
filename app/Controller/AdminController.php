@@ -89,13 +89,14 @@ class AdminController extends AppController{
 
 
     //user情報一覧
+    //アソシはall外しでlogとapplyのカウントだけ取得
     public function students(){
         $this->loadModel("Student");
         $students=$this->Student->nafind();
 
 
 
-        //各ユーザーにログを足す
+        //各ユーザーにlog,applyのカウントを足す
         for($i=0;$i<count($students);$i++){
             $id=$students[$i]["Student"]["id"];
             $log=$this->Student->getLog($id);
@@ -109,17 +110,8 @@ class AdminController extends AppController{
 
     //event情報一覧
     public function events(){
-        /*$this->loadModel("Log1");
-        $this->loadModel("Apply1");
+
         $this->loadModel("Event");
-        $this->loadModel("Student");
-        */
-        $this->loadModel("Event");
-        /*
-        $events=$this->Event->find("all");
-        for($i=0;$i<count($events);$i++){
-            $events[$i]=$this->Event->getOriginal($events[$i]["Event"]["id"]);
-        }*/
         $events=$this->Event->nafind();
         $this->set("events",$events);
 
