@@ -130,6 +130,19 @@ class Student extends AppModel{
 		return $students;
 	}
 
+	public function updateLogin($id){
+
+		$this->unbindModel(
+			array('hasOne' => array('FacebookUser'),
+				"hasAndBelongsToMany"=>array("Stag","Apply","Log"))
+		);
+
+		$this->set(array(
+			"id"=>$id,
+			"modified"=>time()
+		));
+		$this->save();
+	}
 
 
 
