@@ -80,6 +80,7 @@ class StudentsController extends AppController{
 			if($student){
 				$this->Session->setFlash('ログイン完了です');
 				$this->Session->write('myData', $student);
+				$this->updateLogin();
 				$this->redirect(array('action' => 'index'));
 			} else{
 				$this->Session->setFlash('ユーザ名かパスワードが違います');

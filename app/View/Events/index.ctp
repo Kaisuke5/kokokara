@@ -8,6 +8,7 @@
 <!-- id送信-->
 <input type="hidden" class="setid" value="<?echo $event['Event']['id']?>">
 
-
+<?debug($event["Image"][0])?>
+<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
 
 <button onclick="eventapply()">申し込み</button>

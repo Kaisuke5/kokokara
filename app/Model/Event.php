@@ -53,7 +53,65 @@ class Event extends AppModel{
         $this->{$model_name} = new $model_name();
     }
 
-    public function getOriginal($id){
+    public function getOriginal($id)
+    {
+
+        $event = $this->find("first", array("conditions" => array("id" => $id)));
+        if ($event == null) return null;
+
+        $state = $event["Event"]["state"];
+        $original = array();
+
+        if ($state < 4) {
+            $this->loadModel("Intern");
+            $original = $this->Intern->find("first", array("conditions" => array("event_id", $id)));
+        } else {
+
+
+            if ($state < 4) {
+                $this->loadModel("Intern");
+                $original = $this->Intern->find("first", array("conditions" => array("event_id", $id)));
+
+            } else {
+
+                switch ($state) {
+
+
+                    case 5:
+                        $this->loadModel("StudyAbroad");
+                        $original = $this->StudyAbroad->find("first", array("conditions" => array("event_id", $id)));
+                        break;
+
+                    case 6:
+                        $this->loadModel("Camp");
+                        $original = $this->Camp->find("first", array("conditions" => array("event_id", $id)));
+                        break;
+
+                    case 7:
+                        $this->loadModel("Lesson");
+                        $original = $this->Lesson->find("first", array("conditions" => array("event_id", $id)));
+                        break;
+
+                    case 8:
+                        $this->loadModel("FunnyEvent");
+                        $original = $this->FunnyEvent->find("first", array("conditions" => array("event_id", $id)));
+                        break;
+
+                    case 9:
+                        $this->loadModel("StudentGroup");
+                        $original = $this->StudentGroup->find("first", array("conditions" => array("event_id", $id)));
+                        break;
+
+
+                }
+            }
+
+
+        }
+        return $event+$original;
+    }
+
+    public function deleteOriginal($id){
 
         $event=$this->find("first",array("conditions"=>array("id"=>$id)));
         if($event==null) return null;
@@ -63,14 +121,13 @@ class Event extends AppModel{
 
         if($state<4){
             $this->loadModel("Intern");
-            $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
+            $result=$this->Intern->deleteAll(array("event_id"=>$id));
         }else{
 
 
             if($state<4){
                 $this->loadModel("Intern");
-                $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
-
+                $result=$this->Intern->deleteAll(array("event_id"=>$id));
             }else{
 
                 switch ($state){
@@ -79,27 +136,26 @@ class Event extends AppModel{
 
                     case 5:
                         $this->loadModel("StudyAbroad");
-                        $original=$this->Intern->find("first",array("conditions"=>array("event_id",$id)));
+                        $result=$this->Intern->deleteAll(array("event_id"=>$id));
                         break;
 
                     case 6:
                         $this->loadModel("Camp");
-                        $original=$this->Camp->find("first",array("conditions"=>array("event_id",$id)));
+                        $result=$this->Camp->deleteAll(array("event_id"=>$id));                        break;
                         break;
-
                     case 7:
                         $this->loadModel("Lesson");
-                        $original=$this->Lesson->find("first",array("conditions"=>array("event_id",$id)));
+                        $result=$this->Lesson->deleteAll(array("event_id"=>$id));
                         break;
 
                     case 8:
                         $this->loadModel("FunnyEvent");
-                        $original=$this->FunnyEvent->find("first",array("conditions"=>array("event_id",$id)));
+                        $result=$this->FunnyEvent->deleteAll(array("event_id"=>$id));
                         break;
 
                     case 9:
                         $this->loadModel("StudentGroup");
-                        $original=$this->StudentGroup->find("first",array("conditions"=>array("event_id",$id)));
+                        $result=$this->StudentGroup->deleteAll(array("event_id"=>$id));
                         break;
 
 
@@ -111,9 +167,8 @@ class Event extends AppModel{
 
 
         //debug($original);
-        $compevent=$event+$original;
-        $this->id=null;
-        return $compevent;
+
+        return $result;
 
 
     }
@@ -126,6 +181,7 @@ class Event extends AppModel{
             'conditions' => array(
                 'Image.model' => 'Event',
             ),
+            'dependent'     => true
 
         )
     );

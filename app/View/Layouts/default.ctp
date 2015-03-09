@@ -28,6 +28,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		echo $this->Html->css('cake.generic');
 
+		echo $this->Html->script("jquery-1.11.2.js");
+		echo $this->Html->css("kai.css");
+		echo $this->Html->script("kai.js");
+
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');

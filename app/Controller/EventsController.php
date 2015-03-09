@@ -44,7 +44,7 @@ class EventsController extends AppController{
 
         //ログ
         $this->EventsLog->goEventsLog($myData['Student']['id'], $id);
-        $event=$this->Event->find("first",array("conditions"=>array("id"=>$id)));
+        $event=$this->Event->getOriginal($id);
 
         //もし不正なidなら404
         /*
