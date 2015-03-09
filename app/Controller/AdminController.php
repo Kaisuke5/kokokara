@@ -198,6 +198,7 @@ class AdminController extends AppController{
         $this->set("students",$students);
     }
 
+
     //student情報 by mark
     public function student($id){
         if($this->request->is('get')){ //GET送信防止
@@ -207,6 +208,11 @@ class AdminController extends AppController{
         $student = $this->Student->findById($id);
         $this->set("student",$student);
     }
+
+
+
+
+
 
     //student_tag by mark
     public function student_tag(){
