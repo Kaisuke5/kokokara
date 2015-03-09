@@ -13,9 +13,15 @@
 
 	<?foreach($students as $student):?>
 		<tr>
-		<td><?echo $this->Html->link($student["Student"]["name"],
-		array("controller"=>"Students","?"=>array("id"=>$student["Student"]["id"])))?></td>
-		<td><?echo $student["logs"]."pv";?></td>
+
+		<td>
+			<?php
+			echo $this->Form->postLink($student["Student"]["name"], array("controller"=>"admin", "action" => "student", $student["Student"]["id"]));
+			?>
+		</td>
+		<td>
+			<?echo $student["logs"]."pv";?>
+		</td>
 		<td><?echo $student["applies"]."回";?></td>
 		<td><?echo $student["Student"]["modified"];?></td>
 		<td><a href="<?echo $student['FacebookUser']['link']?>">FBlink</a></td>

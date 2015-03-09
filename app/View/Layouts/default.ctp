@@ -37,6 +37,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<!-- Jquery 導入 -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<?php
+	echo $this->Html->script('bootstrap.min.js');
+	//echo $this->Html->css('bootstrap.min.css');
+	?>
 </head>
 <body>
 	<div id="container">

@@ -109,3 +109,5 @@ CakeLog::config('error', array(
 
 //明示的にsessionを始める
 if(!isset($_SESSION)) session_start();
+/*twitter bootstrap*/
+CakePlugin::load(array('TwitterBootstrap'));
