@@ -282,6 +282,27 @@ class AdminController extends AppController{
         $type=$data[$event["Event"]["state"]];
         $this->set("event",$event);
         $this->set("event",$type);
+
+    }
+
+
+
+    public function push(){
+        $this->loadModel("Stag");
+        $this->loadModel("Student");
+        $tags=$this->Stag->find("all");
+        $students=$this->Student->adminfind("all");
+        $this->set("students",$students);
+        $this->set("tags",$tags);
+        $this->set("size",count($students));
+        //debug($tags);
+        $this->render();
+
+    }
+
+
+    public function searchx(){
+
     }
 
 
