@@ -8,7 +8,7 @@
 App::uses('Security', 'Utility');
 
 class Student extends AppModel{
-	//タグアソシエーション
+	//アソシエーション
 	public $hasAndBelongsToMany = array(
 		'Stag',
 		'Apply' => array(
@@ -51,6 +51,55 @@ class Student extends AppModel{
 		)
 	);
 
+	//validation
+	public $validate = array(
+		'name' => array(
+			'rule' => 'notEmpty',
+			'message' => 'ユーザ名を入力してください',
+			'required' => true
+		),
+		'email' => array(
+			array(
+				'rule' => 'email',
+				'message' => '有効なメールアドレスを入力してください'
+			),
+			array(
+				'rule' => 'isUnique',
+				'message' => 'そのメールアドレスは既に使われています'
+			),
+			'required' => true
+		),
+		'password' => array(
+			'rule' => 'alphaNumeric',
+			'message' => '有効なパスワードを入力してください',
+			'required' => true
+		),
+		'gender' => array(
+			'rule' => array('inList', array('male', 'female')),
+			'message' => '男性または女性を選択してください',
+			'required' => true
+		),
+		'birthday' => array(
+			'rule' => 'date',
+			'message' => '生年月日を入力してください',
+			'required' => true
+		),
+		'university' => array(
+			'rule' => 'notEmpty',
+			'message' => '大学名を入力してください',
+			'required' => true
+		),
+		'faculty' => array(
+			'rule' => 'notEmpty',
+			'message' => '学部を入力してください',
+			'required' => true
+		),
+		'year' => array(
+			'rule' => 'numeric',
+			'message' => '学年を入力してください',
+			'required' => true
+		)
+	);
 
 
 	public function loadModel($model_name) {
