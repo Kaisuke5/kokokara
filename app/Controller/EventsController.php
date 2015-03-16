@@ -47,7 +47,6 @@ class EventsController extends AppController{
         $event=$this->Event->getOriginal($id);
 
         //もし不正なidなら404
-
         if($event==null){
             throw new NotFoundException();
         }

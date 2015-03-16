@@ -66,8 +66,7 @@ class Student extends AppModel{
 			array(
 				'rule' => 'isUnique',
 				'message' => 'そのメールアドレスは既に使われています'
-			),
-			'required' => true
+			)
 		),
 		'password' => array(
 			'rule' => 'alphaNumeric',
