@@ -1,0 +1,43 @@
+#screen-top-line{
+	width:100%;
+	height:3px;
+}
+.header-klogo-img{
+	max-width:30px;
+	max-height:30px;
+}
+.header-login-btn{
+	background:#5ba525;
+	border-bottom:5px solid #5ba525;
+}
+.header-login-btn a{
+	color:#ffffff !important;
+}
+#content{
+	margin-top:-20px;
+}
+.header-btn-lg-1{
+	border-bottom:5px solid #d16b9a;
+}
+.header-btn-lg-2{
+	border-bottom:5px solid #d1a16b;
+}
+.header-btn-lg-3{
+	border-bottom:5px solid #ced16b;
+}
+.header-btn-lg-4{
+	border-bottom:5px solid #9ad16b;
+}
+.header-btn-lg-5{
+	border-bottom:5px solid #6bd16e;
+}
+.header-btn-lg-6{
+	border-bottom:5px solid #6bd1a1;
+}
+.header-btn-lg-7{
+	border-bottom:5px solid #6bcad1;
+}
+.header-gal{
+	padding: 0 3px;
+	border-right:1px solid #ededed;
+}

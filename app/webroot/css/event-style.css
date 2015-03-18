@@ -1,0 +1,29 @@
+p {
+	font-size:15px;
+}
+.event-info-top{
+	height:70px;
+	border:1px solid #efefef;
+}
+.event-info-top p{
+	height:70px;
+	display:table-cell;
+	vertical-align:middle;
+}
+.container{
+	background:#ffffff;
+	border-radius: 9px 9px 9px 9px;
+}
+.koko-box-shadow{
+	box-shadow:0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+.img-obfit{
+	padding:0 !important;
+	max-height: 380px;
+    object-fit: cover;
+    overflow: hidden; // Cuts off the parts of the image poking out
+}
+.img-obfit img{
+	border-radius:9px 9px 0px 0px;
+	vertical-align: middle;
+}
