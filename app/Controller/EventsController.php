@@ -52,6 +52,9 @@ class EventsController extends AppController{
 
         }
         */
+        if($event==null){
+            throw new NotFoundException();
+        }
 
         //sessionのmyData更新
         /*

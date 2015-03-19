@@ -44,10 +44,6 @@ class Event extends AppModel{
             'insertQuery'            => ''
         )
     );
-
-
-
-
     public function loadModel($model_name) {
         App::uses($model_name,'Model');
         $this->{$model_name} = new $model_name();
