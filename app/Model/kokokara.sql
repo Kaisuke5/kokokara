@@ -213,7 +213,7 @@ create table events_logs(
   id int not null primary key auto_increment,
   student_id int,
   event_id int,
-  counter int,
+  counter int DEFAULT 1,
   created datetime DEFAULT null,
   modified datetime DEFAULT null
 

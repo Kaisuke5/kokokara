@@ -15,6 +15,12 @@ class StudentsController extends AppController{
 	public function beforeFilter(){
 		#ページタイトル設定
 		$this->set('title_for_layout', 'kokokara');
+		//最終ログイン処理
+		$myData=$this->Session->read("myData");
+		if($myData!=null){
+			$id = $myData['Student']['id'];
+			updateLogin($id);
+		}
 	}
 
 	#ユーザーインデックス

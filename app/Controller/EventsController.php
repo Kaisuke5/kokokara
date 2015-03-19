@@ -12,12 +12,13 @@ class EventsController extends AppController{
 
 
     public function beforeFilter(){
-        /*
+        //最終ログイン処理
         $myData=$this->Session->read("myData");
-        if($myData==null){
-            $this->redirect(array("controller"=>"Student","action"=>"login"));
+        if($myData!=null){
+            $this->loadModel('Student');
+            $id = $myData['Student']['id'];
+            updateLogin($id);
         }
-        */
     }
 
 

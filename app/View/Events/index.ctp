@@ -10,5 +10,6 @@
 
 <?debug($event["Image"][0])?>
 <?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
+<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
 
 <button onclick="eventapply()">申し込み</button>

@@ -12,7 +12,7 @@
 echo $this->Form->create('Event',
     array('type' => 'file','url' =>
         array('controller' => 'admin', 'action' => 'addEvent')));
-echo $this->Form->input("title",array());
+echo $this->Form->input("title");
 echo $this->Form->input('Image.0.attachment', array('type' => 'file', 'label' => 'メイン画像'));
 echo $this->Form->input('Image.0.model', array('type' => 'hidden', 'value' => 'Event'));
 echo $this->Form->input('Image.1.attachment', array('type' => 'file', 'label' => '本文１'));
