@@ -9,6 +9,9 @@ echo $this->Form->input('email');
 echo $this->Form->input('password');
 echo $this->Form->end('ログインする');
 ?>
+<?php
+echo $this->Html->link('パスワードをお忘れの場合', array('action' => 'passwordForgot'));
+?>
 
 <?php
 echo $this->Html->link('新規登録する', array('action' => 'signup'));

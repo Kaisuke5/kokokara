@@ -91,4 +91,13 @@ class EmailConfig {
 		//'headerCharset' => 'utf-8',
 	);
 
+	//追記gmail by mark
+	public $gmail = array(
+		'host' => 'ssl://smtp.gmail.com',
+		'port' => 465,
+		'username' => 'mark.sato1111@gmail.com',
+		'password' => 'mark9211',
+		'transport' => 'Smtp'
+	);
+
 }

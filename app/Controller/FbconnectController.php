@@ -44,7 +44,7 @@ class FbconnectController extends AppController{
 				)
 			);
 			if(!$facebook_user){    //新規ユーザだったら
-				$this->Student->save();     //インサート
+				$this->Student->save('', false);     //インサート
 				$me['student_id'] = $this->Student->getLastInsertID();     //Student Id 取得, $me に追記
 				$me['facebook_user_id'] = $me['id'];
 				unset($me['id']);
@@ -72,7 +72,14 @@ class FbconnectController extends AppController{
 				$student = $this->Student->findById($facebook_user['FacebookUser']['student_id']);
 				$this->Session->setFlash('ログイン完了！');
 				$this->Session->write('myData',$student);	//ユーザ情報をセッションに保存
-				$this->redirect(array("controller" => "students", "action" => "index"));
+				//申請ボタンからログインに飛んできたかどうか
+				if($this->Session->read('apply')){
+					$event_id = $this->Session->read('apply');
+					$this->Session->delete('apply');
+					$this->redirect('/events?id='.$event_id);
+				}else{
+					$this->redirect(array("controller" => "students", "action" => "index"));
+				}
 			}
 
 		}else{//認証前
