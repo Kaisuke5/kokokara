@@ -56,10 +56,24 @@ class StudentsController extends AppController{
 		if($this->request->is('post')){
 			//debug($this->request->data);
 			//emailがユニークかどうか
-			$user = $this->Student->find('first', array(
-				'conditions' => array('Student.email' => $this->request->data['Student']['email'])
-			));
-			if(!$user){ //新規ユーザだったら
+			if($this->request->data['Student']['id']==null){
+				//ノーマル新規登録
+				$user = $this->Student->find('first', array(
+					'conditions' => array('Student.email' => $this->request->data['Student']['email'])
+				));
+				if(!$user){ //新規ユーザだったら
+					if($this->Student->save($this->request->data)){
+						$this->Session->setFlash('ユーザ登録に成功しました');
+						$this->Session->write('myData', $this->Student->findById($this->Student->getLastInsertID()));
+						$this->redirect(array('action' => 'index'));
+					}else{
+						$this->Session->setFlash('ユーザ登録に失敗しました');
+					}
+				} else{ //既存のユーザがいたら
+					$this->Session->setFlash('このメールアドレスは既に登録されています');
+				}
+			} else{
+				//FB新規登録
 				if($this->Student->save($this->request->data)){
 					$this->Session->setFlash('ユーザ登録に成功しました');
 					$this->Session->write('myData', $this->Student->findById($this->request->data['Student']['id']));
@@ -67,8 +81,7 @@ class StudentsController extends AppController{
 				}else{
 					$this->Session->setFlash('ユーザ登録に失敗しました');
 				}
-			} else{ //既存のユーザがいたら
-				$this->Session->setFlash('このメールアドレスは既に登録されています');
+
 			}
 		}
 	}
