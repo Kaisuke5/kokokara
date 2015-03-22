@@ -56,7 +56,7 @@ class StudentsController extends AppController{
 		if($this->request->is('post')){
 			//debug($this->request->data);
 			//emailがユニークかどうか
-			if($this->request->data['Student']['id']==null){
+			if(!isset($this->request->data['Student']['id'])){
 				//ノーマル新規登録
 				$user = $this->Student->find('first', array(
 					'conditions' => array('Student.email' => $this->request->data['Student']['email'])
