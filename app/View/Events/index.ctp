@@ -17,39 +17,50 @@
 	<div class="row">
 		<div class="col-sm-5 event-info-top">
 			<div style="float:left; width:50px; height:50px; margin:10px; background:#ededed;"></div>
-			<p>株式会社kokokara Group</p>
+			<p><font style="font-size:12px;">講師</font><br>株式会社kokokara Group</p>
 		</div>
-		<div class="col-sm-3 event-info-top">
-
+		<div class="col-sm-3 event-info-top" style="text-align:center;">
+			<div class="event-info-top-fav">
+			 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			</div>
+			<div class="event-info-top-fav2">
+				<p>おぼえておく！</p>
+			</div>
 		</div>
 		<div class="col-sm-4 event-info-top">
+			<div class="row">
+				<div class="col-xs-6 event-info-top-fb">
 
+				</div>
+				<div class="col-xs-6 event-info-top-tw">
+					
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
-			<h2 style="border-bottom:3px solid #ced16b"><?echo $event['Event']['title']?></h2>
+		<div class="col-md-12 art-title">
+			<h2><?echo $event['Event']['title']?></h2>
 		</div>
 	</div>
 	<div class="row" >
 		<div class="col-sm-8">
 			<div class="row">
 				<div class="col-sm-12" style="margin:36px 15px;">
+					<h2>クラス紹介</h2>
 					<p><?echo $event['Event']['body']?></p>
 				</div>
-				<div class="col-sm-6" style="height:200px; background:#efefef;">
-					<p>article image1</p>
+				<div class="col-sm-12 img-obfit-incnts">
+					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
 				</div>
-				<div class="col-sm-6" style="height:200px; background:#efefef;">
-					<p>article image2</p>
-				</div>
-				<div class="col-sm-12" style="margin-top:36px;">
+				<div class="col-sm-12" style="margin-top:36px; 15px">
+					<h2>クラス詳細</h2>
 					<p><?echo $event['Event']['detail']?></p>
 				</div>
 			</div>	
 		</div>
-		<div class="col-sm-4">
-			<div style="height:800px; background:#303030;"
+		<div class="col-sm-4 event-pg-sb">
+			
 		</div>
 	</div>
 </div>

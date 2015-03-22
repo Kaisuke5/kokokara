@@ -5,17 +5,69 @@ p {
 	height:70px;
 	border:1px solid #efefef;
 }
+.event-info-top:hover > .event-info-top-fav span{
+	color:#ffa500;
+}
+.event-info-top:hover > .event-info-top-fav2 p{
+	color:#ffa500;
+}
 .event-info-top p{
 	height:70px;
 	display:table-cell;
 	vertical-align:middle;
 }
+.event-info-top-fav{
+	width:100%;
+	height:45px;
+}
+.event-info-top-fav span{
+	font-size:36px; 
+	color:#c0c0c0;
+	vertical-align: middle;
+	text-align:center;
+	margin-top:10px;
+}
+.event-info-top-fav2{
+	width:100%;
+	height:25px;
+}
+.event-info-top-fav2 p{
+	height:auto;
+	display:inline;
+	font-size:13px;
+	color:#c0c0c0;
+}
+.event-info-top-fb{
+	background:#3b5998;
+	height:70px;
+}
+.event-info-top-tw{
+	background:#4099ff;
+	height:70px;
+}
+.event-pg-sb{
+	height:800px;
+	margin-left:15px;
+	border-left:1px solid #ededed;
+}
 .container{
 	background:#ffffff;
 	border-radius: 9px 9px 9px 9px;
 }
+.art-title{
+	margin-top:15px;
+}
+.art-title h2{
+	border-bottom:3px solid #ced16b; 
+	font-size:28px;
+	padding:5px 15px;
+}
 .koko-box-shadow{
 	box-shadow:0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+.fav-btn{
+	text-align:center;
+
 }
 .img-obfit{
 	padding:0 !important;
@@ -26,4 +78,8 @@ p {
 .img-obfit img{
 	border-radius:9px 9px 0px 0px;
 	vertical-align: middle;
+}
+.img-obfit-incnts img{
+	width:100%;
+	height:auto;
 }
