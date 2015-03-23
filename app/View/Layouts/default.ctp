@@ -88,21 +88,24 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			      <ul class="nav navbar-nav">
 			        <!-- <li><a href="#">Home<span class="sr-only"></span></a></li> -->
 			        <li class="header-btn-lg-1"><a href="#" class="dropdown-toggle header-gal" style="border-left:1px solid #ededed;" data-toggle="dropdown" role="button" aria-expanded="false">国内インターン <span class="caret"></span></a>
+			        　　<!--
 			        	<ul class="dropdown-menu" role="menu">
 			            <li><?php echo $this->Html->link('長期インターン', array('controller' => 'events', 'action' => 'category', 1)); ?></li>
-			            <li><a href="#">短期インターン</a></li>
+			            <li><?php echo $this->Html->link('短期インターン', array('controller' => 'events', 'action' => 'category', 2)); ?></li>
 			            <li><a href="#">Something else here</a></li>
 			            <li class="divider"></li>
 			            <li><a href="#">Separated link</a></li>
 			            <li class="divider"></li>
 			            <li><a href="#">One more separated link</a></li>
 			          </ul>
-			        <li class="header-btn-lg-2"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3)); ?></li>
-			        <li class="header-btn-lg-3"><a href="#" class="header-gal">海外留学</a></li>
-			        <li class="header-btn-lg-4"><a href="#" class="header-gal">習い事</a></li>
-			        <li class="header-btn-lg-5"><a href="#" class="header-gal">おもしろい</a></li>
-			        <li class="header-btn-lg-6"><a href="#" class="header-gal">合宿</a></li>
-			        <li class="header-btn-lg-7"><a href="#" class="header-gal">学生団体</a></li>
+			      		-->
+			        </li>
+			        <li class="header-btn-lg-2"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3), array('class' => 'header-gal')); ?></li>
+			        <li class="header-btn-lg-3"><?php echo $this->Html->link('留学', array('controller' => 'events', 'action' => 'category', 5), array('class' => 'header-gal')); ?></li>
+			        <li class="header-btn-lg-4"><?php echo $this->Html->link('習い事', array('controller' => 'events', 'action' => 'category', 7), array('class' => 'header-gal')); ?></li>
+			        <li class="header-btn-lg-5"><?php echo $this->Html->link('おもしろい', array('controller' => 'events', 'action' => 'category', 8), array('class' => 'header-gal')); ?></li>
+			        <li class="header-btn-lg-6"><?php echo $this->Html->link('合宿', array('controller' => 'events', 'action' => 'category', 6), array('class' => 'header-gal')); ?></li>
+			        <li class="header-btn-lg-7"><?php echo $this->Html->link('学生団体', array('controller' => 'events', 'action' => 'category', 9), array('class' => 'header-gal')); ?></li>
 			      </ul>
 			      <ul class="nav navbar-nav navbar-right">
 			      	<!--

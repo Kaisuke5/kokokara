@@ -59,7 +59,14 @@
 	height:auto;
 	padding:15px !important;
 }
-
+.col-gal a{
+	display: block;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+}
 .event-bgi{
 	margin-bottom:50px;
 }

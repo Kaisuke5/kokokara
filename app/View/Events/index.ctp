@@ -60,7 +60,14 @@
 			</div>	
 		</div>
 		<div class="col-sm-4 event-pg-sb">
-			
+			<div class="row">
+				<div class="col-sm-12">
+					<?foreach($events as $event):?>
+						<a href="/kokokara/events?id=<?echo $event['Event']['id']?>"><?echo $event['Event']['title']?></a>
+						</br>
+					<?endforeach;?>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -72,10 +79,7 @@
 <input type="hidden" class="setid" value="<?echo $event['Event']['id']?>">
 
 <?debug($event["Image"][0])?>
-<<<<<<< HEAD
-=======
 <?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
 <?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
->>>>>>> 73c941771955a49aefe5d5f45b0ec6cd54724e61
 
 <button onclick="eventapply()">申し込み</button>
