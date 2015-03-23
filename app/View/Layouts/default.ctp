@@ -89,7 +89,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			        <!-- <li><a href="#">Home<span class="sr-only"></span></a></li> -->
 			        <li class="header-btn-lg-1"><a href="#" class="dropdown-toggle header-gal" style="border-left:1px solid #ededed;" data-toggle="dropdown" role="button" aria-expanded="false">国内インターン <span class="caret"></span></a>
 			        	<ul class="dropdown-menu" role="menu">
-			            <li><a href="#">長期インターン</a></li>
+			            <li><?php echo $this->Html->link('長期インターン', array('controller' => 'events', 'action' => 'category', 1)); ?></li>
 			            <li><a href="#">短期インターン</a></li>
 			            <li><a href="#">Something else here</a></li>
 			            <li class="divider"></li>
@@ -97,7 +97,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			            <li class="divider"></li>
 			            <li><a href="#">One more separated link</a></li>
 			          </ul>
-			        <li class="header-btn-lg-2"><a href="#" class="header-gal">海外インターン</a></li>
+			        <li class="header-btn-lg-2"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3)); ?></li>
 			        <li class="header-btn-lg-3"><a href="#" class="header-gal">海外留学</a></li>
 			        <li class="header-btn-lg-4"><a href="#" class="header-gal">習い事</a></li>
 			        <li class="header-btn-lg-5"><a href="#" class="header-gal">おもしろい</a></li>

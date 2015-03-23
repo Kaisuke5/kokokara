@@ -72,5 +72,10 @@
 <input type="hidden" class="setid" value="<?echo $event['Event']['id']?>">
 
 <?debug($event["Image"][0])?>
+<<<<<<< HEAD
+=======
+<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
+<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
+>>>>>>> 73c941771955a49aefe5d5f45b0ec6cd54724e61
 
 <button onclick="eventapply()">申し込み</button>

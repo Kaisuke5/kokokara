@@ -285,6 +285,18 @@ class Event extends AppModel{
         return $events;
     }
 
+    //カテゴリー別event取得関数 by mark
+    public function getEventsByState($state, $num){
+        $events = $this->find('all', array(
+            'conditions' => array('state' => $state),
+            'limit' => $num
+        ));
+        if($events){
+            return $events;
+        } else{
+            return false;
+        }
+    }
 
 
 }
