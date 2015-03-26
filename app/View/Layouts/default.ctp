@@ -69,7 +69,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<nav class="navbar navbar-default navbar-fixed-top">
+			<nav class="navbar navbar-default navbar-fixed-topた">
 			  <div class="container-fluid"  style="margin:0 auto;">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">

@@ -58,7 +58,14 @@
 					<p><?echo $event['Event']['detail']?></p>
 				</div>
 				<div class="col-sm-12 detail-info-table" style="margin-top:36px; 15px">
-					<? php if($event[‘Event’][’state’] == 1): ?>
+					<?php
+					if($event[‘Event’][’state’] == 1){
+						echo $this->fetch('table_intern1');
+					}elseif($event[‘Event’][’state’] == 2){
+						echo $this->fetch('table_intern2');
+					}
+					?>
+					<!-- <? php if($event[‘Event’][’state’] == 1): ?>
 	    				<table>
 							<tr>
 								<td>講師</td>
@@ -120,7 +127,8 @@
 								<td><?echo $event['Intern']['treatment']?></td>
 							</tr>
 						</table>
-					<? php endif ?>
+					<? php endif ?> -->
+
 				</div>
 				<div class="col-xs-12 apply-btn">
 					<button type="button" class="btn btn-primary btn-lg" onclick="eventapply()">授業を受ける！</button>
