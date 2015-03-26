@@ -81,3 +81,16 @@ p {
 	width:100%;
 	height:auto;
 }
+.detail-info-table{
+	font-size:14px;
+}
+.detail-info-table tr{
+	padding: 10px 20px;
+}
+.detail-info-table td{
+	padding: 5px 20px;
+}
+.apply-btn{
+	text-align:center;
+	margin:15px 0;
+}

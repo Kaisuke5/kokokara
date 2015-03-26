@@ -100,7 +100,7 @@ p {
 #content{
 	clear: both;
 	color: #333;
-	padding: 10px 20px 40px 20px;
+	padding: 90px 20px 40px 20px;
 	overflow: auto;
 	background-image:url("../img/gray-bgi2.png");
 }

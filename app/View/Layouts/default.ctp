@@ -69,7 +69,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid"  style="margin:0 auto;">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
@@ -79,7 +79,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			     <a class="navbar-brand" href="#"><? echo $this->Html->image('kokologo.png', array('alt' => 'kokokara', 'class' => 'header-klogo-img', ));?></a>
+			      <? echo $this->Html->image("kokologo.png", array("alt" => "Homeへ", 'url' => array('controller' => ''), "class" => "navbar-brand")); ?>
 			 	 
 			    </div>
 
@@ -143,5 +143,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<!-- 		
 			<h1><?php echo $this->Html->link('kokokara', '/'); ?></h1>
 		-->
+	<div id="wrap">
+		<footer class="footer">
+	        <p class="text-muted">Place sticky footer content here.</p>
+	    </footer>
+	</div>
 </body>
 </html>
