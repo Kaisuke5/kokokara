@@ -58,12 +58,22 @@
 					<p><?echo $event['Event']['detail']?></p>
 				</div>
 				<div class="col-sm-12 detail-info-table" style="margin-top:36px; 15px">
-					<?php
+					<!-- <?php
 					if($event[‘Event’][’state’] == 1){
 						echo $this->fetch('table_intern1');
 					}elseif($event[‘Event’][’state’] == 2){
 						echo $this->fetch('table_intern2');
 					}
+					?>
+				-->
+					<?php
+					if($event[‘Event’][’state’] == 1){
+							echo $this->render('Events/table_intern1');
+						}
+						elseif($event[‘Event’][’state’] == 2){
+							echo $this->render('Events/table_intern2');
+						}
+						endif
 					?>
 					<!-- <? php if($event[‘Event’][’state’] == 1): ?>
 	    				<table>
