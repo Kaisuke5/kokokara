@@ -37,7 +37,7 @@ class EventsController extends AppController{
         $this->loadModel('Student');
 
         $myData=$this->Session->read("myData");
-        $this->updateLogin();
+        //$this->updateLogin();
         /*if($myData==null){
             $this->redirect(array("controller"=>"Student","action"=>"login"));
         }*/
