@@ -41,9 +41,25 @@ p {
 	background:#3b5998;
 	height:70px;
 }
+.event-info-top-fb a{
+	display: block;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+}
 .event-info-top-tw{
 	background:#4099ff;
 	height:70px;
+}
+.event-info-top-tw a{
+	display: block;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
 }
 .event-pg-sb{
 	height:800px;

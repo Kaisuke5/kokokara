@@ -15,11 +15,11 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-5 event-info-top">
+		<div class="col-sm-6 event-info-top">
 			<div style="float:left; width:50px; height:50px; margin:10px; background:#ededed;"></div>
 			<p><font style="font-size:12px;">講師</font><br>株式会社kokokara Group</p>
 		</div>
-		<div class="col-sm-3 event-info-top" style="text-align:center;">
+		<div class="col-sm-2 event-info-top" style="text-align:center;">
 			<div class="event-info-top-fav">
 			 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 			</div>
@@ -30,10 +30,10 @@
 		<div class="col-sm-4 event-info-top">
 			<div class="row">
 				<div class="col-xs-6 event-info-top-fb">
-
+					<a href="http://www.facebook.com/share.php?u=http://kokokara-univ.com/events?id=<?echo $event['Event']['id']?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">fb</i></a>
 				</div>
 				<div class="col-xs-6 event-info-top-tw">
-					
+					<a href="http://twitter.com/share?url=http://kokokara-univ.com/events?id=<?echo $event['Event']['id']?>&text=<?echo $event['Event']['title']?>&via=kokokara&related=">tw</a>
 				</div>
 			</div>
 		</div>
@@ -55,27 +55,18 @@
 				</div>
 				<div class="col-sm-12" style="margin-top:36px; 15px">
 					<h2>クラス詳細</h2>
-					<p><?echo $event['Event']['detail']?></p>
+					<p><?echo nl2br($event['Event']['detail']);?></p>
 				</div>
 				<div class="col-sm-12 detail-info-table" style="margin-top:36px; 15px">
 					<!-- <?php
-					if($event[‘Event’][’state’] == 1){
-						echo $this->fetch('table_intern1');
-					}elseif($event[‘Event’][’state’] == 2){
-						echo $this->fetch('table_intern2');
-					}
-					?>
-				-->
-					<?php
 					if($event[‘Event’][’state’] == 1){
 							echo $this->render('Events/table_intern1');
 						}
 						elseif($event[‘Event’][’state’] == 2){
 							echo $this->render('Events/table_intern2');
 						}
-						endif
 					?>
-					<!-- <? php if($event[‘Event’][’state’] == 1): ?>
+					-->
 	    				<table>
 							<tr>
 								<td>講師</td>
@@ -106,39 +97,6 @@
 								<td><?echo $event['Intern']['treatment']?></td>
 							</tr>
 						</table>		
-					<? php elseif($event[‘Event’][’state’] == 2): ?>
-	    			 	<table>
-							<tr>
-								<td>講師(短期)</td>
-								<td><?echo $event['Event']['company_info']?></td>
-							</tr>
-							<tr>
-								<td>日時</td>
-								<td><?echo $event['Event']['date']?></td>
-							</tr>
-							<tr>
-								<td>場所</td>
-								<td><?echo $event['Event']['location']?></td>
-							</tr>
-							<tr>
-								<td>身につくスキル</td>
-								<td><?echo $event['Intern']['skill']?></td>
-							</tr>
-							<tr>
-								<td>給与</td>
-								<td><?echo $event['Intern']['payment']?></td>
-							</tr>
-							<tr>
-								<td>募集人数</td>
-								<td><?echo $event['Intern']['limit_num']?>名</td>
-							</tr>
-							<tr>
-								<td>その他待遇</td>
-								<td><?echo $event['Intern']['treatment']?></td>
-							</tr>
-						</table>
-					<? php endif ?> -->
-
 				</div>
 				<div class="col-xs-12 apply-btn">
 					<button type="button" class="btn btn-primary btn-lg" onclick="eventapply()">授業を受ける！</button>

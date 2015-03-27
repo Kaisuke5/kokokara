@@ -28,7 +28,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		echo $this->Html->css('cake.generic');
 
-		echo $this->Html->script("jquery-1.11.2.js");
+		echo $this->Html->script("jquery-1.11.2.min.js");
 		echo $this->Html->css("kai.css");
 		echo $this->Html->script("kai.js");
 		echo $this->Html->script("imgLiquid-min.js");
@@ -46,6 +46,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 	<?php
 	echo $this->Html->script('bootstrap.min.js');
+	echo $this->Html->script('text-overflow.js');
 	echo $this->Html->css('bootstrap.min.css');
 	echo $this->Html->css('polyfill.object-fit.css');
 	echo $this->Html->css('style.css')
@@ -69,7 +70,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<nav class="navbar navbar-default navbar-fixed-topた">
+			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid"  style="margin:0 auto;">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
@@ -123,7 +124,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			        </li> 
 			    	-->
 			        <li><a href="#">kokokaraって？</a></li>
-			        <li class="header-login-btn"><a href="#"> ログイン></a></li>
+			        <li class="header-login-btn"><a href="#"> 登校する></a></li>
 			  </div><!-- /.container-fluid -->
 			</nav>
 		</div>
@@ -133,20 +134,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		<div id="footer">
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-			<!-- 		
-			<h1><?php echo $this->Html->link('kokokara', '/'); ?></h1>
-		-->
-	<div id="wrap">
 		<footer class="footer">
-	        <p class="text-muted">Place sticky footer content here.</p>
+			<div class="container footer-container">
+				<div class="col-sm-4">
+	        		<p class="text-muted">Place sticky footer content here.</p>
+	        	</div>
+	        </div>
 	    </footer>
 	</div>
+	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
 </html>

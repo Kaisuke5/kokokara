@@ -121,35 +121,35 @@
 	  <h2>様々な学びの形で体験する</h2>
 	  <div class="col-md-12">
 	  	<div class="row">
-		  <div class="col-md-3 col-xs-6 col-gal">
+		  <div class="col-sm-3 col-xs-6 col-gal">
 		  	<div style="height:190px; background:#d16b9a;"><?php echo $this->Html->link('長期インターン', array('controller' => 'events', 'action' => 'category', 1)); ?>
 		  	</div>	
 		  </div>
-		  <div class="col-md-3 col-xs-6 col-gal">  
+		  <div class="col-sm-3 col-xs-6 col-gal">  
 		  	<div style="height:190px; background:#d1a16b;"><?php echo $this->Html->link('短期インターン', array('controller' => 'events', 'action' => 'category', 2)); ?>
 		  	</div>		
 		  </div>
-		  <div class="col-md-3 col-xs-6 col-gal">
+		  <div class="col-sm-3 col-xs-6 col-gal">
 		  	<div style="height:190px; background:#ced16b;"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3)); ?>
 		  	</div>	  	
 		  </div>
-		  <div class="col-md-3 col-xs-6 col-gal">
+		  <div class="col-sm-3 col-xs-6 col-gal">
 		  	<div style="height:190px; background:#9ad16b;"><?php echo $this->Html->link('留学', array('controller' => 'events', 'action' => 'category', 5)); ?>
 		  	</div>	  	
 		  </div>
-		  <div class="col-md-3 col-xs-6 col-gal">  	
+		  <div class="col-sm-3 col-xs-6 col-gal">  	
 		  	<div style="height:190px; background:#6bd16e;"><?php echo $this->Html->link('合宿', array('controller' => 'events', 'action' => 'category', 6)); ?>
 		  	</div>	 
 		  </div>
-		  <div class="col-md-3 col-xs-6 col-gal">  
+		  <div class="col-sm-3 col-xs-6 col-gal">  
 		  	<div style="height:190px; background:#6bd1a1;"><?php echo $this->Html->link('習い事', array('controller' => 'events', 'action' => 'category', 7)); ?>
 		  	</div>		
 		  </div>
-		  <div class="col-md-3 col-xs-6 col-gal">  
+		  <div class="col-sm-3 col-xs-6 col-gal">  
 		  	<div style="height:190px; background:#6bcad1;"><?php echo $this->Html->link('おもしろイベント', array('controller' => 'events', 'action' => 'category', 8)); ?>
 		  	</div>		
 		  </div>
-		  <div class="col-md-3 col-xs-6 col-gal">  	
+		  <div class="col-sm-3 col-xs-6 col-gal">  	
 		  	<div style="height:190px; background:#6bcad1;"><?php echo $this->Html->link('学生団体', array('controller' => 'events', 'action' => 'category', 9)); ?>
 		  	</div>
 		  </div>
