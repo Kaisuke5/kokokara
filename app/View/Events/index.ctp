@@ -58,45 +58,32 @@
 					<p><?echo nl2br($event['Event']['detail']);?></p>
 				</div>
 				<div class="col-sm-12 detail-info-table" style="margin-top:36px; 15px">
-					<!-- <?php
-					if($event[‘Event’][’state’] == 1){
-							echo $this->render('Events/table_intern1');
+					<?php
+					if($event['Event']['state'] == 1){
+							echo $this->element( 'table_intern1' );
 						}
-						elseif($event[‘Event’][’state’] == 2){
-							echo $this->render('Events/table_intern2');
+						elseif($event['Event']['state'] == 2){
+							echo $this->element( 'table_intern2' );
+						}
+						elseif($event['Event']['state'] == 3){
+							echo $this->element( 'table_intern3' );
+						}
+						elseif($event['Event']['state'] == 5){
+							echo $this->element( 'table_abroad' );
+						}
+						elseif($event['Event']['state'] == 6){
+							echo $this->element( 'table_camp' );
+						}
+						elseif($event['Event']['state'] == 7){
+							echo $this->element( 'table_lesson' );
+						}
+						elseif($event['Event']['state'] == 8){
+							echo $this->element( 'table_funnyEvent' );
+						}
+						elseif($event['Event']['state'] == 9){
+							echo $this->element( '' );
 						}
 					?>
-					-->
-	    				<table>
-							<tr>
-								<td>講師</td>
-								<td><?echo $event['Event']['company_info']?></td>
-							</tr>
-							<tr>
-								<td>日時</td>
-								<td><?echo $event['Event']['date']?></td>
-							</tr>
-							<tr>
-								<td>場所</td>
-								<td><?echo $event['Event']['location']?></td>
-							</tr>
-							<tr>
-								<td>身につくスキル</td>
-								<td><?echo $event['Intern']['skill']?></td>
-							</tr>
-							<tr>
-								<td>給与</td>
-								<td><?echo $event['Intern']['payment']?></td>
-							</tr>
-							<tr>
-								<td>募集人数</td>
-								<td><?echo $event['Intern']['limit_num']?>名</td>
-							</tr>
-							<tr>
-								<td>その他待遇</td>
-								<td><?echo $event['Intern']['treatment']?></td>
-							</tr>
-						</table>		
 				</div>
 				<div class="col-xs-12 apply-btn">
 					<button type="button" class="btn btn-primary btn-lg" onclick="eventapply()">授業を受ける！</button>
@@ -106,10 +93,7 @@
 		<div class="col-sm-4 event-pg-sb">
 			<div class="row">
 				<div class="col-sm-12">
-					<?foreach($events as $event):?>
-						<a href="/kokokara/events?id=<?echo $event['Event']['id']?>"><?echo $event['Event']['title']?></a>
-						</br>
-					<?endforeach;?>
+					<? echo $this->element('event-pg-sidebar')?>
 				</div>
 			</div>
 		</div>
@@ -123,7 +107,5 @@
 <input type="hidden" class="setid" value="<?echo $event['Event']['id']?>">
 
 <?debug($event["Image"][0])?>
-<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
-<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
 
 <button onclick="eventapply()">申し込み</button>

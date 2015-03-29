@@ -49,6 +49,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->Html->script('text-overflow.js');
 	echo $this->Html->css('bootstrap.min.css');
 	echo $this->Html->css('polyfill.object-fit.css');
+	echo $this->Html->css('font-awesome.min.css');
+
 	echo $this->Html->css('style.css')
 	?>
 	<script type="text/javascript">
@@ -124,17 +126,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			        </li> 
 			    	-->
 			        <li><a href="#">kokokaraって？</a></li>
-			        <li class="header-login-btn"><a href="#"> 登校する></a></li>
+			        <li class="header-login-btn">
+			        	<a href="">登校する</a>
+					</li>
 			  </div><!-- /.container-fluid -->
 			</nav>
 		</div>
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
+			 <?php echo $this->fetch('content'); ?>
 		</div>
-		<footer class="footer">
+	    <footer class="footer">
 			<div class="container footer-container">
 				<div class="col-sm-4">
 	        		<p class="text-muted">Place sticky footer content here.</p>

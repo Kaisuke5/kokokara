@@ -60,13 +60,13 @@ class Event extends AppModel{
 
         if ($state < 4) {
             $this->loadModel("Intern");
-            $original = $this->Intern->find("first", array("conditions" => array("event_id", $id)));
+            $original = $this->Intern->find("first", array("conditions" => array("event_id" => $id)));
         } else {
 
 
             if ($state < 4) {
                 $this->loadModel("Intern");
-                $original = $this->Intern->find("first", array("conditions" => array("event_id", $id)));
+                $original = $this->Intern->find("first", array("conditions" => array("event_id" => $id)));
 
             } else {
 

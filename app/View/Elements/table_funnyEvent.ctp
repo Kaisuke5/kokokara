@@ -1,6 +1,6 @@
-<table>
+						<table>
 							<tr>
-								<td>講師(短期)</td>
+								<td>講師</td>
 								<td><?echo $event['Event']['company_info']?></td>
 							</tr>
 							<tr>
@@ -12,19 +12,19 @@
 								<td><?echo $event['Event']['location']?></td>
 							</tr>
 							<tr>
-								<td>身につくスキル</td>
-								<td><?echo $event['Intern']['skill']?></td>
+								<td>スケジュール</td>
+								<td><?echo $event['FunnyEvent']['schedule']?></td>
 							</tr>
 							<tr>
-								<td>給与</td>
-								<td><?echo $event['Intern']['payment']?></td>
+								<td>費用</td>
+								<td><?echo $event['FunnyEvent']['cost']?></td>
 							</tr>
 							<tr>
 								<td>募集人数</td>
-								<td><?echo $event['Intern']['limit_num']?>名</td>
+								<td><?echo $event['FunnyEvent']['limit_num']?></td>
 							</tr>
 							<tr>
-								<td>その他待遇</td>
-								<td><?echo $event['Intern']['treatment']?></td>
+								<td>応募締め切り</td>
+								<td><?echo $event['FunnyEvent']['deadline']?></td>
 							</tr>
 						</table>	

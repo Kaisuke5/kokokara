@@ -1,17 +1,17 @@
 <? $this->Html->css('index-style', null, array('inline' => false)) ?>
-<div class="container home-cntr">
+<div class="container home-cntr-top">
 	<div class="top-bgi">
 		<div class="row">
 			<div class="col-md-12 top-welcome">
 				<h1>新しい何かを始めよう</h1>
 			</div>
 			<div class="form-group">
-				<div class="col-sm-6 col-sm-offset-1 gal-pad-elim">
+				<div class="col-sm-6 col-sm-offset-1 gal-pad-elim col-xs-10 col-xs-offset-1">
 					<input type="text" class="input-medium search-query">
 				</div>
-				<div class="col-sm-2 gal-pad-elim">
+				<div class="col-sm-2 col-xs-6 col-sm-offset-0 col-xs-offset-1 gal-pad-elim">
 					<select class="form-control">
-						<option> - </option>
+						<option>カテゴリーで絞る </option>
 						<option>長期インターン</option>
 						<option>短期インターン</option>
 						<option>海外インターン</option>
@@ -22,17 +22,37 @@
 						<option>学生団体</option>
 					</select>
 				</div>
-				<div class="col-sm-2 gal-pad-elim">
-					<button type="button" class="btn btn-default">
-						<i class="glyphicon glyphicon-play"></i>　クラスを探す
+				<div class="col-sm-2 col-xs-4 gal-pad-elim">
+					<button type="button" class="btn btn-default" style="width:100% !important;">
+						<i class="glyphicon glyphicon-play"></i>　クラス検索
 					</button>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12" style="height:200px; border-bottom:1px solid #efefef;">
-				<!-- Startボタン -->
-			</div>	
+		<div class="row top-signin">
+			<div class="col-xs-12">
+				<p style="font-size:20px; padding: 15px 0;color:#303030;">入学してkokokara学生証を手に入れよう</p>
+			</div>
+			<div class="col-sm-3 col-sm-offset-3 col-xs-5 col-xs-offset-1 top-signin-btns" style="padding-right:10px; !important">
+				<div class="top-signin-internal">
+					<?php
+					echo $this->Html->link('', array('action' => 'signup'));
+					?>
+					<p><i class="glyphicon glyphicon-play"></i> 入学はこちらから</p>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-5 top-signin-btns"style="padding-left:10px !important;">
+				<div class="top-signin-fb">
+					<?php
+					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+					?>
+					<p><i class="fa fa-facebook-square"></i> facebookで入学する</p>
+				</div>
+			</div>
+			
+			<div class="col-xs-12">
+				<a href="#">kokokara学生証とは？>></a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -118,7 +138,7 @@
 </div>
 <div class="container home-cntr">
 	<div class="row">
-	  <h2>様々な学びの形で体験する</h2>
+	  <h2>kokokaraの、様々な学びの形</h2>
 	  <div class="col-md-12">
 	  	<div class="row">
 		  <div class="col-sm-3 col-xs-6 col-gal">
@@ -150,7 +170,7 @@
 		  	</div>		
 		  </div>
 		  <div class="col-sm-3 col-xs-6 col-gal">  	
-		  	<div style="height:190px; background:#6bcad1;"><?php echo $this->Html->link('学生団体', array('controller' => 'events', 'action' => 'category', 9)); ?>
+		  	<div style="height:190px; background:#6e6bd1;"><?php echo $this->Html->link('学生団体', array('controller' => 'events', 'action' => 'category', 9)); ?>
 		  	</div>
 		  </div>
 		</div>
@@ -163,6 +183,7 @@
 </div>
 
 <?debug($event)?>
+
 <?php
 if(!$myData){
 	echo $this->Html->link('ログイン', array('action' => 'login'));

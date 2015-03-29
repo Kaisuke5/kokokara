@@ -11,21 +11,72 @@
 .home-cntr{
 	margin-bottom:20px;
 }
+.home-cntr-top{
+	margin-bottom:20px;
+	background-image:url('../img/parachute.jpg');
+	background-position:center -70px;
+}
+.signin-a{
+
+}
 .top-welcome{
 	padding-top:60px;
-	margin-bottom:24px;
+	margin-bottom:30px;
 }
 .top-welcome h1{
 	text-align:center;
 	font-size:48px;
 	background:none;
-	margin-bottom:24px;
+	margin-bottom:30px;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);;
+
+
 }
 .top-welcome p{
 	text-align:center;
 	font-size:24px;
 	background:none;
-	font-weight:light;
+}
+.top-signin{
+	margin-top:40px;
+	margin-bottom:60px;
+	text-align:center;
+}
+.top-signin-btns{
+	padding:0 !important;
+	margin-bottom:30px;
+}
+.top-signin-internal{
+	height:50px;
+	background:#5ba525;
+	border-radius: 5px 5px 5px 5px;
+	border:1px solid #447b1b;
+	opacity:0.9;
+}
+.top-signin-internal p{
+	padding-top:12px;
+	color:#ffffff;
+	font-size:20px;
+}
+.top-signin-fb{
+	height:50px;
+	background:#3b5998;
+	border-radius: 5px 5px 5px 5px;
+	border:1px solid #2c4271;
+	opacity:0.9;
+}
+.top-signin-fb p{
+	padding-top:12px;
+	color:#ffffff;
+	font-size:20px;
+}
+.top-signin a{
+	display: block;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
 }
 .well-me{
   min-height: 20px;
@@ -93,6 +144,17 @@
     height:100%;
     text-indent:-999px;
 }
+.incnts-belt{
+	height:50px;
+	background:#303030;
+	border-radius: 9px 9px 0px 0px;
+	box-shadow:0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+.incnts-belt h1{
+	margin-top:15px !important;
+	color:#ffffff;
+	font-size:24px;
+}
 .ctg-topbelt{
 	z-index:1;
 	position:absolute;
@@ -102,11 +164,17 @@
 .ctg-row{
 	width:auto;
 	height:auto;
-	margin-top:65px;
-	margin-bottom:65px;
+	padding-top:35px;
+	padding-bottom:35px;
+	margin-top:30px;
+	margin-bottom:30px;
+	border:1px solid #ffffff;
+}
+.ctg-row:hover{
+	border:1px solid #ededed;
 }
 .art-list-comp{
-	padding-left:0px !important;
+	
 }
 .art-list-comp h2{
 	text-align:left;
@@ -116,6 +184,7 @@
 	margin-bottom:15px !important;
 }
 .art-list-comp h1{
+	color:#303030;
 	font-size:20px;
 	font-weight:bold;
 	margin-top:10px !important;
@@ -127,11 +196,11 @@
 	color:#c0c0c0;
 }
 .art-list-thumb{
-	height:250px;
-}
-.art-list-thumb img{
 	width:100%;
-	height:250px;
+	height:200px;
+	border-radius: 5px 5px 5px 5px;
+	border:1px solid #ededed;
+
 }
 .img-obfit{
 	padding:0 !important;
@@ -143,7 +212,13 @@
 	border-radius:9px 9px 0px 0px;
 	vertical-align: middle;
 }
-.img-obfit-incnts img{
-	width:100%;
-	height:auto;
+.img-obfit-list{
+	padding:0 !important;
+	height: 250px;
+    object-fit: cover;
+    overflow: hidden; // Cuts off the parts of the image poking out
+}
+.img-obfit-list img{
+	border-radius:9px 9px 0px 0px;
+	vertical-align: middle;
 }
