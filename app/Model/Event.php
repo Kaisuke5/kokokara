@@ -5,7 +5,6 @@
  * Date: 2015/02/28
  * Time: 13:35
  */
-
 class Event extends AppModel{
     public $useTable="events";
     //イベントタグアソ

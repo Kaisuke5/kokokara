@@ -48,7 +48,28 @@ a {
 	padding: 0 3px;
 	border-right:1px solid #ededed;
 }
+footer{
+	border-top:1px solid #ededed;
+}
 .footer-container{
 	background:#ffffff;
 	box-shadow:0 0 0 0 rgba(0, 0, 0, 0);
+	padding-top:20px;
+}
+.footer-kokologo{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.footer-col{
+	border-right:1px solid #ededed;
+}
+.footer-col ul{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.footer-col li{
+	list-style:none;
+	color:#c0c0c0;
+	font-size:13px;
+	padding-bottom:10px;
 }

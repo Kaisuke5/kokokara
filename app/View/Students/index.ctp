@@ -46,7 +46,7 @@
 					<?php
 					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
 					?>
-					<p><i class="fa fa-facebook-square"></i> facebookで入学する</p>
+					<p class="text-fit"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
 				</div>
 			</div>
 			
@@ -56,6 +56,7 @@
 		</div>
 	</div>
 </div>
+<!--
 <div class="container home-cntr">
 	<div class="row" style="border-bottom:1px solid #efefef;">
 	  <h2>いま人気のクラス</h2>
@@ -136,6 +137,42 @@
 	  </div>
 	</div>
 </div>
+-->
+<div class="container home-cntr">
+	<div class="row" style="border-bottom:1px solid #efefef;">
+	  <h2>いま人気のクラス</h2>
+		  	<div class="col-md-12">
+		  		<div class="row">
+			  	 	<?
+					$i = 0;
+					$kiji = 6;
+					foreach ($events as $event){ 
+					if($i >= $kiji){
+					break;
+					}else{ ?>
+					<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
+			  			<div class="col-md-4 col-sm-6 col-xs-12 pop-lg">
+			  				<div class="link_box">
+			  				 	<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'))?>
+							</div>
+							<div class="pop-lg-infobox">
+								<h1><?echo $event['Event']['title']?></h1>
+							</div>
+			  			</div>
+			  		</a>
+		  			<?
+					$i++;
+					}
+					}
+					?>
+		  	 	</div>
+	  		</div>
+		</div>
+		 <div class="col-md-12">
+		  	<p class="p-center"><a href="#">ギャラリーを見る>></a></p>
+		 </div>
+	</div>
+
 <div class="container home-cntr">
 	<div class="row">
 	  <h2>kokokaraの、様々な学びの形</h2>

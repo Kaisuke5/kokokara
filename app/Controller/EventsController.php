@@ -143,5 +143,4 @@ class EventsController extends AppController{
         }
         $this->set('events', $events);
     }
-
 }
