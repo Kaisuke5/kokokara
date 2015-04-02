@@ -1,30 +1,6 @@
 <? $this->Html->css('index-style', null, array('inline' => false)) ?>
 <div class="container">
-	<div class="row"><!--
-			<div class="col-xs-12 incnts-belt">
-				<h1>
-					<?php
-					if($this->here == '/kokokara/events/category/1'){
-						echo '長期インターン';
-					}elseif($this->here == '/kokokara/events/category/2'){
-						echo '短期インターン';
-					}elseif($this->here == '/kokokara/events/category/3'){
-						echo '海外インターン';
-					}elseif($this->here == '/kokokara/events/category/5'){
-						echo '留学';
-					}elseif($this->here == '/kokokara/events/category/6'){
-						echo '合宿';
-					}elseif($this->here == '/kokokara/events/category/7'){
-						echo '習い事';
-					}elseif($this->here == '/kokokara/events/category/8'){
-						echo 'おもしろい';
-					}elseif($this->here == '/kokokara/events/category/9'){
-						echo '学生団体';
-					}
-					?>
-				</h1>
-			</div>
-		-->
+	<div class="row">
 			<?php 
 			if($this->here == '/kokokara/events/category/1'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#d16b9a;"><h1>長期インターン</h1></div>';
@@ -44,35 +20,12 @@
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6e6bd1;"><h1>学生団体</h1></div>';
 			}	
 			?>
-			<!--
-				<h1>
-					<?php
-					if($this->here == '/kokokara/events/category/1'){
-						echo '長期インターン';
-					}elseif($this->here == '/kokokara/events/category/2'){
-						echo '短期インターン';
-					}elseif($this->here == '/kokokara/events/category/3'){
-						echo '海外インターン';
-					}elseif($this->here == '/kokokara/events/category/5'){
-						echo '留学';
-					}elseif($this->here == '/kokokara/events/category/6'){
-						echo '合宿';
-					}elseif($this->here == '/kokokara/events/category/7'){
-						echo '習い事';
-					}elseif($this->here == '/kokokara/events/category/8'){
-						echo 'おもしろい';
-					}elseif($this->here == '/kokokara/events/category/9'){
-						echo '学生団体';
-					}
-					?>
-				</h1>
-			-->
-		
 	</div>
-	<div class="row">
-		<div class="col-md-4">
+	<div class="row" >
+		<div class="col-sm-4 hidden-xs" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
+			<? echo $this->element('event-pg-sidebar')?>
 		</div>
-		<div class="col-md-8">
+		<div class="col-sm-8">
 		<?
 			$i = 0;
 			$kiji = 10;
@@ -98,6 +51,9 @@
 		}
 		}
 		?>
+		</div>
+		<div class="col-sm-4 hidden-sm hidden-md hidden-lg" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
+			<? echo $this->element('event-pg-sidebar')?>
 		</div>
 	</div>
 </div>
