@@ -35,11 +35,11 @@
 		}else{ ?>
 		<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
 			<div class="row ctg-row">
-				<div class="col-sm-2" style="padding-right:0;">
-					<div style="float:left;clear:both; background:#ededed; width:70px; height:70px; margin-right:20px;"></div>
+				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
+					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 				</div>
 				<div class="col-sm-10 art-list-comp">
-					<h2>株式会社kokokara Group</h2>
+					<h2><?echo ($event['Event']['comp_name']);?></h2>
 					<h1><?echo $event['Event']['title']?></h1>
 					<p class="text-overflow"><?echo $event['Event']['body']?></p>
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'art-list-thumb img-obfit-list'))?>

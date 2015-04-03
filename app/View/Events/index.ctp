@@ -1,13 +1,6 @@
 <?echo $this->Html->script("user.js");?>
 <?echo $this->Html->script("jquery-1.11.2.js");?>
 <? $this->Html->css('event-style', null, array('inline' => false)) ?>
-<div class="container"  style="background:none;">
-	<div class="row">
-		<div class="col-md-12">
-			<p style="color:#efefef;">aaaaa > aaaaa > aaaaaaaaaaaaa</p>
-		</div>
-	</div>
-</div>
 <div class="container home-cntr koko-box-shadow">
 	<div class="row" >
 		<div class="col-md-12 img-obfit">
@@ -16,7 +9,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-6 event-info-top">
-			<div style="float:left; width:50px; height:50px; margin:10px; background:#ededed;"></div>
+			<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 			<p>
 				<? if($event['Event']['state'] == 9){
 							echo '<font style="font-size:12px;">学生団体</font>';
@@ -24,7 +17,7 @@
 							echo '<font style="font-size:12px;">講師</font>';
 						} 
 				?>
-				<br>株式会社kokokara Group
+				<br><?echo ($event['Event']['comp_name']);?>
 			</p>
 		</div>
 		<div class="col-sm-2 event-info-top" style="text-align:center;">
@@ -48,34 +41,97 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12 art-title">
-			<h2><?echo $event['Event']['title']?></h2>
+			<?php 
+				if($event['Event']['state'] == 1){
+					echo '<p class="event-pg-top-cat" style="background:#d16b9a;">長期インターン</p>';
+					}elseif($event['Event']['state'] == 2){
+					echo '<p class="event-pg-top-cat" style="background:#d1a16b;">短期インターン</p>';
+					}elseif($event['Event']['state'] == 3){
+					echo '<p class="event-pg-top-cat" style="background:#ced16b;">海外インターン</p>';
+					}elseif($event['Event']['state'] == 5){		
+					echo '<p class="event-pg-top-cat" style="background:#9ad16b;">留学</p>';
+					}elseif($event['Event']['state'] == 6){
+					echo '<p class="event-pg-top-cat" style="background:#6bd16e;">合宿</p>';
+					}elseif($event['Event']['state'] == 7){
+					echo '<p class="event-pg-top-cat" style="background:#6bd1a1;">習い事</p>';
+					}elseif($event['Event']['state'] == 8){
+					echo '<p class="event-pg-top-cat" style="background:#6bcad1;">おもしろイベント</p>';
+					}elseif($event['Event']['state'] == 9){
+					echo '<p class="event-pg-top-cat" style="background:#6e6bd1;">学生団体</p>';
+					}	
+			?>
+
+			<? if($event['Event']['state'] == 1){
+					echo '<h2 style="border-bottom:3px solid #d16b9a;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 2){
+					echo '<h2 style="border-bottom:3px solid #d1a16b;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 3){
+					echo '<h2 style="border-bottom:3px solid #ced16b;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 5){
+					echo '<h2 style="border-bottom:3px solid #9ad16b;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 6){
+					echo '<h2 style="border-bottom:3px solid #6bd16b;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 7){
+					echo '<h2 style="border-bottom:3px solid #6bd1a1;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 8){
+					echo '<h2 style="border-bottom:3px solid #6bcad1;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 9){
+					echo '<h2 style="border-bottom:3px solid #6e6bd1;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}
+			?>
 		</div>
 	</div>
-	<div class="row" >
+	<div class="row">
 		<div class="col-sm-8">
 			<div class="row">
-				<div class="col-sm-12" style="margin:36px 15px;">
+				<div class="col-sm-12">
 					<? if($event['Event']['state'] == 9){
-							echo '<h2>団体紹介</h2>';
+							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体紹介</h2>';
 						}else{
-							echo '<h2>クラス紹介</h2>';
+							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス紹介</h2>';
 						} 
 					?>
 					<p><?echo $event['Event']['body']?></p>
+				</div>
+				<div class="col-xs-10 col-xs-offset-1 comp-intro">
+					<div class="row hidden-xs">
+						<div class="col-xs-12 comp-intro-top">
+							<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
+							<h3><? echo $event['Event']['comp_name'] ?></h3>
+						</div>
+						<div class="col-xs-12">
+							<p>企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト</p>
+						</div>
+					</div>
+					<div class="row hidden-sm hidden-md hidden-lg">
+						<div class="col-xs-3 comp-intro-top" style="padding-right:0;">
+							<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
+						</div>
+						<div class="col-xs-9 comp-intro-top"style="padding-left:0;">
+							<h3><? echo $event['Event']['comp_name'] ?></h3>
+						</div>
+						<div class="col-xs-12">
+							<p>企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト</p>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-12 img-obfit-incnts">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
 				</div>
 				<div class="col-sm-12" style="margin-top:36px; 15px">
 					<? if($event['Event']['state'] == 9){
-							echo '<h2>団体詳細</h2>';
+							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体詳細</h2>';
 						}else{
-							echo '<h2>クラス詳細</h2>';
+							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス詳細</h2>';
 						} 
 					?>
 					<p><?echo nl2br($event['Event']['detail']);?></p>
 				</div>
+				<div class="col-sm-12 img-obfit-incnts">
+					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][2]['dir'] . '/' . $event['Image'][2]['attachment'])?>
+				</div>
 				<div class="col-sm-12 detail-info-table" style="margin-top:36px; 15px">
+					<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> もっと知る</h2>
 					<?php
 					if($event['Event']['state'] == 1){
 							echo $this->element( 'table_intern1' );

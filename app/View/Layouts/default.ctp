@@ -62,7 +62,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		});
 	</script>
 	<script>
-		document.addEventListener('DOMContentLoaded', function () {
+		$(document).addEventListener('DOMContentLoaded', function () {
 			objectFit.polyfill({
 				selector: 'img-obfit',
 				fittype: 'cover'

@@ -1,5 +1,5 @@
 p {
-	font-size:15px;
+	font-size:14px;
 }
 .p-center{
 	font-size:14px;
@@ -9,6 +9,13 @@ p {
 .event-info-top{
 	height:70px;
 	border:1px solid #efefef;
+}
+.event-info-top img{
+	float:left;
+	max-width:50px;
+	max-height:50px;
+	margin:10px;
+	vertical-align:middle;
 }
 .event-info-top:hover > .event-info-top-fav span{
 	color:#ffa500;
@@ -78,13 +85,21 @@ p {
 	background:#ffffff;
 	border-radius: 9px 9px 9px 9px;
 }
+.event-pg-top-cat{
+	font-size:16px !important;
+	display:inline;
+	color:#ffffff !important;
+	padding:5px 9px;
+	border:1px solid #ededed;
+	border-radius: 9px 9px 9px 9px;
+}
 .art-title{
 	margin-top:15px;
 }
 .art-title h2{
-	border-bottom:3px solid #ced16b; 
 	font-size:28px;
-	padding:5px 15px;
+	margin-top:15px !important;
+	padding-bottom:5px;
 }
 .koko-box-shadow{
 	box-shadow:0 0 3px 1px rgba(0, 0, 0, 0.2);
@@ -92,6 +107,39 @@ p {
 .fav-btn{
 	text-align:center;
 
+}
+.in-cnts-h2{
+	font-size:20px !important;
+}
+.comp-intro{
+	padding:10px;
+	border:1px solid #b0b0b0;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.comp-intro-top{
+	height:50px;
+	margin-top:10px;
+	margin-bottom:10px;
+	display:table-cell;
+	vertical-align:middle;
+}
+.comp-intro-top img{
+	max-width:50px;
+	max-height:50px;
+	float:left;
+	margin-right:5px;
+}
+.comp-intro h3{
+	font-size:14px;
+	font-weight:bold;
+	float:left;
+	padding:0 !important;
+	margin:0 !important;
+	margin-left:5px;
+}
+.comp-intro p{
+	font-size:13px;
 }
 .img-obfit{
 	padding:0 !important;
@@ -106,9 +154,14 @@ p {
 .img-obfit-incnts img{
 	width:100%;
 	height:auto;
+	border:1px solid #ededed;
 }
 .detail-info-table{
 	font-size:14px;
+}
+.detail-info-table table{
+	border:1px solid #ededed;
+	border-radius:9px 9px 9px 9px;
 }
 .detail-info-table tr{
 	padding: 10px 20px;
