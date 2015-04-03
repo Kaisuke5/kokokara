@@ -21,15 +21,17 @@ echo $this->Form->input('Image.2.attachment', array('type' => 'file', 'label' =>
 echo $this->Form->input('Image.2.model', array('type' => 'hidden', 'value' => 'Event'));
 echo $this->Form->input('Image.3.attachment', array('type' => 'file', 'label' => '本文3'));
 echo $this->Form->input('Image.3.model', array('type' => 'hidden', 'value' => 'Event'));
-/**
-echo $this->Form->input('Image.4.attachment', array('type' => 'file', 'label' => '本文3'));
-echo $this->Form->input('Image.4.model', array('type' => 'hidden', 'value' => 'Event'));
-**/
 
 echo $this->Form->input("comp_name",array("class"=>"",'div'=>"aaa","label"=>"企業・団体名"));
 echo $this->Form->input("body",array("class"=>"",'div'=>"aaa","label"=>"概要"));
 echo $this->Form->input("detail",array("class"=>"",'div'=>"aaa","label"=>"詳細"));
 echo $this->Form->input("period",array("class"=>"",'div'=>"aaa","label"=>"期間"));
+
+echo $this->Form->input("e-mail",array("class"=>"",'div'=>"aaa","label"=>"メールアドレス"));
+echo $this->Form->input("phone",array("class"=>"",'div'=>"aaa","label"=>"お電話番号"));
+echo $this->Form->input("related-url",array("class"=>"",'div'=>"aaa","label"=>"メールアドレス","type"=>"text"));
+echo $this->Form->input("sns-acount",array("class"=>"",'div'=>"aaa","label"=>"SNSアカウント","type"=>"text"));
+
 
 /**
 echo $this->Form->input("pref",array("class"=>"",'div'=>"aaa","label"=>"場所","type"==>"select",

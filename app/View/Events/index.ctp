@@ -60,7 +60,6 @@
 					echo '<p class="event-pg-top-cat" style="background:#6e6bd1;">学生団体</p>';
 					}	
 			?>
-
 			<? if($event['Event']['state'] == 1){
 					echo '<h2 style="border-bottom:3px solid #d16b9a;">'?><?echo $event['Event']['title']?><?'</h2>';
 				}elseif($event['Event']['state'] == 2){
@@ -83,7 +82,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-8">
-			<div class="row">
+			<div class="row" style="padding-left:20px; padding-right:20px;">
 				<div class="col-sm-12">
 					<? if($event['Event']['state'] == 9){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体紹介</h2>';
@@ -100,7 +99,7 @@
 							<h3><? echo $event['Event']['comp_name'] ?></h3>
 						</div>
 						<div class="col-xs-12">
-							<p>企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト</p>
+							<p><? echo nl2br($event['Event']['company_info']) ?></p>
 						</div>
 					</div>
 					<div class="row hidden-sm hidden-md hidden-lg">
@@ -115,9 +114,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 img-obfit-incnts">
-					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
-				</div>
 				<div class="col-sm-12" style="margin-top:36px; 15px">
 					<? if($event['Event']['state'] == 9){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体詳細</h2>';
@@ -125,12 +121,21 @@
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス詳細</h2>';
 						} 
 					?>
-					<p><?echo nl2br($event['Event']['detail']);?></p>
 				</div>
-				<div class="col-sm-12 img-obfit-incnts">
+				<div class="col-sm-6 img-obfit-incnts">
+					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'])?>
+				</div>
+				<div class="col-sm-6 img-obfit-incnts">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][2]['dir'] . '/' . $event['Image'][2]['attachment'])?>
 				</div>
-				<div class="col-sm-12 detail-info-table" style="margin-top:36px; 15px">
+				<div class="col-sm-12" style="margin-top:36px; 15px">
+					<p><?echo nl2br($event['Event']['detail']);?></p>
+				</div>
+				<div class="col-xs-12 apply-btn">
+					<button type="button" class="btn btn-primary btn-lg" onclick="eventapply()">このクラスに出席</button>
+					<p class="p-center"><a href="#">クラスに出席すると？>></a></p>
+				</div>
+				<div class="col-sm-12 detail-info-table">
 					<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> もっと知る</h2>
 					<?php
 					if($event['Event']['state'] == 1){
@@ -158,6 +163,7 @@
 							echo $this->element( '' );
 						}
 					?>
+					<? echo $this->element('detail_contact'); ?>
 				</div>
 				<div class="col-xs-12 apply-btn">
 					<button type="button" class="btn btn-primary btn-lg" onclick="eventapply()">このクラスに出席</button>

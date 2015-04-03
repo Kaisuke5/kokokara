@@ -1,5 +1,8 @@
 p {
 	font-size:14px;
+	line-height: 160%;
+  	letter-spacing: 0.04em;
+  	color: #2b2b2b;
 }
 .p-center{
 	font-size:14px;
@@ -109,6 +112,8 @@ p {
 
 }
 .in-cnts-h2{
+	color:#2b2b2b;
+	font-weight:bold;
 	font-size:20px !important;
 }
 .comp-intro{
@@ -167,7 +172,18 @@ p {
 	padding: 10px 20px;
 }
 .detail-info-table td{
-	padding: 5px 20px;
+	padding: 15px 20px;
+	border-left:1px solid #ededed;
+}
+.detail-info-table-bold{
+	font-weight:bold;
+}
+.detail-contact-tr{
+	padding: 10px 20px;
+}
+.detail-contact-td{
+	padding: 15px 20px;
+	border-left:1px solid #ededed;
 }
 .apply-btn{
 	text-align:center;

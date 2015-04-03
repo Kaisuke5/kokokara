@@ -34,7 +34,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->script("imgLiquid-min.js");
 		echo $this->Html->script("polyfill.object-fit.min.js");
 
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
