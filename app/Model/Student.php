@@ -8,6 +8,7 @@
 App::uses('Security', 'Utility');
 
 class Student extends AppModel{
+	//タグアソシエーション
 	//アソシエーション
 	public $hasAndBelongsToMany = array(
 		'Stag',
@@ -50,7 +51,6 @@ class Student extends AppModel{
 			'foreignKey' => 'student_id'
 		)
 	);
-
 	//validation
 	public $validate = array(
 		'name' => array(
@@ -99,7 +99,6 @@ class Student extends AppModel{
 			'required' => true
 		)
 	);
-
 
 	public function loadModel($model_name) {
 		App::uses($model_name,'Model');

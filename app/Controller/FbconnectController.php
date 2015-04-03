@@ -22,7 +22,7 @@ class FbconnectController extends AppController{
 			$me = $this->facebook->api('/me','GET',array('locale'=>'ja_JP')); //【5】ユーザ情報を日本語で取得
 
 			////////////追加分 by Mark/////////////////////
-			if(!empty($me['education'])){
+			if(isset($me['education'])){
 				foreach($me['education'] as $education){    //大学名and学部
 					if($education['type'] == 'College'){
 						$university = $education['school']['name'];

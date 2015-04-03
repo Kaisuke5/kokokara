@@ -25,7 +25,6 @@
 body {
 	background: #003d4c;
 	color: #fff;
-	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
 	margin: 0;
 }
@@ -66,7 +65,7 @@ h4 {
 	font-weight: normal;
 }
 ul, li {
-	margin: 0 12px;
+	
 }
 p {
 	margin: 0 0 1em 0;
@@ -77,6 +76,7 @@ p {
 	text-align: left;
 }
 
+/**
 #header{
 	padding: 10px 20px;
 }
@@ -87,8 +87,7 @@ p {
 	padding: 0px 30px;
 }
 #header h1 a {
-	color: #fff;
-	background: #003d4c;
+	color: #e0e0e0;
 	font-weight: normal;
 	text-decoration: none;
 }
@@ -97,19 +96,20 @@ p {
 	background: #003d4c;
 	text-decoration: underline;
 }
+**/
 #content{
-	background: #fff;
 	clear: both;
 	color: #333;
-	padding: 10px 20px 40px 20px;
+	padding: 80px 20px 40px 20px;
 	overflow: auto;
+	background-image:url("../img/gray-bgi2.png");
 }
 #footer {
 	clear: both;
 	padding: 6px 10px;
 }
 #header a, #footer a {
-	color: #fff;
+	color: #303030;
 }
 #cake-powered {
 	float: right;
@@ -319,7 +319,7 @@ input, textarea {
 	font-size: 140%;
 	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
 	padding: 1%;
-	width:98%;
+	width:100%;
 }
 select {
 	clear: both;
