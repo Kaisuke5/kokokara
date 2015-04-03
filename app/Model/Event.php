@@ -305,13 +305,6 @@ class Event extends AppModel{
         }
     }
 
-    //新着順event取得 by mark
-    public function getEventsByCreated(){
-        $events = $this->find('all', array(
-            
-        ));
-    }
-
 
 }
 
