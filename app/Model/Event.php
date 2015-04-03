@@ -57,18 +57,19 @@ class Event extends AppModel{
         $state = $event["Event"]["state"];
         $original = array();
 
-        if ($state < 4) {
+        if ($state <= 4) {
             $this->loadModel("Intern");
             $original = $this->Intern->find("first", array("conditions" => array("event_id" => $id)));
+            //debug($original);
         } else {
 
-
+            /*
             if ($state < 4) {
                 $this->loadModel("Intern");
                 $original = $this->Intern->find("first", array("conditions" => array("event_id" => $id)));
 
             } else {
-
+            */
                 switch ($state) {
 
 
@@ -98,7 +99,7 @@ class Event extends AppModel{
                         break;
 
 
-                }
+                //}
             }
 
 
@@ -136,8 +137,9 @@ class Event extends AppModel{
 
                     case 6:
                         $this->loadModel("Camp");
-                        $result=$this->Camp->deleteAll(array("event_id"=>$id));                        break;
+                        $result=$this->Camp->deleteAll(array("event_id"=>$id));
                         break;
+
                     case 7:
                         $this->loadModel("Lesson");
                         $result=$this->Lesson->deleteAll(array("event_id"=>$id));
@@ -297,6 +299,14 @@ class Event extends AppModel{
         }
     }
 
+    //新着順event取得 by mark
+    public function getEventsByCreated($num){
+        $events = $this->find('all', array(
+            'order' => array('created DESC'),
+            'limit' => $num
+        ));
+        return $events;
+    }
 
 }
 

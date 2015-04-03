@@ -37,7 +37,7 @@ class EventsController extends AppController{
         $this->loadModel('Student');
 
         $myData=$this->Session->read("myData");
-        $this->updateLogin();
+        //$this->updateLogin();
         /*if($myData==null){
             $this->redirect(array("controller"=>"Student","action"=>"login"));
         }*/
@@ -138,9 +138,23 @@ class EventsController extends AppController{
     //カテゴリー別event取得 by mark
     public function category($state){
         $events = $this->Event->getEventsByState($state, 20);
+        //新着記事 by mark
+        $new_events = $this->Event->getEventsByCreated(10);
+        if($events==null){
+            throw new NotFoundException();
+        }
+        $this->set('events', $events);
+        //新着記事 by mark
+        $this->set('new_events', $new_events);
+    }
+
+    //新着events取得 by mark
+    public function news(){
+        $events = $this->Event->getEventsByCreated(10);
         if($events==null){
             throw new NotFoundException();
         }
         $this->set('events', $events);
     }
+
 }

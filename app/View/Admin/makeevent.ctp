@@ -40,6 +40,7 @@ echo $this->Form->input("pref",array("class"=>"",'div'=>"aaa","label"=>"場所",
 echo $this->Form->input("location",array("class"=>"",'div'=>"aaa","label"=>"場所"));
 echo $this->Form->input("date",array("class"=>"",'div'=>"aaa","label"=>"日時"));
 **/
+
 ?>
 <h3>オリジナル要素</h3>
 

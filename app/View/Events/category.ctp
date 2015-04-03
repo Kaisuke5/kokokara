@@ -1,4 +1,4 @@
-<? $this->Html->css('index-style', null, array('inline' => false)) ?>
+<? $this->Html->css('index-style', null, array('inline' => false)); ?>
 <div class="container">
 	<div class="row">
 			<?php 
@@ -60,4 +60,10 @@
 
 <?php
 debug($events);
+debug($new_events);
 ?>
+
+<?php
+if($events[0]['Event']['state'] == 5){
+	echo nl2br($events[0]['Event']['body']);
+}

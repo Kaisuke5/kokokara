@@ -245,4 +245,7 @@ if(!$myData){
 	<li>
 		<?php echo $this->Html->link('学生団体', array('controller' => 'events', 'action' => 'category', 9)); ?>
 	</li>
+	<li>
+		<?php echo $this->Html->link('新着イベント', array('controller' => 'events', 'action' => 'news')); ?>
+	</li>
 </ul>

@@ -14,10 +14,9 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<<<<<<< HEAD
-=======
+
 <?php $this->layout = "error"; ?>
->>>>>>> e80f500d2a7634776491f1ff1035ea8738e7e7ba
+
 <h2><?php echo $message; ?></h2>
 <p class="error">
 	<strong><?php echo __d('cake', 'Error'); ?>: </strong>
@@ -27,7 +26,7 @@
 	); ?>
 </p>
 <?php
-if (Configure::read('debug') > 0):
+if (Configure::read('debug') > 0) {
 	echo $this->element('exception_stack_trace');
-endif;
+}
 ?>
