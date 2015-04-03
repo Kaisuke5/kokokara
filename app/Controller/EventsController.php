@@ -66,10 +66,14 @@ class EventsController extends AppController{
         //ジャンルごとのイベント情報を追加したものをcomeventに入れる
 
 
+        //新着記事 by mark
+        $new_events = $this->Event->getEventsByCreated(10);
 
         //$comevent=$this->Event->getOriginal($id);
         $this->set("myData",$myData);
         $this->set("event",$event);
+        //新着記事 by mark
+        $this->set('new_events', $new_events);
         $this->render();
 
 
