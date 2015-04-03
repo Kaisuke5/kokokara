@@ -26,6 +26,7 @@ echo $this->Form->input('Image.3.model', array('type' => 'hidden', 'value' => 'E
 echo $this->Form->input("body",array("class"=>"",'div'=>"aaa","label"=>"概要"));
 echo $this->Form->input("detail",array("class"=>"",'div'=>"aaa","label"=>"詳細"));
 echo $this->Form->input("period",array("class"=>"",'div'=>"aaa","label"=>"期間"));
+echo $this->Form->input("pref",array("class"=>"",'div'=>"aaa","type" => "select","label"=>"期間"));
 echo $this->Form->input("location",array("class"=>"",'div'=>"aaa","label"=>"場所"));
 echo $this->Form->input("date",array("class"=>"",'div'=>"aaa","label"=>"日時"));
 ?>

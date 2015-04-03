@@ -200,4 +200,12 @@ class StudentsController extends AppController{
 	}
 
 
+	#ios
+	public function iosLogin(){
+		if($this->request->is('post')){
+			debug($this->request->data);
+		}
+	}
+
+
 }
