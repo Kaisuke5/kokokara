@@ -170,7 +170,6 @@
 							echo $this->element( 'student_union_event' );
 						}
 					?>
-					<? echo $this->element('detail_contact'); ?>
 				</div>
 				<div class="col-xs-12 apply-btn">
 					<button type="button" class="btn btn-primary btn-lg" onclick="eventapply()">このクラスに出席</button>

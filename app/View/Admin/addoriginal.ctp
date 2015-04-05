@@ -43,51 +43,6 @@
 		echo $this->Form->input("State.state",array("value"=>$state,"type"=>"hidden"));
 	?>
 	
-		<h2>授業コース</h2>
-		<p>*応募者が受けられる<font style="font-weight:bold;">一番人気の</font>授業をご記入下さい</p>
-	<table>
-		<tr>
-			<td style="background:#c0c0c0;"></td>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_a1",array("label"=>"期間など"));?></td>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_a2",array("label"=>"期間など"));?></td>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_a3",array("label"=>"期間など"));?></td>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_a4",array("label"=>"期間など"));?></td>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_a5",array("label"=>"期間など"));?></td>
-		</tr>
-		<tr>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_b1",array("label"=>"部屋タイプなど"));?></td>
-			<td><?echo $this->Form->input("value_1-1",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_1-2",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_1-3",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_1-4",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_1-5",array("label"=>"お値段"));?></td>
-		</tr>
-		<tr>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_b2",array("label"=>"部屋タイプなど"));?></td>
-			<td><?echo $this->Form->input("value_2-1",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_2-2",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_2-3",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_2-4",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_2-5",array("label"=>"お値段"));?></td>
-		</tr>
-		<tr>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_b3",array("label"=>"部屋タイプなど"));?></td>
-			<td><?echo $this->Form->input("value_3-1",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_3-2",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_3-3",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_3-4",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_3-5",array("label"=>"お値段"));?></td>
-		</tr>
-		<tr>
-			<td style="background:#ededed;"><?echo $this->Form->input("value_title_b4",array("label"=>"部屋タイプなど"));?></td>
-			<td><?echo $this->Form->input("value_4-1",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_4-2",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_4-3",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_4-4",array("label"=>"お値段"));?></td>
-			<td><?echo $this->Form->input("value_4-5",array("label"=>"お値段"));?></td>
-		</tr>
-	</table>
-	
 	<input type="submit" value="送信">
 
 	<?echo $this->Form->end()?>
@@ -177,15 +132,9 @@
 	<?
 		echo $this->Form->create('StudentGroup',array(
 			'url' => array('controller' => 'Admin', 'action' => 'goaddoriginal'),"class"=>""));
-		
-		echo $this->Form->input("represent",array("label"=>"団体代表者名"));
-		echo $this->Form->input("foundation",array("label"=>"設立年"));
-		echo $this->Form->input("num_students",array("label"=>"活動人数"));
-		echo $this->Form->input("gender",array("label"=>"男女比"));
-		echo $this->Form->input("frequency",array("label"=>"活動頻度"));
-		echo $this->Form->input("major_univ",array("class"=>"",'div'=>"aaa","label"=>"主要大学"));
-		echo $this->Form->input("total_univ",array("class"=>"",'div'=>"aaa","label"=>"参加大学"));
 
+		echo $this->Form->input("limit_num",array("label"=>"募集人数"));
+		echo $this->Form->input("cost",array("label"=>"費用"));
 
 
 		echo $this->Form->input("event_id",array("value"=>$id,"type"=>"hidden"));

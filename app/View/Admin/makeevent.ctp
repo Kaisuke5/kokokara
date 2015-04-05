@@ -30,8 +30,7 @@ echo $this->Form->input('Image.3.attachment', array('type' => 'file', 'label' =>
 
 echo $this->Form->input('Image.3.model', array('type' => 'hidden', 'value' => 'Event'));
 
-echo $this->Form->input("comp_name",array("class"=>"",'div'=>"aaa","label"=>"企業・団体名"));
-echo '<p class="form_p">*サービスをご登録して頂ける企業様、団体様の名称をご入力下さい。<br>注：名称に「株式会社」などが含まれる場合はそちらもご記入下さい。</p><br>';
+
 
 echo $this->Form->input("body",array("class"=>"",'div'=>"aaa","label"=>"概要"));
 echo '<p class="form_p">*ご登録頂けるイベントの概要やアピールポイントなどを70文字程度でご要説下さいませ。<br>こちらは記事一覧リストなどでイベントの紹介文として表示されます。</p><br>';
@@ -43,18 +42,7 @@ echo $this->Form->input("period",array("class"=>"",'div'=>"aaa","label"=>"期間
 echo '<p class="form_p">*イベントを行う期間をご記入下さい。（例：2015年5月6日 10:00~16:00や2015年5月6日~2015年5月8日）。</p><br><br><br>';
 
 echo '<h1>本件に関するお問い合わせ先</h1>';
-echo '<p class="form_p">*本件に関するお問い合わせ先をご記入下さいませ。<br>注：こちらも上記の項目と同様、イベントページに反映される情報となります。';
-echo $this->Form->input("e-mail",array("class"=>"",'div'=>"aaa","label"=>"メールアドレス"));
 
-echo $this->Form->input("phone",array("class"=>"",'div'=>"aaa","label"=>"お電話番号"));
-echo $this->Form->input("related-url",array("class"=>"",'div'=>"aaa","label"=>"関連URL","type"=>"text"));
-echo '<p class="form_p">*本件に関連するWebページがあればURLをご記入下さい。<br>例:(株式会社○○ホームページ：http:******/******)</p><br>';
-
-
-echo $this->Form->input("sns-facebook",array("class"=>"",'div'=>"aaa","label"=>"Facebookアカウント","type"=>"text"));
-echo '<p class="form_p">*関連するFacebookアカウントなどがあればご記入下さい。<br>(記入例：https://www.facebook.com/kokokaragroup)';
-echo $this->Form->input("sns-twitter",array("class"=>"",'div'=>"aaa","label"=>"Twitterアカウント","type"=>"text"));
-echo '<p class="form_p">*関連するTwitterアカウントなどがあればご記入下さい。<br>(記入例：https://twitter.com/miraikara_news)';
 
 
 /**
