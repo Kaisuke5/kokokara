@@ -30,7 +30,8 @@ echo $this->Form->input("period",array("class"=>"",'div'=>"aaa","label"=>"期間
 echo $this->Form->input("e-mail",array("class"=>"",'div'=>"aaa","label"=>"メールアドレス"));
 echo $this->Form->input("phone",array("class"=>"",'div'=>"aaa","label"=>"お電話番号"));
 echo $this->Form->input("related-url",array("class"=>"",'div'=>"aaa","label"=>"メールアドレス","type"=>"text"));
-echo $this->Form->input("sns-acount",array("class"=>"",'div'=>"aaa","label"=>"SNSアカウント","type"=>"text"));
+echo $this->Form->input("sns-facebook",array("class"=>"",'div'=>"aaa","label"=>"Facebookアカウント","type"=>"text"));
+echo $this->Form->input("sns-twitter",array("class"=>"",'div'=>"aaa","label"=>"Twitterアカウント","type"=>"text"));
 
 
 /**

@@ -223,6 +223,9 @@ p {
 	text-align:left;
 	padding-left:1px;
 }
+.event-pg-sb img{
+	height:150px;
+}
 .event-pg-sb p{
 	font-size:13px;
 	color:#c0c0c0;

@@ -191,7 +191,7 @@
 			<? echo $this->element('event-pg-sidebar')?>
 		</div>
 		<div class="col-md-12">
-		  	<p class="p-center"><a href="#">もっと見る>></a></p>
+		  	<p class="p-center"><?php echo $this->Html->link('もっと見る>>', array('controller' => 'events', 'action' => 'news')); ?></p>
 		</div>
 	</div>
 </div>
