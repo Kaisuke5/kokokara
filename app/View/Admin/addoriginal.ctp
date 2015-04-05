@@ -159,6 +159,7 @@
 		echo $this->Form->input("cost",array("label"=>"費用"));
 		echo $this->Form->input("schedule",array("label"=>"スケジュール"));
 
+
 		echo $this->Form->input("event_id",array("value"=>$id,"type"=>"hidden"));
 		echo $this->Form->input("State.state",array("value"=>$state,"type"=>"hidden"));
 
@@ -175,6 +176,33 @@
 <div id="event_form9" class="event_original_form">
 	<?
 		echo $this->Form->create('StudentGroup',array(
+			'url' => array('controller' => 'Admin', 'action' => 'goaddoriginal'),"class"=>""));
+		
+		echo $this->Form->input("represent",array("label"=>"団体代表者名"));
+		echo $this->Form->input("foundation",array("label"=>"設立年"));
+		echo $this->Form->input("num_students",array("label"=>"活動人数"));
+		echo $this->Form->input("gender",array("label"=>"男女比"));
+		echo $this->Form->input("frequency",array("label"=>"活動頻度"));
+		echo $this->Form->input("major_univ",array("class"=>"",'div'=>"aaa","label"=>"主要大学"));
+		echo $this->Form->input("total_univ",array("class"=>"",'div'=>"aaa","label"=>"参加大学"));
+
+
+
+		echo $this->Form->input("event_id",array("value"=>$id,"type"=>"hidden"));
+		echo $this->Form->input("State.state",array("value"=>$state,"type"=>"hidden"));
+
+	?>
+	
+	<input type="submit" value="送信">
+
+	<?echo $this->Form->end()?>
+
+
+</div>
+
+<div id="event_form4" class="event_original_form">
+	<?
+		echo $this->Form->create('Student_Event',array(
 			'url' => array('controller' => 'Admin', 'action' => 'goaddoriginal'),"class"=>""));
 		
 		echo $this->Form->input("limit_num",array("label"=>"募集人数"));

@@ -58,6 +58,8 @@
 					echo '<p class="event-pg-top-cat" style="background:#6bcad1;">おもしろイベント</p>';
 					}elseif($event['Event']['state'] == 9){
 					echo '<p class="event-pg-top-cat" style="background:#6e6bd1;">学生団体</p>';
+					}elseif($event['Event']['state'] == 4){
+					echo '<p class="event-pg-top-cat" style="background:#6e6bd1;">学生イベント</p>';
 					}	
 			?>
 			<? if($event['Event']['state'] == 1){
@@ -75,6 +77,8 @@
 				}elseif($event['Event']['state'] == 8){
 					echo '<h2 style="border-bottom:3px solid #6bcad1;">'?><?echo $event['Event']['title']?><?'</h2>';
 				}elseif($event['Event']['state'] == 9){
+					echo '<h2 style="border-bottom:3px solid #6e6bd1;">'?><?echo $event['Event']['title']?><?'</h2>';
+				}elseif($event['Event']['state'] == 4){
 					echo '<h2 style="border-bottom:3px solid #6e6bd1;">'?><?echo $event['Event']['title']?><?'</h2>';
 				}
 			?>
@@ -110,7 +114,7 @@
 							<h3><? echo $event['Event']['comp_name'] ?></h3>
 						</div>
 						<div class="col-xs-12">
-							<p>企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト企業の紹介テキスト</p>
+							<p><? echo nl2br($event['Event']['company_info']) ?></p>
 						</div>
 					</div>
 				</div>
@@ -160,7 +164,10 @@
 							echo $this->element( 'table_funnyEvent' );
 						}
 						elseif($event['Event']['state'] == 9){
-							echo $this->element( '' );
+							echo $this->element( 'student_union' );
+						}
+						elseif($event['Event']['state'] == 4){
+							echo $this->element( 'student_union_event' );
 						}
 					?>
 					<? echo $this->element('detail_contact'); ?>

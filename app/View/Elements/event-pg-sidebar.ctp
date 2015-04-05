@@ -28,6 +28,8 @@
 				echo '<p class="event-pg-sb-cat" style="background:#6bcad1;">おもしろイベント</p>';
 				}elseif($event['Event']['state'] == 9){
 				echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生団体</p>';
+				}elseif($event['Event']['state'] == 4){
+				echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生イベント</p>';
 				}	
 				?>
 				<p class="event-pg-sb-title"><?echo ($event['Event']['comp_name']);?></p>
@@ -63,6 +65,8 @@
 			echo '<p class="event-pg-sb-cat" style="background:#6bcad1;">おもしろイベント</p>';
 			}elseif($this->here == '/kokokara/events/category/9'){
 			echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生団体</p>';
+			}elseif($this->here == '/kokokara/events/category/4'){
+			echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生イベント</p>';
 			}	
 			?>
 			<p class="event-pg-sb-title">株式会社kokokara Group</p>

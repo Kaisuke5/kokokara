@@ -91,7 +91,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				     	<ul class="nav navbar-nav">
 				        	<li class="header-btn-lg-1 dropdown">
-				        		<a href="#" class="dropdown-toggle header-gal" style="border-left:1px solid #ededed;" data-toggle="dropdown" role="button" aria-expanded="false">国内インターン <span class="caret"></span></a>
+				        		<a href="#" class="dropdown-toggle header-gal" data-toggle="dropdown" role="button" aria-expanded="false" style="border-left:1px solid #ededed;" >国内インターン <span class="caret"></span></a>
 				        		<ul class="dropdown-menu" role="menu">
 				            		<li><?php echo $this->Html->link('長期インターン', array('controller' => 'events', 'action' => 'category', 1)); ?></li>
 				            		<li><?php echo $this->Html->link('短期インターン', array('controller' => 'events', 'action' => 'category', 2)); ?></li>
@@ -102,7 +102,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					        <li class="header-btn-lg-4"><?php echo $this->Html->link('習い事', array('controller' => 'events', 'action' => 'category', 7), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-5"><?php echo $this->Html->link('おもしろい', array('controller' => 'events', 'action' => 'category', 8), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-6"><?php echo $this->Html->link('合宿', array('controller' => 'events', 'action' => 'category', 6), array('class' => 'header-gal')); ?></li>
-					        <li class="header-btn-lg-7"><?php echo $this->Html->link('学生団体', array('controller' => 'events', 'action' => 'category', 9), array('class' => 'header-gal')); ?></li>
+					        <li class="header-btn-lg-7 dropdown">
+					        	<a href="#" class="dropdown-toggle header-gal" data-toggle="dropdown" role="button" aria-expanded="false">学生団体 <span class="caret"></span></a>
+				        		<ul class="dropdown-menu" role="menu">
+				            		<li><?php echo $this->Html->link('団体ページ', array('controller' => 'events', 'action' => 'category', 9)); ?></li>
+				            		<li><?php echo $this->Html->link('学生イベント', array('controller' => 'events', 'action' => 'category', 4)); ?></li>
+				          		</ul>
+				          	</li>
 				      	</ul>
 				     	<ul class="nav navbar-nav navbar-right">
 					        <li>
