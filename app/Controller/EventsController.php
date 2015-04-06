@@ -127,7 +127,7 @@ class EventsController extends AppController{
         App::uses( 'CakeEmail', 'Network/Email');
         $email = new CakeEmail('gmail');
         $email->from( array( 'mark.sato1111@gmail.com' => 'mark.sato1111@gmail.com'));  // 送信元
-        $email->to('aprile.charlotte@gmail.com');                      // 送信先
+        $email->to('confirm@kokokara-group.com');                      // 送信先
         $email->subject('メールタイトル');                      // メールタイトル
         // メール送信
         $email->send('メール本文');
