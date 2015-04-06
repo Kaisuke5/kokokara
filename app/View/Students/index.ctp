@@ -92,6 +92,8 @@
 									echo '<p class="event-pg-sb-cat" style="background:#6bcad1;">おもしろイベント</p>';
 									}elseif($event['Event']['state'] == 9){
 									echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生団体</p>';
+									}elseif($event['Event']['state'] == 4){
+									echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生イベント</p>';
 									}	
 									?>
 								<h1><?echo $event['Event']['title']?></h1>
@@ -191,7 +193,7 @@
 			<? echo $this->element('event-pg-sidebar')?>
 		</div>
 		<div class="col-md-12">
-		  	<p class="p-center"><a href="#">もっと見る>></a></p>
+		  	<p class="p-center"><?php echo $this->Html->link('もっと見る>>', array('controller' => 'events', 'action' => 'news')); ?></p>
 		</div>
 	</div>
 </div>

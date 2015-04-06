@@ -5,7 +5,7 @@
 
 <h2>イベント作成</h2>
 
-<h3>共通要素</h3>
+<h3>基本情報</h3>
 
 <?php
 
@@ -13,24 +13,36 @@ echo $this->Form->create('Event',
     array('type' => 'file','url' =>
         array('controller' => 'admin', 'action' => 'addEvent')));
 echo $this->Form->input("title");
+echo '<p class="form_p">*こちらがイベントページのタイトルとなります。およそ30字程度でご記入下さい。</p><br><br>';
+
 echo $this->Form->input('Image.0.attachment', array('type' => 'file', 'label' => 'メイン画像'));
+echo '<p class="form_p">*こちらが1)イベントページのトップに表示される画像及び、2)その他ページにおけるサムネイル画像となります。</p><br>';
+
 echo $this->Form->input('Image.0.model', array('type' => 'hidden', 'value' => 'Event'));
-echo $this->Form->input('Image.1.attachment', array('type' => 'file', 'label' => '本文１'));
+echo $this->Form->input('Image.1.attachment', array('type' => 'file', 'label' => '本文中画像１'));
+echo '<p class="form_p">*こちらが本文中に挿入できる画像です。</p><br>';
 echo $this->Form->input('Image.1.model', array('type' => 'hidden', 'value' => 'Event'));
-echo $this->Form->input('Image.2.attachment', array('type' => 'file', 'label' => '本文2'));
+echo $this->Form->input('Image.2.attachment', array('type' => 'file', 'label' => '本文中画像2'));
+echo '<p class="form_p">*こちらが本文中に挿入できる画像です。</p><br>';
+
 echo $this->Form->input('Image.2.model', array('type' => 'hidden', 'value' => 'Event'));
-echo $this->Form->input('Image.3.attachment', array('type' => 'file', 'label' => '本文3'));
+echo $this->Form->input('Image.3.attachment', array('type' => 'file', 'label' => '企業ロゴ・企業イメージ画像'));
+
 echo $this->Form->input('Image.3.model', array('type' => 'hidden', 'value' => 'Event'));
 
-echo $this->Form->input("comp_name",array("class"=>"",'div'=>"aaa","label"=>"企業・団体名"));
-echo $this->Form->input("body",array("class"=>"",'div'=>"aaa","label"=>"概要"));
-echo $this->Form->input("detail",array("class"=>"",'div'=>"aaa","label"=>"詳細"));
-echo $this->Form->input("period",array("class"=>"",'div'=>"aaa","label"=>"期間"));
 
-echo $this->Form->input("e-mail",array("class"=>"",'div'=>"aaa","label"=>"メールアドレス"));
-echo $this->Form->input("phone",array("class"=>"",'div'=>"aaa","label"=>"お電話番号"));
-echo $this->Form->input("related-url",array("class"=>"",'div'=>"aaa","label"=>"メールアドレス","type"=>"text"));
-echo $this->Form->input("sns-acount",array("class"=>"",'div'=>"aaa","label"=>"SNSアカウント","type"=>"text"));
+
+echo $this->Form->input("body",array("class"=>"",'div'=>"aaa","label"=>"概要"));
+echo '<p class="form_p">*ご登録頂けるイベントの概要やアピールポイントなどを70文字程度でご要説下さいませ。<br>こちらは記事一覧リストなどでイベントの紹介文として表示されます。</p><br>';
+
+echo $this->Form->input("detail",array("class"=>"",'div'=>"aaa","label"=>"詳細"));
+echo '<p class="form_p">*イベントに関する情報を自由にご記入下さい。</p><br>';
+
+echo $this->Form->input("period",array("class"=>"",'div'=>"aaa","label"=>"期間"));
+echo '<p class="form_p">*イベントを行う期間をご記入下さい。（例：2015年5月6日 10:00~16:00や2015年5月6日~2015年5月8日）。</p><br><br><br>';
+
+echo '<h1>本件に関するお問い合わせ先</h1>';
+
 
 
 /**
@@ -42,15 +54,14 @@ echo $this->Form->input("date",array("class"=>"",'div'=>"aaa","label"=>"日時")
 **/
 
 ?>
-<h3>オリジナル要素</h3>
-
+<h3>カテゴリー</h3>
+<p class="form_p">*イベントのカテゴリーを選択して下さい。</p>
 <?
 
 
 echo $this->Form->select('state', array(
-	"1"=>"長期インターン","2"=>"短期インターン","3"=>"海外インターン","4"=>"有給バイト",
-	"5"=>"留学","6"=>"合宿","7"=>"習い事","8"=>"面白い","9"=>"学生団体"
-
+	"1"=>"長期インターン","2"=>"短期インターン","3"=>"海外インターン",
+	"5"=>"留学","6"=>"合宿","7"=>"習い事","8"=>"面白い","9"=>"学生団体","4"=>"学生団体イベントページ"
 	));
 
 ?>
@@ -59,10 +70,10 @@ echo $this->Form->select('state', array(
 
 
 <?
-echo $this->Form->submit("送信");
+echo $this->Form->submit("次へ");
 echo $this->Form->end();
 ?>
-
+<p class="form_p">*「次へ」を押すと、イベントの詳細情報をご入力頂けます。</p>
 
 
 

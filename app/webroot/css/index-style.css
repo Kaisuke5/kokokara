@@ -208,6 +208,13 @@
 	border-radius: 5px 5px 5px 5px;
 	border:1px solid #ededed;
 }
+.art-list-info p{
+	font-size:13px;
+	color:#c0c0c0;
+	padding-top:10px !important;
+	padding-bottom:10px !important;
+	margin-bottom:0 !important;
+}
 .img-obfit{
 	padding:0 !important;
 	height: auto;
@@ -247,6 +254,10 @@
 	margin-bottom:0px !important;
 	text-align:left;
 	padding-left:1px;
+}
+.event-pg-sb img{
+	
+	max-width:100%;
 }
 .event-pg-sb p{
 	font-size:13px;

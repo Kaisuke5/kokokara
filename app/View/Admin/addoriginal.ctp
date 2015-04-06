@@ -41,7 +41,6 @@
 		echo $this->Form->input("deadline",array("label"=>"締め切り"));
 		echo $this->Form->input("event_id",array("value"=>$id,"type"=>"hidden"));
 		echo $this->Form->input("State.state",array("value"=>$state,"type"=>"hidden"));
-
 	?>
 	
 	<input type="submit" value="送信">
@@ -115,6 +114,7 @@
 		echo $this->Form->input("cost",array("label"=>"費用"));
 		echo $this->Form->input("schedule",array("label"=>"スケジュール"));
 
+
 		echo $this->Form->input("event_id",array("value"=>$id,"type"=>"hidden"));
 		echo $this->Form->input("State.state",array("value"=>$state,"type"=>"hidden"));
 
@@ -131,6 +131,27 @@
 <div id="event_form9" class="event_original_form">
 	<?
 		echo $this->Form->create('StudentGroup',array(
+			'url' => array('controller' => 'Admin', 'action' => 'goaddoriginal'),"class"=>""));
+
+		echo $this->Form->input("limit_num",array("label"=>"募集人数"));
+		echo $this->Form->input("cost",array("label"=>"費用"));
+
+
+		echo $this->Form->input("event_id",array("value"=>$id,"type"=>"hidden"));
+		echo $this->Form->input("State.state",array("value"=>$state,"type"=>"hidden"));
+
+	?>
+	
+	<input type="submit" value="送信">
+
+	<?echo $this->Form->end()?>
+
+
+</div>
+
+<div id="event_form4" class="event_original_form">
+	<?
+		echo $this->Form->create('Student_Event',array(
 			'url' => array('controller' => 'Admin', 'action' => 'goaddoriginal'),"class"=>""));
 		
 		echo $this->Form->input("limit_num",array("label"=>"募集人数"));

@@ -16,6 +16,19 @@
 							</tr>
 							<tr class="detail-contact-tr">
 								<td class="detail-contact-td">SNS</td>
-								<td><?echo $event['Event']['sns-account']?></td>
+								<td>
+									<?php if($event['Event']['sns-facebook'] == null){
+										echo '<a style="display:none;"></a>';
+										}else{
+										echo '<a href="'?> <? echo $event['Event']['sns-facebook']?> <?echo'"><i class="fa fa-facebook" style="font-size:32px; padding-right:40px;"></i></a>';
+										}
+									?>
+									<?php if($event['Event']['sns-twitter'] == null){
+										echo '<a style="display:none;"></a>';
+										}else{
+										echo '<a href="'?><? echo $event['Event']['sns-twitter']?><? echo'"><i class="fa fa-twitter" style="font-size:32px;"></i></a>';
+										}
+									?>
+								</td>
 							</tr>
 						</table>
