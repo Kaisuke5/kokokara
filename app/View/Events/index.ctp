@@ -17,7 +17,7 @@
 							echo '<font style="font-size:12px;">講師</font>';
 						} 
 				?>
-				<br><?echo ($event['Event']['comp_name']);?>
+				<br><?echo ($event['Event']['company_name']);?>
 			</p>
 		</div>
 		<div class="col-sm-2 event-info-top" style="text-align:center;">
@@ -100,7 +100,7 @@
 					<div class="row hidden-xs">
 						<div class="col-xs-12 comp-intro-top">
 							<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
-							<h3><? echo $event['Event']['comp_name'] ?></h3>
+							<h3><? echo $event['Event']['company_name'] ?></h3>
 						</div>
 						<div class="col-xs-12">
 							<p><? echo nl2br($event['Event']['company_info']) ?></p>
@@ -111,7 +111,7 @@
 							<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 						</div>
 						<div class="col-xs-9 comp-intro-top"style="padding-left:0;">
-							<h3><? echo $event['Event']['comp_name'] ?></h3>
+							<h3><? echo $event['Event']['company_name'] ?></h3>
 						</div>
 						<div class="col-xs-12">
 							<p><? echo nl2br($event['Event']['company_info']) ?></p>

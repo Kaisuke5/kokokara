@@ -1,7 +1,7 @@
 						<table>
 							<tr>
 								<td class="detail-info-table-bold">講師</td>
-								<td><?echo $event['Event']['comp_name']?></td>
+								<td><?echo $event['Event']['company_name']?></td>
 							</tr>
 							<tr>
 								<td class="detail-info-table-bold">日時</td>
