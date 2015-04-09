@@ -4,6 +4,9 @@ p {
   	letter-spacing: 0.04em;
   	color: #2b2b2b;
 }
+a{
+	text-decoration: none;
+}
 .p-center{
 	font-size:14px;
 	margin:12px 0;
@@ -196,14 +199,12 @@ p {
 .sb-apply-btn{
 	border-radius: 9px 9px 9px 9px !important; 
 	box-shadow:0 0 3px 1px rgba(0, 0, 0, 0.2); 
-	background:#5ba525;
 	height:70px;
 	border:1px solid #509020;
 	color:#ffffff;
 	font-size:22px !important;
 }
 .sb-apply-btn:hover{
-	background:#509020;
 	color:#ffffff !important;
 }
 .event-pg-sb{
@@ -229,6 +230,7 @@ p {
 .event-pg-sb p{
 	font-size:13px;
 	color:#c0c0c0;
+	font-weight:lighter;
 }
 .event-pg-sb-cat{
 	font-size:12px !important;

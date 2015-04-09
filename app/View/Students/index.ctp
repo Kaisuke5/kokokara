@@ -1,5 +1,5 @@
 <? $this->Html->css('index-style', null, array('inline' => false)) ?>
-<div class="container home-cntr-top">
+<div class="container home-cntr-top">		
 	<div class="top-bgi">
 		<div class="row">
 			<div class="col-md-12 top-welcome">
@@ -54,10 +54,11 @@
 				<a href="#">kokokara学生証とは？>></a>
 			</div>
 		</div>
+		
 	</div>
 </div>
 <div class="container home-cntr">
-	<div class="row" style="border-bottom:1px solid #efefef;">
+	<div class="row">
 	  <h2>いま人気のクラス</h2>
 		  	<div class="col-md-12">
 		  		<div class="row">
@@ -160,7 +161,7 @@
 	</div>
 	<div class="row" >
 		<div class="col-sm-4 hidden-xs" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
-			<? echo $this->element('event-pg-sidebar')?>
+			<? echo $this->element('top-pg-sidebar')?>
 		</div>
 		<div class="col-sm-8">
 		<?

@@ -29,9 +29,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('cake.generic');
 
 		echo $this->Html->script("jquery-1.11.2.min.js");
+		echo $this->Html->script("jquery.particleground.min.js");
 		echo $this->Html->css("kai.css");
 		echo $this->Html->script("kai.js");
-		echo $this->Html->script("imgLiquid-min.js");
 		echo $this->Html->script("polyfill.object-fit.min.js");
 
 		echo $this->fetch('meta');
@@ -42,11 +42,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 	<!-- Jquery 導入 -->
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
 	<?php
 	echo $this->Html->script('bootstrap.min.js');
-	echo $this->Html->script('text-overflow.js');
-	echo $this->Html->script('jquery.fittext.js');
 	echo $this->Html->css('bootstrap.min.css');
 	echo $this->Html->css('polyfill.object-fit.css');
 	echo $this->Html->css('font-awesome.min.css');
@@ -54,23 +51,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->Html->css('style.css')
 	?>
 	<script type="text/javascript">
-		$(document).ready(function() {
-    		$(".img-resize").imgLiquid({
-    			fill:false, //アス比維持
-    		});
-		});
-	</script>
-	<script>
-		$(document).addEventListener('DOMContentLoaded', function () {
-			objectFit.polyfill({
-				selector: 'img-obfit',
-				fittype: 'cover'
-			});
-		});
-	</script>
-	<script type="text/javascript">
 	    $(".text-fit").fitText();
 	</script>
+	<script type="text/javascript">
+		$('.top-bgi').particleground();
+	</script>
+
 </head>
 <body>
 	<div id="container">

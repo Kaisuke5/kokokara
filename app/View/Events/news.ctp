@@ -23,7 +23,7 @@
 	</div>
 	<div class="row" >
 		<div class="col-sm-4 hidden-xs" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
-			<? echo $this->element('event-pg-sidebar')?>
+			<? echo $this->element('top-pg-sidebar')?>
 		</div>
 		<div class="col-sm-8">
 		<?
@@ -53,7 +53,7 @@
 		?>
 		</div>
 		<div class="col-sm-4 hidden-sm hidden-md hidden-lg" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
-			<? echo $this->element('event-pg-sidebar')?>
+			<? echo$this->element('top-pg-sidebar')?>
 		</div>
 		<div class="col-md-12">
 		  	<p class="p-center"><a href="#">もっと見る>></a></p>

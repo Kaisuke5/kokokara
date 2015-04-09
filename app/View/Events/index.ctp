@@ -17,7 +17,7 @@
 							echo '<font style="font-size:12px;">講師</font>';
 						} 
 				?>
-				<br><?echo ($event['Event']['comp_name']);?>
+				<br>株式会社kokokara Group
 			</p>
 		</div>
 		<div class="col-sm-2 event-info-top" style="text-align:center;">
@@ -100,10 +100,10 @@
 					<div class="row hidden-xs">
 						<div class="col-xs-12 comp-intro-top">
 							<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
-							<h3><? echo $event['Event']['comp_name'] ?></h3>
+							<h3>株式会社kokokara Group</h3>
 						</div>
 						<div class="col-xs-12">
-							<p><? echo nl2br($event['Event']['company_info']) ?></p>
+							<p>2012年にBoypediaとして発足。現在はkokokara Groupとして、前向きな大学生のプラットフォーム作成を原点に、様々な仕掛けをしていきます。</p>
 						</div>
 					</div>
 					<div class="row hidden-sm hidden-md hidden-lg">
@@ -172,7 +172,27 @@
 					?>
 				</div>
 				<div class="col-xs-12 apply-btn">
-					<button type="button" class="btn btn-primary btn-lg" onclick="eventapply()">このクラスに出席</button>
+					<?php 
+					if($event['Event']['state'] == 1){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#d16b9a;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 2){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#d1a6b;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 3){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#ced16b;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 5){		
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#9ad16b;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 6){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#6bd16e;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 7){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#6bd1a1;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 8){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#6bcad1;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 9){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#6e6bd1;">このクラスに出席</button>';
+						}elseif($event['Event']['state'] == 4){
+						echo '<button class="btn btn-primary btn-lg" type="button" onclick="eventapply()" style="background:#6e6bd1;">このクラスに出席</button>';
+						}	
+					?>
 					<p class="p-center"><a href="#">クラスに出席すると？>></a></p>
 				</div>
 			</div>	
