@@ -1,10 +1,20 @@
 <? $this->Html->css('index-style', null, array('inline' => false)) ?>
 <div class="container home-cntr-top">		
 	<div class="top-bgi">
-		<div class="row">
-			<div class="col-md-12 top-welcome">
-				<h1>新しい何かを始めよう</h1>
+		<div class="row" style="padding-top:60px;padding-bottom:60px;">
+			<div class="col-sm-6 top-welcome hidden-xs" style="text-align:right;">
+				 <? echo $this->Html->image("start.png", array("alt" => "新しい何かを始めよう")); ?>
 			</div>
+			<div class="col-sm-6 top-welcome-right hidden-xs" style="text-align:left;">
+				<? echo $this->Html->image("kokokara_logo.gif", array("alt" => "ロゴ")); ?>
+			</div>
+			<div class="col-xs-12 top-welcome hidden-sm hidden-md hidden-lg" style="text-align:center;">
+				 <? echo $this->Html->image("start.png", array("alt" => "新しい何かを始めよう")); ?>
+			</div>
+			<div class="col-xs-12 top-welcome-right hidden-sm hidden-md hidden-lg" style="text-align:center;">
+				<? echo $this->Html->image("kokokara_logo.gif", array("alt" => "ロゴ")); ?>
+			</div>
+			<!--
 			<div class="form-group">
 				<div class="col-sm-6 col-sm-offset-1 gal-pad-elim col-xs-10 col-xs-offset-1">
 					<input type="text" class="input-medium search-query">
@@ -28,10 +38,24 @@
 					</button>
 				</div>
 			</div>
+			-->
 		</div>
 		<div class="row top-signin">
+			<div class="col-sm-6 col-sm-offset-1 top-signin-left">
+				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <i class="fa fa-question-circle"></i></p>
+			</div>
+			<div class="col-sm-3 col-xs-12 top-signin-fb">
+				<?php
+					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+				?>
+				<p class="text-fit" style="color:#c0c0c0;"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
+			</div>
+		</div>
+		<!--
+		<div class="row top-signin">
 			<div class="col-xs-12">
-				<p style="font-size:20px; padding: 15px 0;color:#303030;">入学してkokokara学生証を手に入れよう</p>
+				<p style="font-size:20px; padding:15px 0;color:#ffffff;">入学してkokokara学生証を手に入れよう</p>
+
 			</div>
 			<div class="col-sm-3 col-sm-offset-3 col-xs-5 col-xs-offset-1 top-signin-btns" style="padding-right:10px; !important">
 				<div class="top-signin-internal">
@@ -54,10 +78,24 @@
 				<a href="#">kokokara学生証とは？>></a>
 			</div>
 		</div>
-		
-	</div>
+		-->
+	</div>	
 </div>
 <div class="container home-cntr">
+	<div class="row cnts-top-bar-row">
+		<div class="col-xs-2 cnts-top-bar" style="background:#d16b9a;border-radius: 9px 0px 0px 0px;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#d1a16b;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#9ad16b;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6bd1a1;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6bcad1;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6e6bd1;border-radius: 0px 9px 0px 0px;">
+		</div>
+	</div>
 	<div class="row">
 	  <h2>いま人気のクラス</h2>
 		  	<div class="col-md-12">
@@ -115,6 +153,20 @@
 	</div>
 
 <div class="container home-cntr">
+	<div class="row cnts-top-bar-row">
+		<div class="col-xs-2 cnts-top-bar" style="background:#d16b9a;border-radius: 9px 0px 0px 0px;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#d1a16b;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#9ad16b;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6bd1a1;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6bcad1;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6e6bd1;border-radius: 0px 9px 0px 0px;">
+		</div>
+	</div>
 	<div class="row">
 	  <h2>kokokaraの、様々な学びの形</h2>
 	  <div class="col-md-12">
@@ -156,6 +208,20 @@
 	</div>
 </div>
 <div class="container home-cntr">
+	<div class="row cnts-top-bar-row">
+		<div class="col-xs-2 cnts-top-bar" style="background:#d16b9a;border-radius: 9px 0px 0px 0px;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#d1a16b;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#9ad16b;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6bd1a1;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6bcad1;">
+		</div>
+		<div class="col-xs-2 cnts-top-bar" style="background:#6e6bd1;border-radius: 0px 9px 0px 0px;">
+		</div>
+	</div>
 	<div class="row">
 		<h2>新着サービス</h2>
 	</div>
@@ -252,3 +318,46 @@ if(!$myData){
 		<?php echo $this->Html->link('新着イベント', array('controller' => 'events', 'action' => 'news')); ?>
 	</li>
 </ul>
+
+
+
+
+
+<a href="#modal">Modal Window for Logging-in</a>
+<div class="remodal" data-remodal-id="modal">
+    <h1>おかえりなさい！</h1>
+    <div class="row hidden-xs">
+	    <div class="col-sm-5">
+	    	<h3>会員情報から登校</h3>
+	   	</div>
+	   	<div class="col-sm-2"><h3>OR</h3></div>
+	   	<div class="col-sm-5">
+	    	<h3>Facebookから登校</h3>	
+	   	</div>
+ 	</div>
+    <div class="row">
+    	<div class="col-sm-5">
+    		<h3 class="hidden-md hidden-sm hidden-lg">会員情報から登校</h3>
+    		<?php
+			echo $this->Form->create('Student');
+			echo $this->Form->input('email');
+			echo $this->Form->input('password');
+			echo $this->Form->end('登校する', array('class' => 'remodal-confirm'));
+			?>
+			<div class="forget-pass">
+				<?php
+				echo $this->Html->link('パスワードをお忘れの場合', array('action' => 'passwordForgot'));
+				?>
+			</div>
+    	</div>
+    	<div class="col-sm-2"></div>
+    	<div class="col-sm-5 top-signin top-signin-fb" style="margin-top:30px;">
+    		<?php
+			echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+			?>
+			<p class="text-fit"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
+    	</div>
+    </div>
+    <br>
+    <a class="remodal-cancel" href="#">閉じる</a>
+</div>

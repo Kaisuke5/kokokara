@@ -5,6 +5,7 @@
 //particlesJS('dom-id');
 
 /* config dom id (optional) + config particles params */
+
 particlesJS('particles-js', {
   particles: {
     color: '#fff',
@@ -64,5 +65,6 @@ particlesJS('particles-js', {
     }
   },
   /* Retina Display Support */
+  /**
   retina_detect: true
 });

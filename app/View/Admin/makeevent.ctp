@@ -30,9 +30,12 @@ echo $this->Form->input('Image.3.attachment', array('type' => 'file', 'label' =>
 
 echo $this->Form->input('Image.3.model', array('type' => 'hidden', 'value' => 'Event'));
 
+//追加分2015/04/07 by Mark///////////////////////////
+echo $this->Form->input("company_name", array("div"=>"aaa","label"=>"企業名"));
+echo $this->Form->input("company_info", array("div"=>"aaa","label"=>"企業紹介"));
+////////////////////////////////////////////////////
 
-
-echo $this->Form->input("body",array("class"=>"",'div'=>"aaa","label"=>"概要"));
+echo $this->Form->input("body",array("class"=>"","div"=>"aaa","label"=>"概要"));
 echo '<p class="form_p">*ご登録頂けるイベントの概要やアピールポイントなどを70文字程度でご要説下さいませ。<br>こちらは記事一覧リストなどでイベントの紹介文として表示されます。</p><br>';
 
 echo $this->Form->input("detail",array("class"=>"",'div'=>"aaa","label"=>"詳細"));
@@ -70,8 +73,7 @@ echo $this->Form->select('state', array(
 
 
 <?
-echo $this->Form->submit("次へ");
-echo $this->Form->end();
+echo $this->Form->end("次へ");
 ?>
 <p class="form_p">*「次へ」を押すと、イベントの詳細情報をご入力頂けます。</p>
 

@@ -29,6 +29,7 @@ create table events(
 id int auto_increment primary key,
 state int,
 title varchar(25),
+company_name varchar(255),
 company_info text,
 body text,
 detail text,
@@ -50,8 +51,8 @@ create table intern(
   skill VARCHAR (50),
   payment int,
   conditions VARCHAR (255),
-  treatment VARCHAR (255)
-
+  treatment VARCHAR (255),
+  country_name VARCHAR (255)
 
 );
 
@@ -64,8 +65,8 @@ create table study_abroad(
   stay_type VARCHAR (50),
   conditions VARCHAR (255),
   envirionment text,
-  deadline datetime
-
+  deadline datetime,
+  country_name VARCHAR (255)
 
 );
 
@@ -79,7 +80,8 @@ create table camp(
   tuition int,
   stay_type VARCHAR (50),
   schedule text,
-  cost int
+  cost int,
+  pref VARCHAR (255)
 
 );
 
@@ -89,7 +91,8 @@ create table lesson(
   id int auto_increment primary key,
   event_id int,
   skill VARCHAR (50),
-  cost int
+  cost int,
+  pref VARCHAR (255)
 
 );
 
@@ -101,7 +104,8 @@ create table funny_event(
   limit_min int,
   deadline datetime,
   cost int,
-  schedule text
+  schedule text,
+  pref VARCHAR (255)
 
 );
 
@@ -110,7 +114,9 @@ create table student_group(
   id int auto_increment primary key,
   event_id int,
   cost int,
-  limit_num int
+  limit_num int,
+  pref VARCHAR (255)
+
 );
 
 

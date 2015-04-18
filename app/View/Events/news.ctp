@@ -39,7 +39,7 @@
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 				</div>
 				<div class="col-sm-10 art-list-comp">
-					<h2><?echo ($event['Event']['comp_name']);?></h2>
+					<h2><?echo ($event['Event']['company_name']);?></h2>
 					<h1><?echo $event['Event']['title']?></h1>
 					<p class="text-overflow"><?echo $event['Event']['body']?></p>
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'art-list-thumb img-obfit-list'))?>

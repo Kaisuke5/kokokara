@@ -17,6 +17,7 @@
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
+<div class="remodal-bg"> <!-- remodal実行時、背景を暗く -->
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
@@ -30,9 +31,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		echo $this->Html->script("jquery-1.11.2.min.js");
 		echo $this->Html->script("jquery.particleground.min.js");
+		echo $this->Html->script("jquery.remodal.js");
 		echo $this->Html->css("kai.css");
 		echo $this->Html->script("kai.js");
-		echo $this->Html->script("polyfill.object-fit.min.js");
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -45,7 +46,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 	echo $this->Html->script('bootstrap.min.js');
 	echo $this->Html->css('bootstrap.min.css');
-	echo $this->Html->css('polyfill.object-fit.css');
+	echo $this->Html->css('jquery.remodal.css');
 	echo $this->Html->css('font-awesome.min.css');
 
 	echo $this->Html->css('style.css')
@@ -157,3 +158,4 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
 </html>
+</div>

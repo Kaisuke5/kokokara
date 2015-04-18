@@ -6,11 +6,8 @@ canvas{
 	vertical-align:bottom;
 }
 
-#particles-js{
-	display:block;
-	position:relative;
-	height: 100%;
-	top:-470px;
+#particles{
+	z-index:1;
 }
 .container{
 	background:#ffffff;
@@ -27,66 +24,93 @@ canvas{
 }
 .home-cntr-top{
 	margin-bottom:20px;
+	background-image:url("../img/office.jpg");
+	background-position:right;
+}
+.cnts-top-bar-row{
+	opacity:0.5;
+}
+.cnts-top-bar{
+	height:5px;
+}
+.top-bgi{
+
 }
 .signin-a{
 
 }
 .top-welcome{
-	padding-top:60px;
+	padding-top:30px;
 	margin-bottom:30px;
+}
+.top-welcome-right{
+
 }
 .top-welcome h1{
 	text-align:center;
-	font-size:48px;
+	font-size:32px;
+	font-weight:lighter;
 	background:none;
+	margin-bottom:0px;
+	color:#c0c0c0;
+	letter-spacing: 0.04em;
 	margin-bottom:30px;
-	/** text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);; **/
+	/** text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2); **/
 }
 .top-welcome p{
 	text-align:center;
 	font-size:24px;
 	background:none;
 }
-.top-signin{
-	margin-top:40px;
-	margin-bottom:60px;
-	text-align:center;
+.top-welcome img{
+	margin-top:20px;
+	max-width:250px;
 }
-.top-signin-btns{
-	padding:0 !important;
-	margin-bottom:30px;
+.top-welcome-right img{
+	margin:0 auto;
+	max-width:150px;
+}
+.top-logo-img{
+	max-width:150px !important;
+}
+.top-signin{
+	background:rgba(0,0,0,0.5);
+	border-radius: 0px 0px 9px 9px;
+}
+.top-signin p{
+	font-weight:lighter;
+	margin-bottom:0 !important;
+	margin-top:5px;
 }
 .top-signin-internal{
-	height:50px;
+	height:30px;
 	background:#5ba525;
-	border-radius: 5px 5px 5px 5px;
-	border:1px solid #447b1b;
-	opacity:0.9;
+	opacity:0.5;
 }
-.top-signin-internal p{
-	padding-top:12px;
-	color:#ffffff;
-	font-size:20px;
-}
-.top-signin-fb{
-	height:50px;
-	background:#3b5998;
-	border-radius: 5px 5px 5px 5px;
-	border:1px solid #2c4271;
-	opacity:0.9;
-}
-.top-signin-fb p{
-	padding-top:12px;
-	color:#ffffff;
-	font-size:20px;
-}
-.top-signin a{
+.top-signin-internal a{
 	display: block;
 	position: absolute;
 	top: 5%;
 	left: 5%;
 	width: 90%;
 	height: 90%;
+}
+.top-signin-fb{
+	height:30px;
+	background:rgba(59,89,152,0.5);
+}
+.top-signin-fb a{
+	display: block;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+}
+.forget-pass a{
+	text-decoration: none;
+	font-size:13px;
+	color:#2b2b2b;
 }
 .well-me{
   min-height: 20px;
@@ -103,7 +127,7 @@ canvas{
 	margin:48px 0;
 }
 .top-bgi{
-	/** background-image:url("../img/landscape.jpg"); **/
+	
 }
 .pop-lg{
 	padding:10px;

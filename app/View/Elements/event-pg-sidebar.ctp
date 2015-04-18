@@ -33,14 +33,14 @@
 					echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生イベント</p>';
 					}	
 					?>
-					<p class="event-pg-sb-title">株式会社kokokara Group</p>
+					<p class="event-pg-sb-title"><? echo $event['Event']['company_name']?></p>
 				</div>
 				<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
 				<div>
 					<h1><?echo $event['Event']['title']?></h1>
 					<p><?echo $event['Event']['body']?></p>
 				</div>
-			</div>
+			</div>	
 		</a>
 		<?
 		$i++;
