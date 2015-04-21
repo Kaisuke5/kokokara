@@ -20,6 +20,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <div class="remodal-bg"> <!-- remodal実行時、背景を暗く -->
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $this->fetch('title'); ?>

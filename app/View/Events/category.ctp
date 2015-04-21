@@ -35,7 +35,7 @@
 			if($i >= $kiji){
 			break;
 		}else{ ?>
-		<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>">
 			<div class="row ctg-row">
 				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
@@ -49,7 +49,7 @@
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
 								<p>場所:<font style="">
-									
+
 								</font></p>
 							</div>
 							<div class="col-xs-6">

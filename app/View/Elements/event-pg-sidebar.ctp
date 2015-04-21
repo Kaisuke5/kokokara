@@ -9,7 +9,7 @@
 		if($i >= $kiji){
 		break;
 	}else{ ?>
-		<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>">
 			<div class="col-sm-12 event-pg-sb">
 				<div>
 					<?php 
