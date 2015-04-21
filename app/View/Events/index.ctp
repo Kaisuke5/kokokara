@@ -105,7 +105,7 @@
 							<h3><? echo $event['Event']['company_name'] ?></h3>
 						</div>
 						<div class="col-xs-12">
-							<p>2012年にBoypediaとして発足。現在はkokokara Groupとして、前向きな大学生のプラットフォーム作成を原点に、様々な仕掛けをしていきます。</p>
+							<p><? echo $event['Event']['company_info'] ?></p>
 						</div>
 					</div>
 					<div class="row hidden-sm hidden-md hidden-lg">
