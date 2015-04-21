@@ -1,9 +1,9 @@
 <?echo $this->Html->script("user.js");?>
 <?echo $this->Html->script("jquery-1.11.2.js");?>
 <? $this->Html->css('event-style', null, array('inline' => false)) ?>
-<div class="container home-cntr koko-box-shadow">
-	<div class="row" >
-		<div class="col-md-12 img-obfit">
+<div class="container home-cntr koko-box-shadow" style="margin-top:15px;">
+	<div class="row">
+		<div class="col-md-12 img-obfit" style=" background:#e6e6e6;border-radius: 9px 9px 0px 0px;">
 			<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'event-top-img img-responsive'))?>
 		</div>
 	</div>
@@ -11,7 +11,7 @@
 		<div class="col-sm-6 event-info-top">
 			<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 			<p>
-				<? if($event['Event']['state'] == 9){
+				<? if($event['Event']['state'] == 9||4){
 							echo '<font style="font-size:12px;">学生団体</font>';
 						}else{
 							echo '<font style="font-size:12px;">講師</font>';
@@ -21,12 +21,14 @@
 			</p>
 		</div>
 		<div class="col-sm-2 event-info-top" style="text-align:center;">
+		<!--
 			<div class="event-info-top-fav">
 			 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 			</div>
 			<div class="event-info-top-fav2">
 				<p>おぼえておく！</p>
 			</div>
+		-->
 		</div>
 		<div class="col-sm-4 event-info-top">
 			<div class="row">
@@ -56,9 +58,9 @@
 					echo '<p class="event-pg-top-cat" style="background:#6bd1a1;">習い事</p>';
 					}elseif($event['Event']['state'] == 8){
 					echo '<p class="event-pg-top-cat" style="background:#6bcad1;">おもしろイベント</p>';
-					}elseif($event['Event']['state'] == 9){
-					echo '<p class="event-pg-top-cat" style="background:#6e6bd1;">学生団体</p>';
 					}elseif($event['Event']['state'] == 4){
+					echo '<p class="event-pg-top-cat" style="background:#6b97d1;">学生団体</p>';
+					}elseif($event['Event']['state'] == 9){
 					echo '<p class="event-pg-top-cat" style="background:#6e6bd1;">学生イベント</p>';
 					}	
 			?>
@@ -79,7 +81,7 @@
 				}elseif($event['Event']['state'] == 9){
 					echo '<h2 style="border-bottom:3px solid #6e6bd1;">'?><?echo $event['Event']['title']?><?'</h2>';
 				}elseif($event['Event']['state'] == 4){
-					echo '<h2 style="border-bottom:3px solid #6e6bd1;">'?><?echo $event['Event']['title']?><?'</h2>';
+					echo '<h2 style="border-bottom:3px solid #6b97d1;">'?><?echo $event['Event']['title']?><?'</h2>';
 				}
 			?>
 		</div>
@@ -88,7 +90,7 @@
 		<div class="col-sm-8">
 			<div class="row" style="padding-left:20px; padding-right:20px;">
 				<div class="col-sm-12">
-					<? if($event['Event']['state'] == 9){
+					<? if($event['Event']['state'] == 9||4){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体紹介</h2>';
 						}else{
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス紹介</h2>';
@@ -119,7 +121,7 @@
 					</div>
 				</div>
 				<div class="col-sm-12" style="margin-top:36px; 15px">
-					<? if($event['Event']['state'] == 9){
+					<? if($event['Event']['state'] == 9||4){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体詳細</h2>';
 						}else{
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス詳細</h2>';
@@ -152,7 +154,7 @@
 						}elseif($event['Event']['state'] == 8){
 						echo '<button class="btn btn-primary btn-lg btn-lg8" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}elseif($event['Event']['state'] == 9){
-						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<button class="btn btn-primary btn-lg btn-lg9" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}elseif($event['Event']['state'] == 4){
 						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}	
@@ -184,10 +186,10 @@
 							echo $this->element( 'table_funnyEvent' );
 						}
 						elseif($event['Event']['state'] == 9){
-							echo $this->element( 'student_union' );
+							echo $this->element( 'student_union_event' );
 						}
 						elseif($event['Event']['state'] == 4){
-							echo $this->element( 'student_union_event' );
+							echo $this->element( 'student_union' );
 						}
 					?>
 				</div>
@@ -208,7 +210,7 @@
 						}elseif($event['Event']['state'] == 8){
 						echo '<button class="btn btn-primary btn-lg btn-lg8" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}elseif($event['Event']['state'] == 9){
-						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<button class="btn btn-primary btn-lg btn-lg9" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}elseif($event['Event']['state'] == 4){
 						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}	

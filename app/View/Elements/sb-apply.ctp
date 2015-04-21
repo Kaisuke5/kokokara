@@ -19,7 +19,7 @@
 			}elseif($event['Event']['state'] == 8){
 			echo '<button class="btn btn-large btn-block sb-apply-btn8" type="button" onclick="eventapply()">このクラスに出席</button>';
 			}elseif($event['Event']['state'] == 9){
-			echo '<button class="btn btn-large btn-block sb-apply-btn4" type="button" onclick="eventapply()">このクラスに出席</button>';
+			echo '<button class="btn btn-large btn-block sb-apply-btn9" type="button" onclick="eventapply()">このクラスに出席</button>';
 			}elseif($event['Event']['state'] == 4){
 			echo '<button class="btn btn-large btn-block sb-apply-btn4" type="button" onclick="eventapply()">このクラスに出席</button>';
 			}	

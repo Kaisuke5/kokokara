@@ -92,14 +92,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					        <li class="header-btn-lg-7 dropdown">
 					        	<a href="#" class="dropdown-toggle header-gal" data-toggle="dropdown" role="button" aria-expanded="false">学生団体 <span class="caret"></span></a>
 				        		<ul class="dropdown-menu" role="menu">
-				            		<li><?php echo $this->Html->link('団体ページ', array('controller' => 'events', 'action' => 'category', 9)); ?></li>
-				            		<li><?php echo $this->Html->link('学生イベント', array('controller' => 'events', 'action' => 'category', 4)); ?></li>
+				            		<li><?php echo $this->Html->link('団体ページ', array('controller' => 'events', 'action' => 'category', 4)); ?></li>
+				            		<li><?php echo $this->Html->link('学生イベント', array('controller' => 'events', 'action' => 'category', 9)); ?></li>
 				          		</ul>
 				          	</li>
 				      	</ul>
 				     	<ul class="nav navbar-nav navbar-right">
 					        <li>
-					        	<a href="#">kokokaraって？</a>
+					        	<?php echo $this->Html->link(
+	        						'kokokaraって？',
+								      array('controller'=>'pages',
+									    'action'=>'about')
+										)
+								?>
 					        </li>
 					        <li class="header-login-btn">
 					        	<a href="#">登校する</a>

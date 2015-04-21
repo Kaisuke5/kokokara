@@ -1,5 +1,5 @@
 <? $this->Html->css('index-style', null, array('inline' => false)) ?>
-<div class="container home-cntr-top">		
+<div class="container home-cntr-top" style="margin-top:90px;">		
 	<div class="top-bgi">
 		<div class="row" style="padding-top:60px;padding-bottom:60px;">
 			<div class="col-sm-6 top-welcome hidden-xs" style="text-align:right;">
@@ -129,9 +129,9 @@
 									echo '<p class="event-pg-sb-cat" style="background:#6bd1a1;">習い事</p>';
 									}elseif($event['Event']['state'] == 8){
 									echo '<p class="event-pg-sb-cat" style="background:#6bcad1;">おもしろイベント</p>';
-									}elseif($event['Event']['state'] == 9){
-									echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生団体</p>';
 									}elseif($event['Event']['state'] == 4){
+									echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生団体</p>';
+									}elseif($event['Event']['state'] == 9){
 									echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生イベント</p>';
 									}	
 									?>
@@ -167,10 +167,118 @@
 		<div class="col-xs-2 cnts-top-bar" style="background:#6e6bd1;border-radius: 0px 9px 0px 0px;">
 		</div>
 	</div>
-	<div class="row">
-	  <h2>kokokaraの、様々な学びの形</h2>
+	<div class="row" style="padding-bottom:60px;">
+	  <h2>なにを始めよう</h2>
 	  <div class="col-md-12">
 	  	<div class="row">
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 1)); ?>
+	  			<div class="col-cat-in col-cat-in1">
+	  				<div class="col-cat-in-logo" style="background:#d16b9a;"></div>
+	  				<div>
+	  					<h3 class="hidden-md" style="color:#d16b9a;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>長期インターン</h3>
+	  					<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#d16b9a;"><font style="font-size:13px; font-weight:lighter;">いまから</font><br>長期インターン</h4>
+	  				</div>
+	  			</div>
+
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 2)); ?>
+	  			<div class="col-cat-in col-cat-in2">
+	  				<div class="col-cat-in-logo" style="background:#d1a16b;"></div>
+		  			<div>
+		  				<h3 class="hidden-md" style="color:#d1a16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>短期インターン</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#d1a16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>短期インターン</h4>
+		  			</div>
+		  		</div>
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 3)); ?>
+	  			<div class="col-cat-in col-cat-in3">
+	  				<div class="col-cat-in-logo" style="background:#ced16b;"></div>
+		  			<div>
+		  				<h3 class="hidden-md" style="color:#ced16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>海外インターン</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#ced16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>海外インターン</h4>
+		  			</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 5)); ?>
+	  			<div class="col-cat-in col-cat-in5">
+	  				<div class="col-cat-in-logo" style="background:#9ad16b;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#9ad16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>海外留学</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#9ad16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>海外留学</h4>
+		  			</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 6)); ?>
+	  			<div class="col-cat-in col-cat-in6">
+	  				<!--　サイトオープン時、グレイアウト用
+	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">合宿</font><br>只今建設中</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">合宿</font><br>只今建設中</h4>
+		  			</div>
+		  			-->
+		  			<div class="col-cat-in-logo" style="background:#6bd16e;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#6bd16e;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>合宿</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bd16e;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>合宿</h4>
+		  			</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 7)); ?>
+	  			<div class="col-cat-in col-cat-in7">
+	  				<!--　サイトオープン時、グレイアウト用
+	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">習い事</font><br>只今建設中</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">習い事</font><br>只今建設中</h4>
+		  			</div>
+		  			-->
+	  				<div class="col-cat-in-logo" style="background:#6bd1a1;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#6bd1a1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>習い事</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bd1a1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>習い事</h4>
+		  			</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 8)); ?>
+	  			<div class="col-cat-in col-cat-in8">
+	  				<div class="col-cat-in-logo" style="background:#6bcad1;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#6bcad1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>おもしろい事</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bcad1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>おもしろい事</h4>
+		  			</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
+	  			<div class="col-cat-in col-cat-in4">
+	  				<div class="col-cat-in-logo" style="background:#6b97d1;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>学生団体</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>学生団体</h4>
+		  			</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 9)); ?>
+	  			<div class="col-cat-in col-cat-in9">
+	  				<div class="col-cat-in-logo" style="background:#6e6bd1;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#6e6bd1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>学生イベント</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6e6bd1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>学生イベント</h4>
+		  			</div>
+	  			</div>
+	  		</div>
+	  	</div>
+	  	<!--
+	  	<div class="row">	
 		  <div class="col-sm-3 col-xs-6 col-gal">
 		  	<div style="height:190px; background:#d16b9a;"><?php echo $this->Html->link('長期インターン', array('controller' => 'events', 'action' => 'category', 1)); ?>
 		  	</div>	
@@ -204,6 +312,7 @@
 		  	</div>
 		  </div>
 		</div>
+		-->
 　	　</div>
 	</div>
 </div>
@@ -223,7 +332,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<h2>新着サービス</h2>
+		<h2 style="margin-bottom:15px;">新しいできたクラス</h2>
 	</div>
 	<div class="row" >
 		<div class="col-sm-4 hidden-xs" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
@@ -239,11 +348,11 @@
 		}else{ ?>
 		<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
 			<div class="row ctg-row">
-				<div class="col-sm-2" style="padding-right:0;">
-					<div style="float:left;clear:both; background:#ededed; width:70px; height:70px; margin-right:20px;"></div>
+				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
+					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 				</div>
 				<div class="col-sm-10 art-list-comp">
-					<h2>株式会社kokokara Group</h2>
+					<h2><?echo $event['Event']['company_name']?></h2>
 					<h1><?echo $event['Event']['title']?></h1>
 					<p class="text-overflow"><?echo $event['Event']['body']?></p>
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'art-list-thumb img-obfit-list'))?>

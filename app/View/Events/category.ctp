@@ -1,5 +1,5 @@
 <? $this->Html->css('index-style', null, array('inline' => false)); ?>
-<div class="container">
+<div class="container" style="margin-top:90px;">
 	<div class="row">
 			<?php 
 			if($this->here == '/kokokara/events/category/1'){
@@ -16,9 +16,9 @@
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6bd1a1;"><h1>習い事</h1></div>';
 			}elseif($this->here == '/kokokara/events/category/8'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6bcad1;"><h1>おもしろイベント</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/9'){
-			echo '<div class="col-xs-12 incnts-belt" style="background:#6e6bd1;"><h1>学生団体</h1></div>';
 			}elseif($this->here == '/kokokara/events/category/4'){
+			echo '<div class="col-xs-12 incnts-belt" style="background:#6b97d1;"><h1>学生団体</h1></div>';
+			}elseif($this->here == '/kokokara/events/category/9'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6e6bd1;"><h1>学生団体イベント</h1></div>';
 			}	
 			?>
@@ -48,7 +48,9 @@
 					<div class="col-xs-12" style="border:1px solid #ededed;">
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
-								<p>場所:<font style=""> ベトナム</font></p>
+								<p>場所:<font style="">
+									
+								</font></p>
 							</div>
 							<div class="col-xs-6">
 								<p>業種:<font style=""> 手動タグで表示</font></p>

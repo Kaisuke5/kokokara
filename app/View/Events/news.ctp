@@ -1,5 +1,5 @@
 <? $this->Html->css('index-style', null, array('inline' => false)); ?>
-<div class="container">
+<div class="container" style="margin-top:90px;">
 	<div class="row">
 			<?php 
 			if($this->here == '/kokokara/events/category/1'){
@@ -39,10 +39,20 @@
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 				</div>
 				<div class="col-sm-10 art-list-comp">
-					<h2><?echo ($event['Event']['company_name']);?></h2>
+					<h2><?echo $event['Event']['company_name']?></h2>
 					<h1><?echo $event['Event']['title']?></h1>
 					<p class="text-overflow"><?echo $event['Event']['body']?></p>
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'art-list-thumb img-obfit-list'))?>
+					<div class="col-xs-12" style="border:1px solid #ededed;">
+						<div class="row art-list-info">
+							<div class="col-xs-6" style="border-right:1px solid #ededed;">
+								<p>場所:<font style=""> </font></p>
+							</div>
+							<div class="col-xs-6">
+								<p>業種:<font style=""> 手動タグで表示</font></p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</a>
