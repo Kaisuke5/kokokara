@@ -74,32 +74,37 @@ class Event extends AppModel{
 
                     case 4:
                         $this->loadModel("StudentGroupInfo");
-                        $original = $this->StudentGroupInfo->find("first", array("conditions" => array("event_id", $id)));
+                        $original = $this->StudentGroupInfo->find("first", array("conditions" => array("event_id" => $id)));
                         break;
 
                     case 5:
                         $this->loadModel("StudyAbroad");
-                        $original = $this->StudyAbroad->find("first", array("conditions" => array("event_id", $id)));
+                        $original = $this->StudyAbroad->find("first", array(
+                            "conditions" => array("event_id" => $id)
+                        ));
+                        debug($original);
+                        debug($id);
+                        exit;
                         break;
 
                     case 6:
                         $this->loadModel("Camp");
-                        $original = $this->Camp->find("first", array("conditions" => array("event_id", $id)));
+                        $original = $this->Camp->find("first", array("conditions" => array("event_id" => $id)));
                         break;
 
                     case 7:
                         $this->loadModel("Lesson");
-                        $original = $this->Lesson->find("first", array("conditions" => array("event_id", $id)));
+                        $original = $this->Lesson->find("first", array("conditions" => array("event_id" => $id)));
                         break;
 
                     case 8:
                         $this->loadModel("FunnyEvent");
-                        $original = $this->FunnyEvent->find("first", array("conditions" => array("event_id", $id)));
+                        $original = $this->FunnyEvent->find("first", array("conditions" => array("event_id" => $id)));
                         break;
 
                     case 9:
                         $this->loadModel("StudentGroup");
-                        $original = $this->StudentGroup->find("first", array("conditions" => array("event_id", $id)));
+                        $original = $this->StudentGroup->find("first", array("conditions" => array("event_id" => $id)));
                         break;
 
 

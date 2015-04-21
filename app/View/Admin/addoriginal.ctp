@@ -38,7 +38,6 @@
 		echo $this->Form->input("cost",array("label"=>"費用"));
 		echo $this->Form->input("class",array("label"=>'時間割サンプル'));
 		echo $this->Form->input("stay_type",array("label"=>"滞在の種類"));
-		echo $this->Form->input("cost",array("label"=>"費用"));
 		echo $this->Form->input("conditions",array("label"=>"応募条件"));
 		echo $this->Form->input("environment",array("label"=>"環境"));
 		echo $this->Form->input("deadline",array("label"=>"締め切り"));
@@ -48,7 +47,7 @@
 	//追加分2015/04/07 by Mark///////////////////////////
 		echo $this->Form->select('country_name', array(
 			"1"=>"アメリカ","2"=>"フランス","3"=>"イギリス", "4"=>"イタリア",
-			"5"=>"ドイツ","6"=>"中国","7"=>"韓国","8"=>"台湾","9"=>"マレーシア", "10"=>"ベトナム"
+			"5"=>"ドイツ","6"=>"中国","7"=>"韓国","8"=>"台湾","9"=>"マレーシア", "10"=>"ベトナム", "11" => "フィリピン"
 		));
 	////////////////////////////////////////////////////
 
