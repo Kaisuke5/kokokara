@@ -51,9 +51,15 @@ class FbconnectController extends AppController{
 
 				////////////追加分 by Mark/////////////////////
 				$me['access_token']= $access_token;
-				$me['university'] = $university;
-				$me['faculty'] = $faculty;
-				$me['friends_num'] = $friends_num;
+				if(isset($university)){
+					$me['university'] = $university;
+				}
+				if(isset($faculty)) {
+					$me['faculty'] = $faculty;
+				}
+				if(isset($friends_num)) {
+					$me['friends_num'] = $friends_num;
+				}
 				////////////追加分 by Mark/////////////////////
 
 				$a = array();   //Insert フォーマットに変更

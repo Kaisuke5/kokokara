@@ -57,7 +57,7 @@ class Event extends AppModel{
         $state = $event["Event"]["state"];
         $original = array();
 
-        if ($state <= 4) {
+        if ($state <= 3) {
             $this->loadModel("Intern");
             $original = $this->Intern->find("first", array("conditions" => array("event_id" => $id)));
             //debug($original);
@@ -72,6 +72,10 @@ class Event extends AppModel{
             */
                 switch ($state) {
 
+                    case 4:
+                        $this->loadModel("StudentGroupInfo");
+                        $original = $this->StudentGroupInfo->find("first", array("conditions" => array("event_id", $id)));
+                        break;
 
                     case 5:
                         $this->loadModel("StudyAbroad");

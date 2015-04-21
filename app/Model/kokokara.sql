@@ -139,7 +139,7 @@ create table student_group(
 create table facebook_users(
   id int not null primary key auto_increment,
   student_id int not null,
-  facebook_user_id int,
+  facebook_user_id VARCHAR (255),
   birthday VARCHAR (255),
 	email VARCHAR (255),
 	first_name VARCHAR (255),
@@ -238,7 +238,15 @@ CREATE table attachments (
 
 );
 
-
+/*追加分byMark20150415*/
+create table student_group_info(
+  id int NOT NULL auto_increment PRIMARY KEY,
+  event_id int,
+  universities text,
+  activities text,
+  created datetime DEFAULT null,
+  modified datetime DEFAULT null
+);
 
 
 
