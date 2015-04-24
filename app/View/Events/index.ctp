@@ -11,7 +11,7 @@
 		<div class="col-sm-6 event-info-top">
 			<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 			<p>
-				<? if($event['Event']['state'] == 9||4){
+				<? if($event['Event']['state'] == 9 and $event['Event']['state'] == 4){
 							echo '<font style="font-size:12px;">学生団体</font>';
 						}else{
 							echo '<font style="font-size:12px;">講師</font>';
