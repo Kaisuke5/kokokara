@@ -159,7 +159,7 @@
 						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}	
 					?>
-					<p class="p-center"><a href="#">クラスに出席すると？>></a></p>
+					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
 				</div>
 				<div class="col-sm-12 detail-info-table">
 					<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> もっと知る</h2>
@@ -215,7 +215,7 @@
 						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}	
 					?>
-					<p class="p-center"><a href="#">クラスに出席すると？>></a></p>
+					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
 				</div>
 			</div>	
 		</div>

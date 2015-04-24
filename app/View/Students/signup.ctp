@@ -1,8 +1,13 @@
 <h2>新規登録</h2>
 
-<?php
-echo $this->Html->link('Facebookログイン', array("controller" => "fbconnect", "action" => "facebook"));
-?>
+<div class="row" style="border-bottom:3px dotted #c0c0c0;margin-bottom:60px;">
+	<div class="col-xs-6 col-xs-offset-3 login-fb-btn">
+		<?php
+		echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+		?>
+		<h1><i class="fa fa-facebook-square"></i><br><font style="font-size:18px;">まずFacebookで登録！</font></h1>
+	</div>
+</div>
 
 <?php
 debug($myData);

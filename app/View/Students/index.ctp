@@ -42,7 +42,7 @@
 		</div>
 		<div class="row top-signin">
 			<div class="col-sm-6 col-sm-offset-1 top-signin-left">
-				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <i class="fa fa-question-circle"></i></p>
+				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <a href="../pages/about"><i class="fa fa-question-circle"></i></a></p>
 			</div>
 			<div class="col-sm-3 col-xs-12 top-signin-fb">
 				<?php
@@ -213,47 +213,54 @@
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 6)); ?>
+	  			
 	  			<div class="col-cat-in col-cat-in6">
-	  				<!--　サイトオープン時、グレイアウト用
 	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">合宿</font><br>只今建設中</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">合宿</font><br>只今建設中</h4>
 		  			</div>
-		  			-->
+		  			<!--
 		  			<div class="col-cat-in-logo" style="background:#6bd16e;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#6bd16e;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>合宿</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bd16e;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>合宿</h4>
 		  			</div>
+		  		-->
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 7)); ?>
-	  			<div class="col-cat-in col-cat-in7">
-	  				<!--　サイトオープン時、グレイアウト用
+	  			<div class="col-cat-in col-cat-in7">		
 	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">習い事</font><br>只今建設中</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">習い事</font><br>只今建設中</h4>
 		  			</div>
-		  			-->
+		  			
+		  			<!--
 	  				<div class="col-cat-in-logo" style="background:#6bd1a1;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#6bd1a1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>習い事</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bd1a1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>習い事</h4>
 		  			</div>
+		  			-->
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 8)); ?>
+	  			
 	  			<div class="col-cat-in col-cat-in8">
+	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">おもしろい事</font><br>只今建設中</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">おもしろい事</font><br>只今建設中</h4>
+		  			</div>
+		  			<!--
 	  				<div class="col-cat-in-logo" style="background:#6bcad1;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#6bcad1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>おもしろい事</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bcad1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>おもしろい事</h4>
 		  			</div>
+		  			-->
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
@@ -346,7 +353,7 @@
 			if($i >= $kiji){
 			break;
 		}else{ ?>
-		<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>">
 			<div class="row ctg-row">
 				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>

@@ -87,9 +87,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				        	</li>
 					        <li class="header-btn-lg-2"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-3"><?php echo $this->Html->link('留学', array('controller' => 'events', 'action' => 'category', 5), array('class' => 'header-gal')); ?></li>
+					        <!--
 					        <li class="header-btn-lg-4"><?php echo $this->Html->link('習い事', array('controller' => 'events', 'action' => 'category', 7), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-5"><?php echo $this->Html->link('おもしろい', array('controller' => 'events', 'action' => 'category', 8), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-6"><?php echo $this->Html->link('合宿', array('controller' => 'events', 'action' => 'category', 6), array('class' => 'header-gal')); ?></li>
+					    	-->
 					        <li class="header-btn-lg-7 dropdown">
 					        	<a href="#" class="dropdown-toggle header-gal" data-toggle="dropdown" role="button" aria-expanded="false">学生団体 <span class="caret"></span></a>
 				        		<ul class="dropdown-menu" role="menu">
@@ -108,8 +110,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								?>
 					        </li>
 					        <li class="header-login-btn">
-					        	<a href="#">登校する</a>
-					        <!--
+					        	
+					        	<?php
+								echo $this->Html->link('登校する', array("controller" => "fbconnect", "action" => "facebook"));
+								?>
+								
+					        	<!--
 								<?php
 								if(!$myData){
 									echo $this->Html->link('登校する', array('action' => 'login'));
@@ -118,7 +124,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 									debug($myData);
 								}
 								?>
-					    	-->
+					    		-->
 							</li>
 						</ul>
 					</div>
