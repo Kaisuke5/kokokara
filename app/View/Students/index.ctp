@@ -373,7 +373,7 @@
 		?>
 		</div>
 		<div class="col-sm-4 hidden-sm hidden-md hidden-lg" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
-			<? echo $this->element('event-pg-sidebar')?>
+			<? echo $this->element('top-pg-sidebar')?>
 		</div>
 		<div class="col-md-12">
 		  	<p class="p-center"><?php echo $this->Html->link('もっと見る>>', array('controller' => 'events', 'action' => 'news')); ?></p>
