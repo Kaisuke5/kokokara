@@ -31,7 +31,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('cake.generic');
 
 		echo $this->Html->script("jquery-1.11.2.min.js");
-		echo $this->Html->script("jquery.particleground.min.js");
 		echo $this->Html->script("jquery.remodal.js");
 		echo $this->Html->css("kai.css");
 		echo $this->Html->script("kai.js");
@@ -52,13 +51,24 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 	echo $this->Html->css('style.css')
 	?>
-	<script type="text/javascript">
-	    $(".text-fit").fitText();
+	<script>
+	$(function(){
+	    var $setElm = $('.text-fit');
+	    var cutFigure = '70'; // カットする文字数
+	    var afterTxt = ' …'; // 文字カット後に表示するテキスト
+	 
+	    $setElm.each(function(){
+	        var textLength = $(this).text().length;
+	        var textTrim = $(this).text().substr(0,(cutFigure))
+	 
+	        if(cutFigure < textLength) {
+	            $(this).html(textTrim + afterTxt).css({visibility:'visible'});
+	        } else if(cutFigure >= textLength) {
+	            $(this).css({visibility:'visible'});
+	        }
+	    });
+	});
 	</script>
-	<script type="text/javascript">
-		$('.top-bgi').particleground();
-	</script>
-
 </head>
 <body>
 	<div id="container">
