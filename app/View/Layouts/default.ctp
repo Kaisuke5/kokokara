@@ -120,11 +120,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								?>
 					        </li>
 					        <li class="header-login-btn">
-					        	
-					        	<?php
-								echo $this->Html->link('登校する', array("controller" => "fbconnect", "action" => "facebook"));
-								?>
-								
+					        	<a href="#modal">登校する</a>
 					        	<!--
 								<?php
 								if(!$myData){
@@ -145,6 +141,33 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 			<?php echo $this->Session->flash(); ?>
 			 <?php echo $this->fetch('content'); ?>
+		</div>
+		<div class="remodal" data-remodal-id="modal">
+		    <h1 style="margin-bottom:40px;">おかえりなさい！</h1>
+		    <div class="row">
+		    	<div class="col-sm-6">
+		    		<h4>学生証（アカウント）をお持ちの方</h4>
+		    	</div>
+		    	<div class="col-sm-6 hidden-xs">
+		    		<h4>学生証をお持ちでない方</h4>
+		    	</div>
+		    </div>
+		    <div class="row">
+		    	<div class="col-sm-4 col-sm-offset-1 login-fb-btn">
+		    		<?php
+					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+					?>
+					<h1><i class="fa fa-facebook-square"></i><br><font style="font-size:14px;">Facebookで登校する</font></h1>
+			    </div>
+			    <div class="col-sm-4 col-sm-offset-2 login-fb-btn2">
+					<?php
+					echo $this->Html->link('', array('action' => 'signup'));
+					?>
+					<h1><i class="fa fa-facebook-square"></i><br><font style="font-size:14px;">Facebookで簡単入学</font></h1>
+			    </div>
+		    </div>
+		    <br>
+		    <a class="remodal-cancel" href="#">閉じる</a>
 		</div>
 	    <footer class="footer">
 			<div class="container footer-container">

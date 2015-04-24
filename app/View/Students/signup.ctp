@@ -1,4 +1,4 @@
-<h2>新規登録</h2>
+<h2>入学のご案内</h2>
 
 <div class="row" style="border-bottom:3px dotted #c0c0c0;margin-bottom:60px;">
 	<div class="col-xs-6 col-xs-offset-3 login-fb-btn">
@@ -71,7 +71,7 @@
 		echo $this->Form->input('email');
 		echo $this->Form->input('password');
 		echo $this->Form->input('email_accept', array('type' => 'checkbox', 'value' => 1));
-		echo $this->Form->end('新規登録する');
+		echo $this->Form->end('入学する！');
 		?>
 	</div>
 </div>
