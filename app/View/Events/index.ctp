@@ -90,7 +90,7 @@
 		<div class="col-sm-8">
 			<div class="row" style="padding-left:20px; padding-right:20px;">
 				<div class="col-sm-12">
-					<? if($event['Event']['state'] == 9||4){
+					<? if($event['Event']['state'] == 9 and $event['Event']['state'] == 4){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体紹介</h2>';
 						}else{
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス紹介</h2>';
@@ -121,7 +121,7 @@
 					</div>
 				</div>
 				<div class="col-sm-12" style="margin-top:36px; 15px">
-					<? if($event['Event']['state'] == 9||4){
+					<? if($event['Event']['state'] and $event['Event']['state'] == 4){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体詳細</h2>';
 						}else{
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス詳細</h2>';

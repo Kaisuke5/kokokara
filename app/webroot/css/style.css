@@ -68,6 +68,10 @@ footer{
 	font-size:13px;
 	padding-bottom:10px;
 }
+.footer-col a{
+	color:#c0c0c0;
+	font-weight:lighter;
+}
 .login-fb-btn{
 	height:150px; 
 	background:#3b5998;

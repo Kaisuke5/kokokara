@@ -180,8 +180,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<div class="row">
 					<div class="col-sm-4 footer-col">
 		        		<ul>
-		        			<li>kokokaraって？</li>
-		        			<li>運営企業</li>
+		        			<li><?php echo $this->Html->link(
+	        						'kokokaraって？',
+								      array('controller'=>'pages',
+									    'action'=>'about')
+										)
+								?>
+							</li>
+		        			<li><?php echo $this->Html->link(
+	        						'運営企業',
+								      array('controller'=>'pages',
+									    'action'=>'about')
+										)
+								?>
+							</li>
 		        			<li>プライバシーポリシー</li>
 		        			<li>利用規約</li>
 		        		</ul>
