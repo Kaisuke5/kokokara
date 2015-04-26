@@ -111,7 +111,15 @@
 					<a href="/events?id=<?echo $event['Event']['id']?>">
 			  			<div class="col-md-4 col-sm-6 col-xs-12 pop-lg">
 			  				<div class="link_box">
-			  				 	<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'))?>
+			  					<!--<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'))?>-->
+
+			  					<?php
+			  						if($this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment']) == null){
+			  							echo $this->Html->image("kokokara_logo.gif", array("alt" => "ロゴ")); 
+			  						}else{
+			  							echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'));
+			  						}
+			  					?>
 							</div>
 							<div class="pop-lg-infobox">
 								<?php 
