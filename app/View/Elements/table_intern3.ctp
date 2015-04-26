@@ -17,7 +17,7 @@
 							</tr>
 							<tr>
 								<td class="detail-info-table-bold">対象</td>
-								<td><?echo $event['Intern']['target']?>名</td>
+								<td><?echo $event['Intern']['target']?></td>
 							</tr>
 							<tr>
 								<td class="detail-info-table-bold">募集人数</td>
