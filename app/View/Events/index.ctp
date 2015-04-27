@@ -11,7 +11,7 @@
 		<div class="col-sm-6 event-info-top">
 			<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 			<p>
-				<? if($event['Event']['state'] == 9||4){
+				<? if($event['Event']['state'] == 9 and $event['Event']['state'] == 4){
 							echo '<font style="font-size:12px;">学生団体</font>';
 						}else{
 							echo '<font style="font-size:12px;">講師</font>';
@@ -90,7 +90,7 @@
 		<div class="col-sm-8">
 			<div class="row" style="padding-left:20px; padding-right:20px;">
 				<div class="col-sm-12">
-					<? if($event['Event']['state'] == 9||4){
+					<? if($event['Event']['state'] == 9 and $event['Event']['state'] == 4){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体紹介</h2>';
 						}else{
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス紹介</h2>';
@@ -105,7 +105,7 @@
 							<h3><? echo $event['Event']['company_name'] ?></h3>
 						</div>
 						<div class="col-xs-12">
-							<p>2012年にBoypediaとして発足。現在はkokokara Groupとして、前向きな大学生のプラットフォーム作成を原点に、様々な仕掛けをしていきます。</p>
+							<p><? echo $event['Event']['company_info'] ?></p>
 						</div>
 					</div>
 					<div class="row hidden-sm hidden-md hidden-lg">
@@ -121,7 +121,7 @@
 					</div>
 				</div>
 				<div class="col-sm-12" style="margin-top:36px; 15px">
-					<? if($event['Event']['state'] == 9||4){
+					<? if($event['Event']['state'] and $event['Event']['state'] == 4){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体詳細</h2>';
 						}else{
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス詳細</h2>';
@@ -159,7 +159,7 @@
 						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}	
 					?>
-					<p class="p-center"><a href="#">クラスに出席すると？>></a></p>
+					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
 				</div>
 				<div class="col-sm-12 detail-info-table">
 					<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> もっと知る</h2>
@@ -215,7 +215,7 @@
 						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}	
 					?>
-					<p class="p-center"><a href="#">クラスに出席すると？>></a></p>
+					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
 				</div>
 			</div>	
 		</div>

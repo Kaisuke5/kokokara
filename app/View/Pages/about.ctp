@@ -108,7 +108,7 @@
 			<div class="col-md-12">
 			  	<div class="row qanda-row">
 			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-			  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
+			  			<a href="#ins-student-card"></a>
 			  			<div class="col-cat-in col-cat-in4">
 			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p style="padding-left:17px;"><i class="fa fa-credit-card"></i></p></div>
 			  				<div>
@@ -120,64 +120,12 @@
 			  	</div>
 			  	<div class="row qanda-row">
 			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-			  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
+			  			<a href="#ins-apply"></a>
 			  			<div class="col-cat-in col-cat-in4">
 			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p style="padding-left:25px;padding-top:10px;"><i class="fa fa-play"></i></p></div>
 			  				<div>
 				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">イベント</font><br>クラスに出席</h3>
 				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">イベント</font><br>クラスに出席</h4>
-				  			</div>
-			  			</div>
-			  		</div>
-			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-			  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
-			  			<div class="col-cat-in col-cat-in4">
-			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p><i class="fa fa-question-circle"></i></p></div>
-			  				<div>
-				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">イベント</font><br>出席すると？</h3>
-				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">イベント</font><br>出席すると？</h4>
-				  			</div>
-			  			</div>
-			  		</div>
-			  	</div>
-			  	<div class="row qanda-row">
-			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-			  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
-			  			<div class="col-cat-in col-cat-in4">
-			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p><i class="fa fa-question-circle"></i></p></div>
-			  				<div>
-				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h3>
-				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h4>
-				  			</div>
-			  			</div>
-			  		</div>
-			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-			  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
-			  			<div class="col-cat-in col-cat-in4">
-			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p><i class="fa fa-question-circle"></i></p></div>
-			  				<div>
-				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h3>
-				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h4>
-				  			</div>
-			  			</div>
-			  		</div>
-			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-			  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
-			  			<div class="col-cat-in col-cat-in4">
-			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p><i class="fa fa-question-circle"></i></p></div>
-			  				<div>
-				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h3>
-				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h4>
-				  			</div>
-			  			</div>
-			  		</div>
-			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-			  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 4)); ?>
-			  			<div class="col-cat-in col-cat-in4">
-			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p><i class="fa fa-question-circle"></i></p></div>
-			  				<div>
-				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h3>
-				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">アカウント</font><br>kokokara学生証</h4>
 				  			</div>
 			  			</div>
 			  		</div>
@@ -222,4 +170,49 @@
 			</div>
 		</div>
 	</div>
+</div>
+<div class="remodal" data-remodal-id="ins-student-card">
+    <h1 style="margin-bottom:40px;">kokokara学生証とは</h1>
+    <div class="row">
+    	<div class="col-sm-6">
+    		<p style="font-size:14px;text-align:left;">kokokaraが提供致しますあらゆるサービスにおいて有効なオンライン上の学生証です。<br>
+	    	当サイトのサービスにお申し込み頂く際にも必要となります。<br><br>
+	    	お持ちのFacebookアカウントを用いて簡単にご登録頂けますので是非どうぞ！
+    		</p>
+    		<?php
+			echo $this->Html->link('facebookで入学する', array("controller" => "fbconnect", "action" => "facebook"));
+			?>
+			<br>
+			<a href="#">個人情報の取り扱いについて</a>
+    	</div>
+    	<div class="col-sm-6">
+    		<p style="font-size:124px;"><i class="fa fa-credit-card"></i></p>
+    	</div>
+	</div>
+	<br>
+    <a class="remodal-cancel" href="#">閉じる</a>
+</div>
+<div class="remodal" data-remodal-id="ins-apply">
+    <h1 style="margin-bottom:40px;">クラスに出席とは</h1>
+    <div class="row">
+    	<div class="col-sm-6">
+    		<p style="font-size:14px;text-align:left;">
+    		kokokaraはたくさんの組織・個人の協力によって、多彩なサービスを提供しております。<br>
+    		それらのサービスは全てkokokaraが目指す学習に繋がる事から私達はそれを「クラス」と呼んでいます。<br>
+    		つまり「クラスに出席する」とは、kokokaraを通じて彼らのサービスへ簡単にお申し込み頂けるという事です。<br><br>
+
+	    	お申し込み頂くと、クラスを実際に提供している組織・個人から皆様に詳細をお伝えするメールが届きます。
+    		</p>
+    		<?php
+			echo $this->Html->link('facebookで入学する', array("controller" => "fbconnect", "action" => "facebook"));
+			?>
+			<br>
+			<a href="#">個人情報の取り扱いについて</a>
+    	</div>
+    	<div class="col-sm-6">
+    		<p style="font-size:124px;padding-top:60px;"><i class="fa fa-play"></i></p>
+    	</div>
+	</div>
+	<br>
+    <a class="remodal-cancel" href="#">閉じる</a>
 </div>

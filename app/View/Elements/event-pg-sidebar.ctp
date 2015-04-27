@@ -9,7 +9,7 @@
 		if($i >= $kiji){
 		break;
 	}else{ ?>
-		<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>">
 			<div class="col-sm-12 event-pg-sb">
 				<div>
 					<?php 
@@ -38,7 +38,7 @@
 				<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
 				<div>
 					<h1><?echo $event['Event']['title']?></h1>
-					<p><?echo $event['Event']['body']?></p>
+					<p class="text-fit"><?echo $event['Event']['body']?></p>
 				</div>
 			</div>	
 		</a>

@@ -166,7 +166,7 @@ a{
 	border:1px solid #ededed;
 }
 .detail-info-table{
-	font-size:14px;
+	font-size:14px !important;
 }
 .detail-info-table table{
 	border:1px solid #ededed;

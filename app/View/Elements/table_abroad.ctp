@@ -4,14 +4,6 @@
 								<td><? echo $event['Event']['company_name']?></td>
 							</tr>
 							<tr>
-								<td class="detail-info-table-bold">場所</td>
-								<td><?echo $event['Event']['location']?></td>
-							</tr>
-							<tr>
-								<td class="detail-info-table-bold">学べる事</td>
-								<td><?echo nl2br($event['StudyAbroad']['skill'])?></td>
-							</tr>
-							<tr>
 								<td class="detail-info-table-bold">おすすめコース</td>
 								<td><?echo nl2br($event['StudyAbroad']['class'])?></td>
 							</tr>

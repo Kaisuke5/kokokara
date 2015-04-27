@@ -42,7 +42,7 @@
 		</div>
 		<div class="row top-signin">
 			<div class="col-sm-6 col-sm-offset-1 top-signin-left">
-				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <i class="fa fa-question-circle"></i></p>
+				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <a href="../pages/about"><i class="fa fa-question-circle"></i></a></p>
 			</div>
 			<div class="col-sm-3 col-xs-12 top-signin-fb">
 				<?php
@@ -108,10 +108,18 @@
 					if($i >= $kiji){
 					break;
 					}else{ ?>
-					<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
+					<a href="/events?id=<?echo $event['Event']['id']?>">
 			  			<div class="col-md-4 col-sm-6 col-xs-12 pop-lg">
 			  				<div class="link_box">
-			  				 	<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'))?>
+			  					<!--<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'))?>-->
+
+			  					<?php
+			  						if($this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment']) == null){
+			  							echo $this->Html->image("kokokara_logo.gif", array("alt" => "ロゴ")); 
+			  						}else{
+			  							echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'));
+			  						}
+			  					?>
 							</div>
 							<div class="pop-lg-infobox">
 								<?php 
@@ -213,47 +221,54 @@
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 6)); ?>
+	  			
 	  			<div class="col-cat-in col-cat-in6">
-	  				<!--　サイトオープン時、グレイアウト用
 	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">合宿</font><br>只今建設中</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">合宿</font><br>只今建設中</h4>
 		  			</div>
-		  			-->
+		  			<!--
 		  			<div class="col-cat-in-logo" style="background:#6bd16e;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#6bd16e;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>合宿</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bd16e;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>合宿</h4>
 		  			</div>
+		  		-->
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 7)); ?>
-	  			<div class="col-cat-in col-cat-in7">
-	  				<!--　サイトオープン時、グレイアウト用
+	  			<div class="col-cat-in col-cat-in7">		
 	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">習い事</font><br>只今建設中</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">習い事</font><br>只今建設中</h4>
 		  			</div>
-		  			-->
+		  			
+		  			<!--
 	  				<div class="col-cat-in-logo" style="background:#6bd1a1;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#6bd1a1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>習い事</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bd1a1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>習い事</h4>
 		  			</div>
+		  			-->
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 8)); ?>
+	  			
 	  			<div class="col-cat-in col-cat-in8">
+	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">おもしろい事</font><br>只今建設中</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">おもしろい事</font><br>只今建設中</h4>
+		  			</div>
+		  			<!--
 	  				<div class="col-cat-in-logo" style="background:#6bcad1;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#6bcad1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>おもしろい事</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6bcad1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>おもしろい事</h4>
 		  			</div>
+		  			-->
 	  			</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
@@ -346,7 +361,7 @@
 			if($i >= $kiji){
 			break;
 		}else{ ?>
-		<a href="/kokokara/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>">
 			<div class="row ctg-row">
 				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
@@ -366,7 +381,7 @@
 		?>
 		</div>
 		<div class="col-sm-4 hidden-sm hidden-md hidden-lg" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
-			<? echo $this->element('event-pg-sidebar')?>
+			<? echo $this->element('top-pg-sidebar')?>
 		</div>
 		<div class="col-md-12">
 		  	<p class="p-center"><?php echo $this->Html->link('もっと見る>>', array('controller' => 'events', 'action' => 'news')); ?></p>
@@ -427,46 +442,3 @@ if(!$myData){
 		<?php echo $this->Html->link('新着イベント', array('controller' => 'events', 'action' => 'news')); ?>
 	</li>
 </ul>
-
-
-
-
-
-<a href="#modal">Modal Window for Logging-in</a>
-<div class="remodal" data-remodal-id="modal">
-    <h1>おかえりなさい！</h1>
-    <div class="row hidden-xs">
-	    <div class="col-sm-5">
-	    	<h3>会員情報から登校</h3>
-	   	</div>
-	   	<div class="col-sm-2"><h3>OR</h3></div>
-	   	<div class="col-sm-5">
-	    	<h3>Facebookから登校</h3>	
-	   	</div>
- 	</div>
-    <div class="row">
-    	<div class="col-sm-5">
-    		<h3 class="hidden-md hidden-sm hidden-lg">会員情報から登校</h3>
-    		<?php
-			echo $this->Form->create('Student');
-			echo $this->Form->input('email');
-			echo $this->Form->input('password');
-			echo $this->Form->end('登校する', array('class' => 'remodal-confirm'));
-			?>
-			<div class="forget-pass">
-				<?php
-				echo $this->Html->link('パスワードをお忘れの場合', array('action' => 'passwordForgot'));
-				?>
-			</div>
-    	</div>
-    	<div class="col-sm-2"></div>
-    	<div class="col-sm-5 top-signin top-signin-fb" style="margin-top:30px;">
-    		<?php
-			echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
-			?>
-			<p class="text-fit"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
-    	</div>
-    </div>
-    <br>
-    <a class="remodal-cancel" href="#">閉じる</a>
-</div>

@@ -20,6 +20,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <div class="remodal-bg"> <!-- remodal実行時、背景を暗く -->
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $this->fetch('title'); ?>
@@ -30,7 +31,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('cake.generic');
 
 		echo $this->Html->script("jquery-1.11.2.min.js");
-		echo $this->Html->script("jquery.particleground.min.js");
 		echo $this->Html->script("jquery.remodal.js");
 		echo $this->Html->css("kai.css");
 		echo $this->Html->script("kai.js");
@@ -51,13 +51,24 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 	echo $this->Html->css('style.css')
 	?>
-	<script type="text/javascript">
-	    $(".text-fit").fitText();
+	<script>
+	$(function(){
+	    var $setElm = $('.text-fit');
+	    var cutFigure = '70'; // カットする文字数
+	    var afterTxt = ' …'; // 文字カット後に表示するテキスト
+	 
+	    $setElm.each(function(){
+	        var textLength = $(this).text().length;
+	        var textTrim = $(this).text().substr(0,(cutFigure))
+	 
+	        if(cutFigure < textLength) {
+	            $(this).html(textTrim + afterTxt).css({visibility:'visible'});
+	        } else if(cutFigure >= textLength) {
+	            $(this).css({visibility:'visible'});
+	        }
+	    });
+	});
 	</script>
-	<script type="text/javascript">
-		$('.top-bgi').particleground();
-	</script>
-
 </head>
 <body>
 	<div id="container">
@@ -86,9 +97,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				        	</li>
 					        <li class="header-btn-lg-2"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-3"><?php echo $this->Html->link('留学', array('controller' => 'events', 'action' => 'category', 5), array('class' => 'header-gal')); ?></li>
+					        <!--
 					        <li class="header-btn-lg-4"><?php echo $this->Html->link('習い事', array('controller' => 'events', 'action' => 'category', 7), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-5"><?php echo $this->Html->link('おもしろい', array('controller' => 'events', 'action' => 'category', 8), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-6"><?php echo $this->Html->link('合宿', array('controller' => 'events', 'action' => 'category', 6), array('class' => 'header-gal')); ?></li>
+					    	-->
 					        <li class="header-btn-lg-7 dropdown">
 					        	<a href="#" class="dropdown-toggle header-gal" data-toggle="dropdown" role="button" aria-expanded="false">学生団体 <span class="caret"></span></a>
 				        		<ul class="dropdown-menu" role="menu">
@@ -107,8 +120,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								?>
 					        </li>
 					        <li class="header-login-btn">
-					        	<a href="#">登校する</a>
-					        <!--
+					        	<a href="#modal">登校する</a>
+					        	<!--
 								<?php
 								if(!$myData){
 									echo $this->Html->link('登校する', array('action' => 'login'));
@@ -117,7 +130,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 									debug($myData);
 								}
 								?>
-					    	-->
+					    		-->
 							</li>
 						</ul>
 					</div>
@@ -128,6 +141,33 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 			<?php echo $this->Session->flash(); ?>
 			 <?php echo $this->fetch('content'); ?>
+		</div>
+		<div class="remodal" data-remodal-id="modal">
+		    <h1 style="margin-bottom:40px;">おかえりなさい！</h1>
+		    <div class="row">
+		    	<div class="col-sm-6">
+		    		<h4>学生証（アカウント）をお持ちの方</h4>
+		    	</div>
+		    	<div class="col-sm-6 hidden-xs">
+		    		<h4>学生証をお持ちでない方</h4>
+		    	</div>
+		    </div>
+		    <div class="row">
+		    	<div class="col-sm-4 col-sm-offset-1 login-fb-btn">
+		    		<?php
+					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+					?>
+					<h1><i class="fa fa-facebook-square"></i><br><font style="font-size:14px;">Facebookで登校する</font></h1>
+			    </div>
+			    <div class="col-sm-4 col-sm-offset-2 login-fb-btn2">
+					<?php
+					echo $this->Html->link('', array('action' => 'signup'));
+					?>
+					<h1><i class="fa fa-facebook-square"></i><br><font style="font-size:14px;">Facebookで簡単入学</font></h1>
+			    </div>
+		    </div>
+		    <br>
+		    <a class="remodal-cancel" href="#">閉じる</a>
 		</div>
 	    <footer class="footer">
 			<div class="container footer-container">
@@ -140,8 +180,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<div class="row">
 					<div class="col-sm-4 footer-col">
 		        		<ul>
-		        			<li>kokokaraって？</li>
-		        			<li>運営企業</li>
+		        			<li><?php echo $this->Html->link(
+	        						'kokokaraって？',
+								      array('controller'=>'pages',
+									    'action'=>'about')
+										)
+								?>
+							</li>
+		        			<li><?php echo $this->Html->link(
+	        						'運営企業',
+								      array('controller'=>'pages',
+									    'action'=>'about')
+										)
+								?>
+							</li>
 		        			<li>プライバシーポリシー</li>
 		        			<li>利用規約</li>
 		        		</ul>
