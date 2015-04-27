@@ -123,19 +123,24 @@ class EventsController extends AppController{
             $this->redirect("index");
         }
 
+        //メール送信用イベント情報取得
+        $event_info = $this->Event->find("first", array("conditions"=>array("id"=>$id)));
+        $event_title = $event_info['Event']['title'];
+        $student_name = $myData['Student']['name'];
+
         //ここにメール関数を書く
         App::uses( 'CakeEmail', 'Network/Email');
         $email = new CakeEmail('gmail');
         $email->from( array('mark.sato1111@gmail.com' => 'mark.sato1111@gmail.com'));  // 送信元
-        $email->to('confirm@kokokara-group.com');                      // 送信先
-        $email->subject('メールタイトル');                      // メールタイトル
+        $email->to('confirm@kokokara-group.com'); // 送信先
+        $email->subject('【申請完了】');                      // メールタイトル
         // メール送信
-        $email->send('メール本文');
+        $email->send("ユーザ：$student_name\n\nイベント：$event_title");
         //debug($res);
 
 
         $this->Session->setFlash("申し込み完了");
-        $this->redirect(array("controller"=>"Students","action"=>"index"));
+        $this->redirect(array("controller"=>"events","action"=>"thanks"));
 
     }
 
@@ -159,6 +164,11 @@ class EventsController extends AppController{
             throw new NotFoundException();
         }
         $this->set('events', $events);
+    }
+
+    //2015/04/27 追加 by mark//////////
+    public function thanks() {
+
     }
 
 }

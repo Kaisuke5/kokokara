@@ -120,14 +120,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								?>
 					        </li>
 					        <li class="header-login-btn">
-					        	<a href="#modal">登校する</a>
+						        <a href="#modal">登校する</a>
 					        	<!--
 								<?php
 								if(!$myData){
-									echo $this->Html->link('登校する', array('action' => 'login'));
+									echo $this->Html->link('登校する', array('controller' => 'students', 'action' => 'login'));
 								}else{
-									echo $this->Html->link('下校する', array('action' => 'logout'));
-									debug($myData);
+									echo $this->Html->link('下校する', array('controller' => 'students', 'action' => 'logout'));
+									//debug($myData);
 								}
 								?>
 					    		-->
