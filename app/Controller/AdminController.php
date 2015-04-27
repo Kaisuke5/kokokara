@@ -147,6 +147,12 @@ class AdminController extends AppController{
         }else{
 
             switch ($state){
+                case 4:
+                    $this->loadModel("StudentGroupInfo");
+                    $original_id=$this->data["StudentGroupInfo"]["id"];
+                    $this->StudentGroupInfo->$id=$original_id;
+                    $this->StudentGroupInfo->save($this->data);
+                    break;
                 case 5:
                     $this->loadModel("StudyAbroad");
                     $original_id=$this->data["StudyAbroad"]["id"];

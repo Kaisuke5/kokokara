@@ -52,7 +52,7 @@
 	<div class="col-sm-12 event-pg-sb">
 		<div>
 			<?php 
-			if($this->here == '/kokokara/events/category/1'){
+			if($this->here == '/events/category/1'){
 			echo '<p class="event-pg-sb-cat" style="background:#d16b9a;">長期インターン</p>';
 			}elseif($this->here == '/kokokara/events/category/2'){
 			echo '<p class="event-pg-sb-cat" style="background:#d1a16b;">短期インターン</p>';

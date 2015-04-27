@@ -238,10 +238,6 @@
     }else{
     	$(s+1).css("display", "block");
     }
-    
-
-
-
 </script>
 
 

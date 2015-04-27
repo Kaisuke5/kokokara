@@ -82,9 +82,6 @@ class Event extends AppModel{
                         $original = $this->StudyAbroad->find("first", array(
                             "conditions" => array("event_id" => $id)
                         ));
-                        debug($original);
-                        debug($id);
-                        exit;
                         break;
 
                     case 6:

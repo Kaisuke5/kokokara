@@ -100,4 +100,7 @@ class EmailConfig {
 		'transport' => 'Smtp'
 	);
 
+	//2015/04/27 追記 by mark
+
+
 }
