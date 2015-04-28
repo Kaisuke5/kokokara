@@ -121,7 +121,7 @@
 					</div>
 				</div>
 				<div class="col-sm-12" style="margin-top:36px; 15px">
-					<? if($event['Event']['state'] and $event['Event']['state'] == 4){
+					<? if($event['Event']['state'] == 9 and $event['Event']['state'] == 4){
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> 団体詳細</h2>';
 						}else{
 							echo '<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> クラス詳細</h2>';
@@ -140,23 +140,23 @@
 				<div class="col-xs-12 apply-btn">
 					<?php 
 					if($event['Event']['state'] == 1){
-						echo '<button class="btn btn-primary btn-lg btn-lg1" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg1" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 2){
-						echo '<button class="btn btn-primary btn-lg btn-lg2" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg2" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 3){
-						echo '<button class="btn btn-primary btn-lg btn-lg3" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg3" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 5){		
-						echo '<button class="btn btn-primary btn-lg btn-lg5" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg5" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 6){
-						echo '<button class="btn btn-primary btn-lg btn-lg6" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg6" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 7){
-						echo '<button class="btn btn-primary btn-lg btn-lg7" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg7" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 8){
-						echo '<button class="btn btn-primary btn-lg btn-lg8" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg8" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 9){
-						echo '<button class="btn btn-primary btn-lg btn-lg9" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg9" type="button">このクラスに出席</a>';
 						}elseif($event['Event']['state'] == 4){
-						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg4" type="button">このクラスに出席</a>';
 						}	
 					?>
 					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
@@ -196,6 +196,43 @@
 				<div class="col-xs-12 apply-btn">
 					<?php 
 					if($event['Event']['state'] == 1){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg1" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 2){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg2" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 3){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg3" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 5){		
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg5" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 6){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg6" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 7){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg7" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 8){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg8" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 9){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg9" type="button">このクラスに出席</a>';
+						}elseif($event['Event']['state'] == 4){
+						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg4" type="button">このクラスに出席</a>';
+						}	
+					?>
+					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
+				</div>
+			</div>	
+		</div>
+		<div class="col-sm-4" style="border-left:1px solid #ededed;">
+			<? echo $this->element('sb-apply')?>
+			<? echo $this->element('event-pg-sidebar')?>
+		</div>
+		
+	</div>
+</div>
+<!-- 0427 追加木内 -->
+		<div class="remodal" data-remodal-id="event-apply">
+		    <h1 style="margin-bottom:40px;">このクラスに出席しますか？</h1>
+		    <p>このボタンを押すと、このクラスへの出席を申請します。申請するとおおよそ3日以内にkokokaraから確認メールが届きます。</p>
+		    <div class="col-xs-12 apply-btn">
+					<?php 
+					if($event['Event']['state'] == 1){
 						echo '<button class="btn btn-primary btn-lg btn-lg1" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}elseif($event['Event']['state'] == 2){
 						echo '<button class="btn btn-primary btn-lg btn-lg2" type="button" onclick="eventapply()">このクラスに出席</button>';
@@ -215,17 +252,13 @@
 						echo '<button class="btn btn-primary btn-lg btn-lg4" type="button" onclick="eventapply()">このクラスに出席</button>';
 						}	
 					?>
-					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
 				</div>
-			</div>	
+				<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
+		    <br>
+		    <a class="remodal-cancel" href="#">閉じる</a>
 		</div>
-		<div class="col-sm-4" style="border-left:1px solid #ededed;">
-			<? echo $this->element('sb-apply')?>
-			<? echo $this->element('event-pg-sidebar')?>
-		</div>
-		
-	</div>
-</div>
+<!--以上追加分 -->
+
 <h2>イベント</h2>
 
 

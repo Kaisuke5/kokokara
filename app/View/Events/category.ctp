@@ -2,23 +2,23 @@
 <div class="container" style="margin-top:90px;">
 	<div class="row">
 			<?php 
-			if($this->here == '/kokokara/events/category/1'){
+			if($this->here == '/events/category/1'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#d16b9a;"><h1>長期インターン</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/2'){
+			}elseif($this->here == '/events/category/2'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#d1a16b;"><h1>短期インターン</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/3'){
+			}elseif($this->here == '/events/category/3'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#ced16b;"><h1>海外インターン</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/5'){
+			}elseif($this->here == '/events/category/5'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#9ad16b;"><h1>留学</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/6'){
+			}elseif($this->here == '/events/category/6'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6bd16e;"><h1>合宿</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/7'){
+			}elseif($this->here == '/events/category/7'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6bd1a1;"><h1>習い事</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/8'){
+			}elseif($this->here == '/events/category/8'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6bcad1;"><h1>おもしろイベント</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/4'){
+			}elseif($this->here == '/events/category/4'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6b97d1;"><h1>学生団体</h1></div>';
-			}elseif($this->here == '/kokokara/events/category/9'){
+			}elseif($this->here == '/events/category/9'){
 			echo '<div class="col-xs-12 incnts-belt" style="background:#6e6bd1;"><h1>学生団体イベント</h1></div>';
 			}	
 			?>
@@ -41,7 +41,7 @@
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
 				</div>
 				<div class="col-sm-10 art-list-comp">
-					<h2>株式会社kokokara Group</h2>
+					<h2><?echo $event['Event']['company_name']?></h2>
 					<h1><?echo $event['Event']['title']?></h1>
 					<p class="text-overflow"><?echo $event['Event']['body']?></p>
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'art-list-thumb img-obfit-list'))?>
@@ -49,11 +49,21 @@
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
 								<p>場所:<font style="">
-
+									<!--
+									<?php 
+										if($event['Event']['state'] == 5){
+											echo $event['StudyAbroad']['country_name'];
+										}elseif($event['Event']['state'] == 3){
+											echo $event['Intern']['country_name'];
+										}else{
+											echo 日本;
+										}
+									?>
+								-->
 								</font></p>
 							</div>
 							<div class="col-xs-6">
-								<p>業種:<font style=""> 手動タグで表示</font></p>
+								
 							</div>
 						</div>
 					</div>
