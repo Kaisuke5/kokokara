@@ -117,62 +117,72 @@ class Event extends AppModel{
 
         $event=$this->find("first",array("conditions"=>array("id"=>$id)));
         if($event==null) return null;
-
         $state=$event["Event"]["state"];
         $original=array();
 
         if($state<4){
             $this->loadModel("Intern");
-            $result=$this->Intern->deleteAll(array("event_id"=>$id));
+            $flag = $this->Intern->find("first",array("conditions"=>array("event_id"=>$id)));
+            if($flag!=null){
+                $this->Intern->deleteAll(array("event_id"=>$id), false);
+            }
         }else{
-
-
-            if($state<4){
-                $this->loadModel("Intern");
-                $result=$this->Intern->deleteAll(array("event_id"=>$id));
-            }else{
 
                 switch ($state){
 
-
+                    case 4:
+                        $this->loadModel("StudentGroupInfo");
+                        $flag = $this->StudentGroupInfo->find("first",array("conditions"=>array("event_id"=>$id)));
+                        if($flag!=null){
+                            $this->StudentGroupInfo->deleteAll(array("event_id"=>$id), false);
+                        }
+                        break;
 
                     case 5:
                         $this->loadModel("StudyAbroad");
-                        $result=$this->Intern->deleteAll(array("event_id"=>$id));
+                        $flag = $this->StudyAbroad->find("first",array("conditions"=>array("event_id"=>$id)));
+                        if($flag!=null){
+                            $this->StudyAbroad->deleteAll(array("event_id"=>$id), false);
+                        }
                         break;
 
                     case 6:
                         $this->loadModel("Camp");
-                        $result=$this->Camp->deleteAll(array("event_id"=>$id));
+                        $flag = $this->Camp->find("first",array("conditions"=>array("event_id"=>$id)));
+                        if($flag!=null){
+                            $this->Camp->deleteAll(array("event_id"=>$id), false);
+                        }
                         break;
 
                     case 7:
                         $this->loadModel("Lesson");
-                        $result=$this->Lesson->deleteAll(array("event_id"=>$id));
+                        $flag = $this->Lesson->find("first",array("conditions"=>array("event_id"=>$id)));
+                        if($flag!=null){
+                            $this->Lesson->deleteAll(array("event_id"=>$id), false);
+                        }
                         break;
 
                     case 8:
                         $this->loadModel("FunnyEvent");
-                        $result=$this->FunnyEvent->deleteAll(array("event_id"=>$id));
+                        $flag = $this->FunnyEvent->find("first",array("conditions"=>array("event_id"=>$id)));
+                        if($flag!=null){
+                            $this->FunnyEvent->deleteAll(array("event_id"=>$id), false);
+                        }
                         break;
 
                     case 9:
                         $this->loadModel("StudentGroup");
-                        $result=$this->StudentGroup->deleteAll(array("event_id"=>$id));
+                        $flag = $this->StudentGroup->find("first",array("conditions"=>array("event_id"=>$id)));
+                        if($flag!=null){
+                            $this->StudentGroup->deleteAll(array("event_id"=>$id), false);
+                        }
                         break;
 
 
                 }
             }
 
-
-        }
-
-
         //debug($original);
-
-        return $result;
-
 
     }
 
