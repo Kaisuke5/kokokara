@@ -5,6 +5,7 @@
 	<?
 		$i = 0;
 		$kiji = 4;
+		shuffle ( $events );
 		foreach ($events as $event){ 
 		if($i >= $kiji){
 		break;
@@ -28,9 +29,9 @@
 					}elseif($event['Event']['state'] == 8){
 					echo '<p class="event-pg-sb-cat" style="background:#6bcad1;">おもしろイベント</p>';
 					}elseif($event['Event']['state'] == 9){
-					echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生団体</p>';
-					}elseif($event['Event']['state'] == 4){
 					echo '<p class="event-pg-sb-cat" style="background:#6e6bd1;">学生イベント</p>';
+					}elseif($event['Event']['state'] == 4){
+					echo '<p class="event-pg-sb-cat" style="background:#6b97d1;">学生団体</p>';
 					}	
 					?>
 					<p class="event-pg-sb-title">株式会社kokokara Group</p>

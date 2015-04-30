@@ -124,8 +124,18 @@
 			  			<div class="col-cat-in col-cat-in4">
 			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p style="padding-left:25px;padding-top:10px;"><i class="fa fa-play"></i></p></div>
 			  				<div>
-				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">イベント</font><br>クラスに出席</h3>
-				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">イベント</font><br>クラスに出席</h4>
+				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">クラス</font><br>クラスに出席</h3>
+				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">クラス</font><br>クラスに出席</h4>
+				  			</div>
+			  			</div>
+			  		</div>
+			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+			  			<a href="#after-apply"></a>
+			  			<div class="col-cat-in col-cat-in4">
+			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p style="padding-left:25px;padding-top:10px;"><i class="fa fa-play"></i></p></div>
+			  				<div>
+				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">クラス</font><br>出席すると？</h3>
+				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">クラス</font><br>出席すると？</h4>
 				  			</div>
 			  			</div>
 			  		</div>
@@ -211,6 +221,21 @@
     	</div>
     	<div class="col-sm-6">
     		<p style="font-size:124px;padding-top:60px;"><i class="fa fa-play"></i></p>
+    	</div>
+	</div>
+	<br>
+    <a class="remodal-cancel" href="#">閉じる</a>
+</div>
+<div class="remodal" data-remodal-id="after-apply">
+    <h1 style="margin-bottom:40px;">クラスに出席すると？</h1>
+    <div class="row">
+    	<div class="col-sm-6">
+    		<p style="font-size:14px;text-align:left;">
+    		クラスに出席されると、おおよそ3日以内にkokokaraから確認のメールが届きます。その後のフローは、お申込み頂いたクラスそれぞれによって異なりますのでメールにて詳細が説明されます。<br><br>最終的にはサービスをご提供頂いている企業と繋がり、クラスが現実のものとなります！！<br>
+    		</p>
+    	</div>
+    	<div class="col-sm-6">
+    		<p style="font-size:124px;"><i class="fa fa-play"></i></p>
     	</div>
 	</div>
 	<br>

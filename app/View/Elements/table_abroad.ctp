@@ -12,6 +12,10 @@
 								<td><?echo $event['StudyAbroad']['cost']?></td>
 							</tr>
 							<tr>
+								<td class="detail-info-table-bold">ロケーション</td>
+								<td><?echo nl2br($event['Event']['location'])?></td>
+							</tr>
+							<tr>
 								<td class="detail-info-table-bold">滞在先の環境</td>
 								<td><?echo nl2br($event['StudyAbroad']['environment'])?></td>
 							</tr>
