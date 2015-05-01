@@ -23,6 +23,15 @@ canvas{
 	box-shadow:0 0 0 0 rgba(0, 0, 0, 0);
 	border-radius: 0;
 }
+.welcome-cntr{
+	margin-bottom:20px;
+	background-image:url("../img/hand.png");
+	background-position:right;
+	background-size:cover;
+}
+.item img{
+	height:380px !important;
+}
 .home-cntr{
 	margin-bottom:20px;
 }

@@ -2,11 +2,67 @@
 <?echo $this->Html->script("jquery-1.11.2.js");?>
 <? $this->Html->css('event-style', null, array('inline' => false)) ?>
 <div class="container home-cntr koko-box-shadow" style="margin-top:15px;">
+	
+	<div class="row">
+		<!-- カルーセルのサンプル
+	    ================================================== -->
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	      <!-- インジケータ(カルーセル下部の三つ表示されているスライド枚数を示す丸いアイコン) -->
+	      <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
+	      </ol>
+	　　　 <!-- カルーセルのスライドするコンテンツ部分 -->
+	      	<div class="carousel-inner">
+	        <div class="item active">
+	         <?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'event-top-img img-responsive'))?>
+	          <!--
+	          <div class="container">
+	            <div class="carousel-caption">
+	              <h1>一つ目のイメージ</h1>
+	              <p>一つ目のイメージの説明文</p>
+	              <p><a class="btn btn-lg btn-primary" href="#" role="button">ボタンも置けます</a></p>
+	            </div>
+	          </div>
+	     	 -->
+	        </div>
+	        <div class="item">
+	         	<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][1]['dir'] . '/' . $event['Image'][1]['attachment'], array('class' => 'event-top-img img-responsive'))?>
+	          <!--
+	          <div class="container">
+	            <div class="carousel-caption">
+	              <h1>2枚目のタイトル</h1>
+	              <p>一定時間が経過すると自動的にスライドし2枚目が表示されます。</p>
+	            </div>
+	          </div>
+	      		-->
+	        </div>
+	        <div class="item">
+	          	<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][2]['dir'] . '/' . $event['Image'][2]['attachment'], array('class' => 'event-top-img img-responsive'))?>
+	          <!-- キャプションが不要な場合は記述する必要はありません。
+	          <div class="container">
+	            <div class="carousel-caption">
+	              <h1>画像だけ見せたい場合は、</h1>
+	              <p>キャプションは必要ありません。</p>
+	            </div>
+	          </div>
+	            -->
+	        </div>
+	      </div>
+	      <!-- カルーセルの[次へ][前へ]を操作するコントロールボタン -->
+	      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	    </div><!-- /.carousel -->
+	</div>
+	<!--
 	<div class="row">
 		<div class="col-md-12 img-obfit" style=" background:#e6e6e6;border-radius: 9px 9px 0px 0px;">
+
 			<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'event-top-img img-responsive'))?>
 		</div>
 	</div>
+	-->
 	<div class="row">
 		<div class="col-sm-6 event-info-top">
 			<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
