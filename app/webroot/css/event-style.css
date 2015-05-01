@@ -391,6 +391,7 @@ a{
 
 .event-pg-sb img{
 	height:150px;
+	max-width:100%;
 }
 .event-pg-sb p{
 	font-size:13px;

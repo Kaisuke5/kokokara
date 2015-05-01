@@ -42,43 +42,22 @@
 		</div>
 		<div class="row top-signin">
 			<div class="col-sm-6 col-sm-offset-1 top-signin-left">
-				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <a href="../pages/about"><i class="fa fa-question-circle"></i></a></p>
+				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <a href="#ins-student-card"><i class="fa fa-question-circle"></i></a></p>
 			</div>
-			<div class="col-sm-3 col-xs-12 top-signin-fb">
+			<div class="col-sm-3 hidden-xs top-signin-fb">
 				<?php
 					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
 				?>
-				<p class="text-fit" style="color:#c0c0c0;"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
+				<p class="text-fit" style="color:#ffffff;"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
 			</div>
-		</div>
-		<!--
-		<div class="row top-signin">
-			<div class="col-xs-12">
-				<p style="font-size:20px; padding:15px 0;color:#ffffff;">入学してkokokara学生証を手に入れよう</p>
-
-			</div>
-			<div class="col-sm-3 col-sm-offset-3 col-xs-5 col-xs-offset-1 top-signin-btns" style="padding-right:10px; !important">
-				<div class="top-signin-internal">
-					<?php
-					echo $this->Html->link('', array('action' => 'signup'));
-					?>
-					<p><i class="glyphicon glyphicon-play"></i> 入学はこちらから</p>
-				</div>
-			</div>
-			<div class="col-sm-3 col-xs-5 top-signin-btns"style="padding-left:10px !important;">
-				<div class="top-signin-fb">
-					<?php
+			<div class="col-xs-12 hidden-lg hidden-md hidden-sm top-signin-fb" style="height:50px;">
+				<?php
 					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
-					?>
-					<p class="text-fit"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
-				</div>
-			</div>
-			
-			<div class="col-xs-12">
-				<a href="#">kokokara学生証とは？>></a>
+				?>
+				<p class="text-fit" style="color:#ffffff; padding-top:8px; font-size:18px;text-align:center;"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
 			</div>
 		</div>
-		-->
+		
 	</div>	
 </div>
 <div class="container home-cntr">
@@ -96,10 +75,10 @@
 		<div class="col-xs-2 cnts-top-bar" style="background:#6e6bd1;border-radius: 0px 9px 0px 0px;">
 		</div>
 	</div>
-	<div class="row">
-	  <h2>いま人気のクラス</h2>
-		  	<div class="col-md-12">
-		  		<div class="row">
+	<div class="row" style="padding-bottom:30px;">
+	  	<h2>いま人気のクラス</h2>
+		<div class="col-md-12">
+		  	<div class="row">
 			  	 	<?
 					$i = 0;
 					$kiji = 6;
@@ -152,13 +131,10 @@
 					}
 					}
 					?>
-		  	 	</div>
-	  		</div>
-		</div>
-		 <div class="col-md-12">
-		  	<p class="p-center"><a href="#">ギャラリーを見る>></a></p>
-		 </div>
+		  	 </div>
+	  	</div>
 	</div>
+</div>
 
 <div class="container home-cntr">
 	<div class="row cnts-top-bar-row">
@@ -292,42 +268,7 @@
 	  			</div>
 	  		</div>
 	  	</div>
-	  	<!--
-	  	<div class="row">	
-		  <div class="col-sm-3 col-xs-6 col-gal">
-		  	<div style="height:190px; background:#d16b9a;"><?php echo $this->Html->link('長期インターン', array('controller' => 'events', 'action' => 'category', 1)); ?>
-		  	</div>	
-		  </div>
-		  <div class="col-sm-3 col-xs-6 col-gal">  
-		  	<div style="height:190px; background:#d1a16b;"><?php echo $this->Html->link('短期インターン', array('controller' => 'events', 'action' => 'category', 2)); ?>
-		  	</div>		
-		  </div>
-		  <div class="col-sm-3 col-xs-6 col-gal">
-		  	<div style="height:190px; background:#ced16b;"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3)); ?>
-		  	</div>	  	
-		  </div>
-		  <div class="col-sm-3 col-xs-6 col-gal">
-		  	<div style="height:190px; background:#9ad16b;"><?php echo $this->Html->link('留学', array('controller' => 'events', 'action' => 'category', 5)); ?>
-		  	</div>	  	
-		  </div>
-		  <div class="col-sm-3 col-xs-6 col-gal">  	
-		  	<div style="height:190px; background:#6bd16e;"><?php echo $this->Html->link('合宿', array('controller' => 'events', 'action' => 'category', 6)); ?>
-		  	</div>	 
-		  </div>
-		  <div class="col-sm-3 col-xs-6 col-gal">  
-		  	<div style="height:190px; background:#6bd1a1;"><?php echo $this->Html->link('習い事', array('controller' => 'events', 'action' => 'category', 7)); ?>
-		  	</div>		
-		  </div>
-		  <div class="col-sm-3 col-xs-6 col-gal">  
-		  	<div style="height:190px; background:#6bcad1;"><?php echo $this->Html->link('おもしろイベント', array('controller' => 'events', 'action' => 'category', 8)); ?>
-		  	</div>		
-		  </div>
-		  <div class="col-sm-3 col-xs-6 col-gal">  	
-		  	<div style="height:190px; background:#6e6bd1;"><?php echo $this->Html->link('学生団体', array('controller' => 'events', 'action' => 'category', 9)); ?>
-		  	</div>
-		  </div>
-		</div>
-		-->
+	  	
 　	　</div>
 	</div>
 </div>
@@ -347,7 +288,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<h2 style="margin-bottom:15px;">新しいできたクラス</h2>
+		<h2 style="margin-bottom:15px;">今注目のクラス</h2>
 	</div>
 	<div class="row" >
 		<div class="col-sm-4 hidden-xs" style="margin-top:35px;border-right:1px solid #ededed; padding-bottom:20px;">
@@ -388,9 +329,26 @@
 		</div>
 	</div>
 </div>
-
-<div style="width:100%; height:800px">
-	<!-- just a space -->
+<div class="remodal" data-remodal-id="ins-student-card">
+    <h1 style="margin-bottom:40px;">kokokara学生証とは</h1>
+    <div class="row">
+    	<div class="col-sm-6">
+    		<p style="font-size:14px;text-align:left;">kokokaraが提供致しますあらゆるサービスにおいて有効なオンライン上の学生証です。<br>
+	    	当サイトのサービスにお申し込み頂く際にも必要となります。<br><br>
+	    	お持ちのFacebookアカウントを用いて簡単にご登録頂けますので是非どうぞ！
+    		</p>
+    		<?php
+			echo $this->Html->link('facebookで入学する', array("controller" => "fbconnect", "action" => "facebook"));
+			?>
+			<br>
+			<a href="#">個人情報の取り扱いについて</a>
+    	</div>
+    	<div class="col-sm-6">
+    		<p style="font-size:124px;"><i class="fa fa-credit-card"></i></p>
+    	</div>
+	</div>
+	<br>
+    <a class="remodal-cancel" href="#">閉じる</a>
 </div>
 
 <?debug($event)?>

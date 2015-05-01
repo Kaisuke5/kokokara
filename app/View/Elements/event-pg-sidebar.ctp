@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-sm-12">
-		<h1 style="font-size:18px;font-weight:bold;">おすすめのクラス</h1>
+		<h1 style="font-size:18px;font-weight:bold;">新着クラス</h1>
 	</div>
 	<?
 		$i = 0;

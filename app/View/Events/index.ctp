@@ -138,6 +138,10 @@
 					<p><?echo nl2br($event['Event']['detail']);?></p>
 				</div>
 				<div class="col-xs-12 apply-btn">
+					<?if($event['Event']['state'] == 5){
+						echo'<p class="apply-notice">kokokara2015参加者で1ヶ月以上の留学を討し、留学体験記を書いてくれる方には1万円キャッシュバック</p>';
+					}
+					?>
 					<?php 
 					if($event['Event']['state'] == 1){
 						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg1" type="button">このクラスに出席</a>';
@@ -159,7 +163,7 @@
 						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg4" type="button">このクラスに出席</a>';
 						}	
 					?>
-					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
+					<p class="p-center"><a href="#ins-apply">クラスに出席すると？>></a></p>
 				</div>
 				<div class="col-sm-12 detail-info-table">
 					<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> もっと知る</h2>
@@ -215,7 +219,7 @@
 						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg4" type="button">このクラスに出席</a>';
 						}	
 					?>
-					<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
+					<p class="p-center"><a href="#ins-apply">クラスに出席すると？>></a></p>
 				</div>
 			</div>	
 		</div>
@@ -253,12 +257,35 @@
 						}	
 					?>
 				</div>
-				<p class="p-center"><a href="../pages/about">クラスに出席すると？>></a></p>
+				<p class="p-center"><a href="#ins-apply">クラスに出席すると？>></a></p>
 		    <br>
 		    <a class="remodal-cancel" href="#">閉じる</a>
 		</div>
 <!--以上追加分 -->
 
+<div class="remodal" data-remodal-id="ins-apply">
+    <h1 style="margin-bottom:40px;">クラスに出席とは</h1>
+    <div class="row">
+    	<div class="col-sm-6">
+    		<p style="font-size:14px;text-align:left;">
+    		kokokaraはたくさんの組織・個人の協力によって、多彩なサービスを提供しております。<br>
+    		それらのサービスは全てkokokaraが目指す学習に繋がる事から私達はそれを「クラス」と呼んでいます。<br>
+    		つまり「クラスに出席する」とは、kokokaraを通じて彼らのサービスへ簡単にお申し込み頂けるという事です。<br><br>
+
+	    	お申し込み頂くと、クラスを実際に提供している組織・個人から皆様に詳細をお伝えするメールが届きます。
+    		</p>
+    		<?php
+			echo $this->Html->link('facebookで入学する', array("controller" => "fbconnect", "action" => "facebook"));
+			?>
+			<br>
+    	</div>
+    	<div class="col-sm-6">
+    		<p style="font-size:124px;padding-top:60px;"><i class="fa fa-play"></i></p>
+    	</div>
+	</div>
+	<br>
+    <a class="remodal-cancel" href="#">閉じる</a>
+</div>
 <h2>イベント</h2>
 
 
