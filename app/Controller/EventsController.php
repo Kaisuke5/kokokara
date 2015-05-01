@@ -146,13 +146,17 @@ class EventsController extends AppController{
 
     //カテゴリー別event取得 by mark
     public function category($state){
+        $category_events = array();
         $events = $this->Event->getEventsByState($state, 20);
+        foreach ($events as $event){
+            $category_events[] = $this->Event->getOriginal($event['Event']['id']);
+        }
         //新着記事 by mark
         $new_events = $this->Event->getEventsByCreated(10);
         if($events==null){
             throw new NotFoundException();
         }
-        $this->set('events', $events);
+        $this->set('events', $category_events);
         //新着記事 by mark
         $this->set('new_events', $new_events);
     }

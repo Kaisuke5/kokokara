@@ -8,5 +8,5 @@
 
 class StudyAbroad extends AppModel{
     public $useTable="study_abroad";
-
+    
 }
