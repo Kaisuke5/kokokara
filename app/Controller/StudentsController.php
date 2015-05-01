@@ -108,7 +108,7 @@ class StudentsController extends AppController{
 					$this->Session->delete('apply');
 					$this->redirect('/events?id='.$event_id);
 				}else{
-					$this->redirect(array('action' => 'index'));
+					$this->redirect(array('action' => 'welcome'));
 				}
 			} else{
 				$this->Session->setFlash('ユーザ名かパスワードが違います');
@@ -197,6 +197,15 @@ class StudentsController extends AppController{
 			}else{
 				$this->Session->setFlash('パスワードの変更に失敗しました');
 			}
+		}
+	}
+
+	#2015/05/01 by mark
+	public function welcome(){
+		//Session が空じゃなかったら
+		if($this->Session->read('myData')){
+			//$id=$this->Session->read("myData")['Student']['id'];
+			$this->set('myData', $this->Session->read('myData'));
 		}
 	}
 

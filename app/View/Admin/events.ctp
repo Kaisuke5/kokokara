@@ -22,8 +22,10 @@
 			<td><?echo $event["logs"]."pv";?></td>
 			<td><?echo $event["applies"]."回";?></td>
 			<td><?echo $event["Event"]["company_info"];?></td>
-			<td><button onclick="location.href='<?php echo $this->html->url('/Admin/editevent?id=' . $event['Event']['id']);?>';">編集</button> 
-				<button onclick="deleteEvent('<?echo $event['Event']['id']?>')">削除</button> 
+
+			<td>
+				<button onclick="location.href='<?php echo $this->html->url('/Admin/editevent?id=' . $event['Event']['id']);?>';">編集</button>
+				<button onclick="location.href='<?php echo $this->html->url('/Admin/deleteevent?id=' . $event['Event']['id']);?>';">削除</button>
 			</td>
 		</tr>
 		

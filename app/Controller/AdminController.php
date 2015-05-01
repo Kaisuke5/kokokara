@@ -100,13 +100,15 @@ class AdminController extends AppController{
 
     public function deleteevent(){
         $this->loadModel("Event");
+        /*
         $this->autoRender = false;
         // Ajax以外の通信の場合
+
         if(!$this->request->is('ajax')) {
             throw new BadRequestException();
         }
-        /*  ここでDBアクセスなど何かの処理をする */
         $id=$this->data["id"];
+
         $this->Event->deleteOriginal($id);
 
         if($this->Event->delete($id,true)){
@@ -118,6 +120,14 @@ class AdminController extends AppController{
 
         // JSON形式で返却。errorが定義されていない場合はstatusとresultの配列になる。
         return json_encode($result);
+        */
+        $id=$this->request->query['id'];
+        $this->Event->deleteOriginal($id);
+        $this->Event->delete($id);
+
+        $this->Session->setFlash("削除されました");
+        $this->redirect(array("controller"=>"Admin","action"=>"events"));
+
     }
 
 
@@ -310,9 +320,11 @@ class AdminController extends AppController{
 
     }
 
-
-    public function searchx(){
-
+    #2015/04/29 by mark
+    public function didApplyStudents(){
+        $this->loadModel("AppliesEvent");
+        $did_apply_students = $this->AppliesEvent->find('all');
+        $this->set("did_apply_students", $did_apply_students);
     }
 
 
