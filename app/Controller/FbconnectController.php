@@ -68,7 +68,7 @@ class FbconnectController extends AppController{
 				$facebook_user = $this->FacebookUser->findById($this->FacebookUser->getLastInsertID());
 				//Student取得
 				$student = $this->Student->findById($facebook_user['FacebookUser']['student_id']);
-				$this->Session->setFlash('残りの項目を埋めてください！');
+				$this->Session->setFlash('入学まであと少し！残りの項目も埋めてください');
 				$this->Session->write('myData',$student);	//ユーザ情報をセッションに保存
 				$this->redirect(array("controller" => "students", "action" => "signup")); //残りの情報を埋めさせるためsignpへ
 			}else{
@@ -84,7 +84,7 @@ class FbconnectController extends AppController{
 					$this->Session->delete('apply');
 					$this->redirect('/events?id='.$event_id);
 				}else{
-					$this->redirect(array("controller" => "students", "action" => "index"));
+					$this->redirect(array("controller" => "students", "action" => "welcome"));
 				}
 			}
 

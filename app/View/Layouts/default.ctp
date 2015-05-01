@@ -121,6 +121,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					        </li>
 					        <li class="header-login-btn">						      
 						        <?php
+						        $myData=$this->Session->read("myData");
 								if(!$myData){
 								   echo $this->Html->link('登校する', array('controller' => 'students', 'action' => 'login'));
 								}else{

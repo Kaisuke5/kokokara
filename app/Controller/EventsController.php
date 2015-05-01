@@ -97,7 +97,7 @@ class EventsController extends AppController{
         //セッション
         $myData=$this->Session->read("myData");
         if(!$myData){
-            $this->Session->setFlash('ログインしてください');
+            $this->Session->setFlash('入学しよう');
             //このページにリダイレクトする処理
             $this->Session->write('apply', $id);
             $this->redirect(array('controller' => 'students', 'action' => 'login'));
