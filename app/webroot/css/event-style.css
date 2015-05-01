@@ -23,6 +23,9 @@ a{
 	margin:10px;
 	vertical-align:middle;
 }
+.carousel-inner>.item>img{
+	height:360px !important;
+}
 .event-info-top:hover > .event-info-top-fav span{
 	color:#ffa500;
 }
