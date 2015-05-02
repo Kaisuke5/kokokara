@@ -35,7 +35,7 @@
 			if($i >= $kiji){
 			break;
 		}else{ ?>
-		<a href="/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>" target="_blank">
 			<div class="row ctg-row">
 				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
@@ -49,17 +49,27 @@
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
 								<p>場所:<font style="">
-									<!--
 									<?php 
 										if($event['Event']['state'] == 5){
 											echo $event['StudyAbroad']['country_name'];
 										}elseif($event['Event']['state'] == 3){
 											echo $event['Intern']['country_name'];
-										}else{
-											echo 日本;
+										}elseif($event['Event']['state'] == 1){
+											echo $event['Intern']['pref'];
+										}elseif($event['Event']['state'] == 2){
+											echo $event['Intern']['pref'];
+										}elseif($event['Event']['state'] == 4){
+											echo $event['StudentGroupInfo']['pref'];
+										}elseif($event['Event']['state'] == 6){
+											echo $event['camp']['pref'];
+										}elseif($event['Event']['state'] == 7){
+											echo $event['lesson']['pref'];
+										}elseif($event['Event']['state'] == 8){
+											echo $event['funny_event']['pref'];
+										}elseif($event['Event']['state'] == 9){
+											echo $event['student_group']['pref'];
 										}
 									?>
-								-->
 								</font></p>
 							</div>
 							<div class="col-xs-6">

@@ -29,7 +29,7 @@
 			if($i >= $kiji){
 			break;
 		}else{ ?>
-		<a href="/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>" target="_blank">
 			<div class="row ctg-row">
 				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
@@ -40,6 +40,7 @@
 					<p class="text-overflow"><?echo $event['Event']['body']?></p>
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'art-list-thumb img-obfit-list'))?>
 					<div class="col-xs-12" style="border:1px solid #ededed;">
+						<!--
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
 								<p>場所:<font style=""> </font></p>
@@ -48,6 +49,7 @@
 								<p>業種:<font style=""> 手動タグで表示</font></p>
 							</div>
 						</div>
+						-->
 					</div>
 				</div>
 			</div>

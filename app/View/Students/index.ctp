@@ -87,7 +87,7 @@
 					if($i >= $kiji){
 					break;
 					}else{ ?>
-					<a href="/events?id=<?echo $event['Event']['id']?>">
+					<a href="/events?id=<?echo $event['Event']['id']?>" target="_blank">
 			  			<div class="col-md-4 col-sm-6 col-xs-12 pop-lg">
 			  				<div class="link_box">
 			  					<!--<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'img-obfit img-responsive'))?>-->
@@ -302,7 +302,7 @@
 			if($i >= $kiji){
 			break;
 		}else{ ?>
-		<a href="/events?id=<?echo $event['Event']['id']?>">
+		<a href="/events?id=<?echo $event['Event']['id']?>" target="_blank">
 			<div class="row ctg-row">
 				<div class="col-sm-2 ctg-row-comp-thumb" style="padding-right:0;">
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][3]['dir'] . '/' . $event['Image'][3]['attachment'])?>
