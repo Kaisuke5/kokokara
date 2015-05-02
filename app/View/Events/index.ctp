@@ -193,11 +193,15 @@
 				<div class="col-sm-12" style="margin-top:36px; 15px">
 					<p><?echo nl2br($event['Event']['detail']);?></p>
 				</div>
-				<div class="col-xs-12 apply-btn">
-					<?if($event['Event']['state'] == 5){
-						echo'<p class="apply-notice">kokokara2015参加者で1ヶ月以上の留学を討し、留学体験記を書いてくれる方には1万円キャッシュバック</p>';
+				<?if($event['Event']['state'] == 5){
+						echo'<div class="col-sm-8 col-sm-offset-2">
+								<blockquote style="border:1px solid #c0c0c0; margin:20px 0 0;">
+									<p class="apply-notice">kokokara2015参加者で1ヶ月以上の留学を検討し、留学体験記を書いてくれる方には1万円キャッシュバック!</p>
+								</blockquote>
+							</div>';
 					}
-					?>
+				?>
+				<div class="col-xs-12 apply-btn" style="z-index:1;">
 					<?php 
 					if($event['Event']['state'] == 1){
 						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg1" type="button">このクラスに出席</a>';
@@ -253,6 +257,15 @@
 						}
 					?>
 				</div>
+				<?if($event['Event']['state'] == 5){
+						echo'<div class="col-sm-8 col-sm-offset-2">
+								<blockquote style="border:1px solid #c0c0c0; margin:20px 0 0;">
+									
+									<p class="apply-notice">kokokara2015参加者で1ヶ月以上の留学を検討し、留学体験記を書いてくれる方には1万円キャッシュバック!</p>
+								</blockquote>
+							</div>';
+					}
+				?>
 				<div class="col-xs-12 apply-btn">
 					<?php 
 					if($event['Event']['state'] == 1){
