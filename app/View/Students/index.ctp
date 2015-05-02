@@ -41,18 +41,21 @@
 			-->
 		</div>
 		<div class="row top-signin">
-			<div class="col-sm-6 col-sm-offset-1 top-signin-left">
-				<p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう <a href="#ins-student-card"><i class="fa fa-question-circle"></i></a></p>
+			<div class="col-sm-6 hidden-xs col-sm-offset-1 top-signin-left">
+				<a href="#ins-student-card"><p style="color:#c0c0c0;">入学してkokokara学生証を手に入れよう　<i class="fa fa-question-circle"></i></p></a>
+			</div>
+			<div class="col-xs-12 hidden-lg hidden-md hidden-sm top-signin-left">
+				<a href="#ins-student-card"><p style="color:#c0c0c0;font-size:18px;text-align:center;">入学してkokokara学生証を手に入れよう　<i class="fa fa-question-circle"></i></p></a>
 			</div>
 			<div class="col-sm-3 hidden-xs top-signin-fb">
 				<?php
-					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+					echo $this->Html->link('', array('action' => 'signup'));
 				?>
 				<p class="text-fit" style="color:#ffffff;"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
 			</div>
 			<div class="col-xs-12 hidden-lg hidden-md hidden-sm top-signin-fb" style="height:50px;">
 				<?php
-					echo $this->Html->link('', array("controller" => "fbconnect", "action" => "facebook"));
+					echo $this->Html->link('', array('action' => 'signup'));
 				?>
 				<p class="text-fit" style="color:#ffffff; padding-top:8px; font-size:18px;text-align:center;"><i class="fa fa-facebook-square"></i> facebookで入学する</p>
 			</div>

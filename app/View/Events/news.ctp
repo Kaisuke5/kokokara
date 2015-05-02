@@ -39,8 +39,8 @@
 					<h1><?echo $event['Event']['title']?></h1>
 					<p class="text-overflow"><?echo $event['Event']['body']?></p>
 					<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'], array('class' => 'art-list-thumb img-obfit-list'))?>
+					<!--
 					<div class="col-xs-12" style="border:1px solid #ededed;">
-						<!--
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
 								<p>場所:<font style=""> </font></p>
@@ -49,8 +49,8 @@
 								<p>業種:<font style=""> 手動タグで表示</font></p>
 							</div>
 						</div>
-						-->
 					</div>
+					-->
 				</div>
 			</div>
 		</a>
