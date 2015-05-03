@@ -140,6 +140,18 @@
 			  			</div>
 			  		</div>
 			  	</div>
+			  	<div class="row qanda-row">
+			  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
+			  			<?php echo $this->Html->link('',array('controller'=>'pages','action'=>'privacy_policy'))?>
+			  			<div class="col-cat-in col-cat-in4">
+			  				<div class="col-cat-in-logo" style="background:#6b97d1;"><p style="padding-left:25px;padding-top:10px;"><i class="fa fa-play"></i></p></div>
+			  				<div>
+				  				<h3 class="hidden-md" style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">規約</font><br>プライバシーポリシー</h3>
+				  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6b97d1;"><font style="font-size:13px;font-weight:lighter;">規約</font><br>プライバシーポリシー</h4>
+				  			</div>
+			  			</div>
+			  		</div>
+			  	</div>
 			  	<!--
 			  	<div class="row">	
 				  <div class="col-sm-3 col-xs-6 col-gal">

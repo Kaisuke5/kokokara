@@ -48,12 +48,13 @@
 					<div class="col-xs-12" style="border:1px solid #ededed;">
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
+								<!--
 								<p>場所:<font style="">
-									<!--<?php 
+									<?php 
 										if($event['Event']['state'] == 5){
-											echo $event['StudyAbroad']['country_name'];
+											echo $this->element('StudyAbroad_country');
 										}elseif($event['Event']['state'] == 3){
-											echo $event['Intern']['country_name'];
+											echo $this->element('Intern_country');
 										}elseif($event['Event']['state'] == 1){
 											echo $event['Intern']['pref'];
 										}elseif($event['Event']['state'] == 2){
@@ -69,8 +70,9 @@
 										}elseif($event['Event']['state'] == 9){
 											echo $event['student_group']['pref'];
 										}
-									?> -->
+									?>
 								</font></p>
+							-->
 							</div>
 							<div class="col-xs-6">
 								
