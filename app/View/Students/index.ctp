@@ -358,7 +358,12 @@
 			echo $this->Html->link('facebookで入学する', array("controller" => "fbconnect", "action" => "facebook"));
 			?>
 			<br>
-			<a href="#">個人情報の取り扱いについて</a>
+			<?php echo $this->Html->link(
+	        						'個人情報の取り扱いについて',
+								      array('controller'=>'pages',
+									    'action'=>'privacy_policy')
+										)
+								?>
     	</div>
     	<div class="col-sm-6">
     		<p style="font-size:124px;"><i class="fa fa-credit-card"></i></p>
