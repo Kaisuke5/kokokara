@@ -172,11 +172,18 @@
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
 	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 2)); ?>
 	  			<div class="col-cat-in col-cat-in2">
+	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">短期インターン</font><br>只今建設中</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">短期インターン</font><br>只今建設中</h4>
+		  			</div>
+		  			<!--
 	  				<div class="col-cat-in-logo" style="background:#d1a16b;"></div>
 		  			<div>
 		  				<h3 class="hidden-md" style="color:#d1a16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>短期インターン</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#d1a16b;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>短期インターン</h4>
 		  			</div>
+		  			-->
 		  		</div>
 	  		</div>
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
@@ -263,11 +270,18 @@
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
 	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 9)); ?>
 	  			<div class="col-cat-in col-cat-in9">
+	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">学生イベント</font><br>只今建設中</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">学生イベント</font><br>只今建設中</h4>
+		  			</div>
+		  			<!--
 	  				<div class="col-cat-in-logo" style="background:#6e6bd1;"></div>
 	  				<div>
 		  				<h3 class="hidden-md" style="color:#6e6bd1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>学生イベント</h3>
 		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#6e6bd1;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>学生イベント</h4>
 		  			</div>
+		  			-->
 	  			</div>
 	  		</div>
 	  	</div>

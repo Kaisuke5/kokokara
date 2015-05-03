@@ -49,7 +49,7 @@
 						<div class="row art-list-info">
 							<div class="col-xs-6" style="border-right:1px solid #ededed;">
 								<p>場所:<font style="">
-									<?php 
+									<!--<?php 
 										if($event['Event']['state'] == 5){
 											echo $event['StudyAbroad']['country_name'];
 										}elseif($event['Event']['state'] == 3){
@@ -69,7 +69,7 @@
 										}elseif($event['Event']['state'] == 9){
 											echo $event['student_group']['pref'];
 										}
-									?>
+									?> -->
 								</font></p>
 							</div>
 							<div class="col-xs-6">
