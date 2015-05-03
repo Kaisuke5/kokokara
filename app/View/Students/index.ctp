@@ -367,7 +367,7 @@
 	<br>
     <a class="remodal-cancel" href="#">閉じる</a>
 </div>
-
+<!--
 <?debug($event)?>
 
 <?php
@@ -417,3 +417,4 @@ if(!$myData){
 		<?php echo $this->Html->link('新着イベント', array('controller' => 'events', 'action' => 'news')); ?>
 	</li>
 </ul>
+-->
