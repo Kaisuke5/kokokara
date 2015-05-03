@@ -88,15 +88,16 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				     	<ul class="nav navbar-nav">
+				        	<!--
 				        	<li class="header-btn-lg-1 dropdown">
 				        		<a href="#" class="dropdown-toggle header-gal" data-toggle="dropdown" role="button" aria-expanded="false" style="border-left:1px solid #ededed;" >国内インターン <span class="caret"></span></a>
 				        		<ul class="dropdown-menu" role="menu">
 				            		<li><?php echo $this->Html->link('長期インターン', array('controller' => 'events', 'action' => 'category', 1)); ?></li>
 				            		<!--
 				            		<li><?php echo $this->Html->link('短期インターン', array('controller' => 'events', 'action' => 'category', 2)); ?></li>
-				            	-->
 				          		</ul>
 				        	</li>
+				        	-->
 					        <li class="header-btn-lg-2"><?php echo $this->Html->link('海外インターン', array('controller' => 'events', 'action' => 'category', 3), array('class' => 'header-gal')); ?></li>
 					        <li class="header-btn-lg-3"><?php echo $this->Html->link('留学', array('controller' => 'events', 'action' => 'category', 5), array('class' => 'header-gal')); ?></li>
 					        <!--
