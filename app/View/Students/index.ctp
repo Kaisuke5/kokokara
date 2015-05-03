@@ -159,13 +159,20 @@
 	  <div class="col-md-12">
 	  	<div class="row">
 	  		<div class="col-md-4 col-sm-6 col-xs-12 col-cat">
-	  			<?php echo $this->Html->link('', array('controller' => 'events', 'action' => 'category', 1)); ?>
+				<!-- a tag will be inserted here -->
 	  			<div class="col-cat-in col-cat-in1">
+	  				<div class="col-cat-in-logo" style="background:#c0c0c0;"></div>
+	  				<div>
+		  				<h3 class="hidden-md" style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">長期インターン</font><br>只今建設中</h3>
+		  				<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#c0c0c0;"><font style="font-size:13px;font-weight:lighter;">長期インターン</font><br>只今建設中</h4>
+		  			</div>
+	  				<!--
 	  				<div class="col-cat-in-logo" style="background:#d16b9a;"></div>
 	  				<div>
 	  					<h3 class="hidden-md" style="color:#d16b9a;"><font style="font-size:13px;font-weight:lighter;">いまから</font><br>長期インターン</h3>
 	  					<h4 class="hidden-xs hidden-sm hidden-lg"style="color:#d16b9a;"><font style="font-size:13px; font-weight:lighter;">いまから</font><br>長期インターン</h4>
 	  				</div>
+	  				-->
 	  			</div>
 
 	  		</div>
