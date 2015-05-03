@@ -1,5 +1,5 @@
 <? $this->Html->css('index-style', null, array('inline' => false)); ?>
-<div class="container" style="margin-top:90px;">
+<div class="container" style="margin-top:90px;margin-bottom:40px;">
 	<div class="row">
 			<?php 
 			if($this->here == '/events/category/1'){

@@ -1,5 +1,5 @@
 <? $this->Html->css('index-style', null, array('inline' => false)); ?>
-<div class="container" style="margin-top:90px;">
+<div class="container" style="margin-top:90px;margin-bottom:40px;">
 	<div class="row cnts-top-bar-row">
 		<div class="col-xs-2 cnts-top-bar" style="background:#d16b9a;border-radius: 9px 0px 0px 0px;">
 		</div>

@@ -1,7 +1,7 @@
 <?echo $this->Html->script("user.js");?>
 <?echo $this->Html->script("jquery-1.11.2.js");?>
 <? $this->Html->css('event-style', null, array('inline' => false)) ?>
-<div class="container home-cntr koko-box-shadow" style="margin-top:15px;">
+<div class="container home-cntr koko-box-shadow" style="margin-top:15px;margin-bottom:40px;">
 	
 	<div class="row">
 		<!-- カルーセルのサンプル
