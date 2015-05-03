@@ -19,5 +19,8 @@
 			<h1 style="padding-bottom:30px;padding-top:60px;">お申込みありがとうございました</h1>
 			<p>出席を承りました。<br>3日以内にkokokaraから確認のメールをお届け致しますので、メールの確認をよろしくお願い致します。</p>
 		</div>
+		<div class="col-xs-12" style="text-align:center;padding-bottom:60px;">
+			
+		</div>
 	</div>
 </div>

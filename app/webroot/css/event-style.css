@@ -74,6 +74,9 @@ a{
 	font-weight:lighter;
 	text-align:center;
 }
+.event-info-top-fb a:hover{
+	color:#8b9dc3 !important;
+}
 .event-info-top-tw{
 	background:#4099ff;
 	height:70px;
@@ -89,6 +92,9 @@ a{
 	padding-top:5px;
 	font-weight:lighter;
 	text-align:center;
+}
+.event-info-top-tw a:hover{
+	color:#23527c !important;
 }
 .container{
 	background:#ffffff;
