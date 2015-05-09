@@ -93,13 +93,3 @@
 		</div>
 	</div>
 </div>
-
-<?php
-debug($events);
-debug($new_events);
-?>
-
-<?php
-if($events[0]['Event']['state'] == 5){
-	echo nl2br($events[0]['Event']['body']);
-}

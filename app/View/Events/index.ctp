@@ -201,6 +201,15 @@
 							</div>';
 					}
 				?>
+				<?if($event['Event']['state'] == 3){
+						echo'<div class="col-sm-8 col-sm-offset-2">
+								<blockquote style="border:1px solid #c0c0c0; margin:20px 0 0;">
+									
+									<p class="apply-notice">先着20名につき海外インターンのサポート費が3万円から1万円に！<br><br><font style="color:#FE2E2E;text-align:center;font-weight:bold;">残り17人！</font></p>
+								</blockquote>
+							</div>';
+					}
+				?>
 				<div class="col-xs-12 apply-btn" style="z-index:1;">
 					<?php 
 					if($event['Event']['state'] == 1){
@@ -262,6 +271,15 @@
 								<blockquote style="border:1px solid #c0c0c0; margin:20px 0 0;">
 									
 									<p class="apply-notice">kokokara2015参加者で1ヶ月以上の留学を検討し、留学体験記を書いてくれる方には1万円キャッシュバック!</p>
+								</blockquote>
+							</div>';
+					}
+				?>
+				<?if($event['Event']['state'] == 3){
+						echo'<div class="col-sm-8 col-sm-offset-2">
+								<blockquote style="border:1px solid #c0c0c0; margin:20px 0 0;">
+									
+									<p class="apply-notice">先着20名につき海外インターンのサポート費が3万円から1万円に！<br><br><font style="color:#FE2E2E;text-align:center;font-weight:bold;">残り17人！</font></p>
 								</blockquote>
 							</div>';
 					}
@@ -355,14 +373,3 @@
 	<br>
     <a class="remodal-cancel" href="#">閉じる</a>
 </div>
-<h2>イベント</h2>
-
-
-<?debug($event)?>
-
-<!-- id送信-->
-<input type="hidden" class="setid" value="<?echo $event['Event']['id']?>">
-
-<?debug($event["Image"][0])?>
-
-<button onclick="eventapply()">申し込み</button>
