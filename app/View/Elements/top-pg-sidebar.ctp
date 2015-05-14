@@ -34,7 +34,7 @@
 					echo '<p class="event-pg-sb-cat" style="background:#6b97d1;">学生団体</p>';
 					}	
 					?>
-					<p class="event-pg-sb-title">株式会社kokokara Group</p>
+					<p class="event-pg-sb-title"><?echo $event['Event']['company_name']?></p>
 				</div>
 				<?echo $this->Html->image('../files/image/attachment/'. $event['Image'][0]['dir'] . '/' . $event['Image'][0]['attachment'])?>
 				<div>

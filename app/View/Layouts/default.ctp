@@ -21,6 +21,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="kokokara University"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="大学生活の勉強以外のもの全てをサポート、kokokara Universityは前向きな人を増やします。" />
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $this->fetch('title'); ?>

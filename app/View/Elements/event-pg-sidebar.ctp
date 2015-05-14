@@ -1,4 +1,20 @@
 <div class="row">
+	<div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="margin-top:20px;margin-bottom:20px;">
+		<div class="row cnts-top-bar-row">
+			<div class="col-xs-2 cnts-top-bar" style="background:#d16b9a;">
+			</div>
+			<div class="col-xs-2 cnts-top-bar" style="background:#d1a16b;">
+			</div>
+			<div class="col-xs-2 cnts-top-bar" style="background:#9ad16b;">
+			</div>
+			<div class="col-xs-2 cnts-top-bar" style="background:#6bd1a1;">
+			</div>
+			<div class="col-xs-2 cnts-top-bar" style="background:#6bcad1;">
+			</div>
+			<div class="col-xs-2 cnts-top-bar" style="background:#6e6bd1;">
+			</div>
+		</div>
+	</div>
 	<div class="col-sm-12">
 		<h1 style="font-size:18px;font-weight:bold;">新着クラス</h1>
 	</div>

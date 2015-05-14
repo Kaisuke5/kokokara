@@ -6,13 +6,13 @@
 				 <? echo $this->Html->image("start.png", array("alt" => "新しい何かを始めよう")); ?>
 			</div>
 			<div class="col-sm-6 top-welcome-right hidden-xs" style="text-align:left;">
-				<? echo $this->Html->image("kokokara_logo.gif", array("alt" => "ロゴ")); ?>
+				<? echo $this->Html->image("kokokara_logo.gif"); ?>
 			</div>
 			<div class="col-xs-12 top-welcome hidden-sm hidden-md hidden-lg" style="text-align:center;">
 				 <? echo $this->Html->image("start.png", array("alt" => "新しい何かを始めよう")); ?>
 			</div>
 			<div class="col-xs-12 top-welcome-right hidden-sm hidden-md hidden-lg" style="text-align:center;">
-				<? echo $this->Html->image("kokokara_logo.gif", array("alt" => "ロゴ")); ?>
+				<? echo $this->Html->image("kokokara_logo.gif"); ?>
 			</div>
 			<!--
 			<div class="form-group">
