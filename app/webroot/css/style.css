@@ -46,10 +46,15 @@ a {
 	padding: 0 3px;
 	border-right:1px solid #ededed;
 }
+.kokologo-header-div{
+	text-align:center;
+}
 .kokologo-header{
+	height: 50px;
+	line-height: 20px;
 	padding-top:13px !important;
 	padding-bottom:8px !important;
-
+	float:none ;
 }
 footer{
 	border-top:1px solid #ededed;
