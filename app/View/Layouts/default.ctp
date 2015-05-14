@@ -87,6 +87,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				        <span class="icon-bar"></span>
 				      </button>
 				      <? echo $this->Html->image("kokologo.png", array("alt" => "Homeへ", 'url' => '/', "class" => "navbar-brand")); ?>
+				      <? echo $this->Html->image("kokologo-header.png", array("alt" => "Homeへ", 'url' => '/', "class" => "navbar-brand kokologo-header")); ?>
+
 				    </div>
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

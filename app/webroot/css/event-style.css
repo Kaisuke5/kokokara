@@ -222,6 +222,27 @@ a{
 	text-align:center;
 	margin:15px 0;
 }
+.ins-intern-abroad{
+	margin:0 auto;
+	height:180px;
+	width:180px;
+	background:#d1bb6b;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+.ins-intern-abroad h4{
+	color:#ffffff;
+	font-weight:bold;
+	font-size:22px;
+}
+.ins-intern-abroad p{
+	color:#ffffff;
+}
+.ins-intern-abroad-row{
+	margin-top:10px;
+	margin-bottom:20px;
+}
 
 
 

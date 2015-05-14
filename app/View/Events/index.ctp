@@ -233,7 +233,7 @@
 <!--以上追加分 -->
 
 <div class="remodal" data-remodal-id="ins-apply">
-    <h1 style="margin-bottom:40px;">クラスに出席とは</h1>
+    <h1 style="margin-bottom:40px;">クラスに出席すると？</h1>
     <div class="row">
     	<div class="col-sm-6">
     		<p style="font-size:14px;text-align:left;">
@@ -251,6 +251,127 @@
     	<div class="col-sm-6">
     		<p style="font-size:124px;padding-top:60px;"><i class="fa fa-play"></i></p>
     	</div>
+	</div>
+	<br>
+    <a class="remodal-cancel" href="#">閉じる</a>
+</div>
+<div class="remodal" data-remodal-id="ins-apply-intern-abroad-sm">
+    <div class="hidden-xs">
+	    <h1 style="margin-bottom:20px;">海外インターンに出発！</h1>
+	    <p style="font-size:13px;margin-bottom:20px;">クラスに出席（お申込み）されますと、後日皆様に詳細をお伝えするEメールをお送り致します。<br>Eメールが届いた後、海外インターンクラスの場合は以下が基本の流れとなります。<br><br></p>
+	    <p style="font-size:20px;">出席（お申込み）から海外インターンへの流れ</p>
+	    <div class="row ins-intern-abroad-row">
+			<div class="col-sm-5">
+				<div class="ins-intern-abroad">
+	    			<h4 style="padding-top:40px;padding-bottom:10px;">STEP 1</h4>
+	    			<p><i class="fa fa-weixin" style="font-size:64px;"></i></p>
+	    		</div>
+			</div>
+			<div class="col-sm-7">
+				<h3 style="padding-top:40px;">kokokaraスタッフと面接、相談</h3>
+				<div style="height:5px; background:#d1bb6b; margin-left:-80px;"></div>
+			</div>
+		</div>
+		<div class="row ins-intern-abroad-row">
+			<div class="col-sm-5">
+				<div class="ins-intern-abroad">
+	    			<h4 style="padding-top:40px;padding-bottom:10px;">STEP 2</h4>
+	    			<p><i class="fa fa-skype" style="font-size:64px;"></i></p>
+	    		</div>
+			</div>
+			<div class="col-sm-7">
+				<h3 style="padding-top:40px;">インターン先企業とSkype面談</h3>
+				<div style="height:5px; background:#d1bb6b; margin-left:-80px;"></div>
+			</div>
+		</div>
+		<div class="row ins-intern-abroad-row">
+			<div class="col-sm-5">
+				<div class="ins-intern-abroad">
+	    			<h4 style="padding-top:40px;padding-bottom:20px;">STEP 3</h4>
+	    			<p><i class="fa fa-pencil-square-o" style="font-size:64px;"></i></p>
+	    		</div>
+			</div>
+			<div class="col-sm-7">
+				<h3 style="padding-top:40px;">申し込み書などの書類記入</h3>
+	    		<div style="height:5px; background:#d1bb6b; margin-left:-80px;"></div>
+			</div>
+		</div>
+		<div class="row ins-intern-abroad-row">
+	    	<div class="col-sm-5">
+	    		<div class="ins-intern-abroad">
+	    			<h4 style="padding-top:20px;padding-bottom:10px;">STEP 4</h4>
+	    			<p><i class="fa fa-money" style="font-size:48px;"></i></p>
+	    			<p>サポート費の<br>ご入金</p>
+	    		</div>
+	    	</div>
+	    	<div class="col-sm-2">
+	    		<h2 style="padding-top:60px;">AND</h2>
+	    	</div>
+	    	<div class="col-sm-5">
+	    		<div class="ins-intern-abroad">
+	    			<h4 style="padding-top:30px;padding-bottom:10px;">STEP 5</h4>
+	    			<p><i class="fa fa-plane" style="font-size:48px;"></i></p>
+	    			<p style="font-size:20px;">出発!</p>
+	    		</div>
+	    	</div>
+		</div>
+	</div>
+	<br>
+	<div class="hidden-sm hidden-md hidden-lg">
+		 <h1 style="margin-bottom:20px;">海外インターンに出発！</h1>
+		 <p style="font-size:16px;">小画面用表示に切り替え致します。</p>
+		 <p style="font-size:13px;margin-bottom:20px;">お手数ですが、一度この画面を閉じてもう一度お開き下さい。</p>
+	</div>
+	<a class="remodal-cancel" href="#">閉じる</a>
+</div>
+<div class="remodal" data-remodal-id="ins-apply-intern-abroad-xs">
+    <h1 style="margin-bottom:20px;">海外インターンに<br>出発！</h1>
+	<p style="font-size:13px;margin-bottom:20px;">クラスに出席（お申込み）されますと、後日皆様に詳細をお伝えするEメールをお送り致します。<br>Eメールが届いた後、海外インターンクラスの場合は以下が基本の流れとなります。<br><br></p>
+	<p style="font-size:20px;">出席（お申込み）から<br>海外インターンへの流れ</p>
+    <div class="row ins-intern-abroad-row">
+	    <div class="col-sm-12">
+	    	<div class="ins-intern-abroad">
+	    		<h4 style="padding-top:20px;padding-bottom:10px;">STEP 1</h4>
+	    		<p><i class="fa fa-weixin" style="font-size:48px;"></i></p>
+	    		<p>kokokaraスタッフと<br>面接、相談</p>
+	    	</div>
+	    </div>
+	</div>
+	<div class="row ins-intern-abroad-row">
+	    <div class="col-sm-12">
+	    	<div class="ins-intern-abroad">
+	    		<h4 style="padding-top:20px;padding-bottom:10px;">STEP 2</h4>
+	    		<p><i class="fa fa-skype" style="font-size:48px;"></i></p>
+	    		<p>インターン先企業と<br>Skype面談</p>
+	    	</div>
+	    </div>
+	</div>
+	<div class="row ins-intern-abroad-row">
+	    <div class="col-sm-12">
+	    	<div class="ins-intern-abroad">
+	    		<h4 style="padding-top:20px;padding-bottom:10px;">STEP 3</h4>
+	    		<p><i class="fa fa-pencil-square-o" style="font-size:48px;"></i></p>
+	    		<p>申し込み書などの<br>書類記入</p>
+	    	</div>
+	    </div>
+	</div>
+	<div class="row ins-intern-abroad-row">
+	    <div class="col-sm-12">
+	    	<div class="ins-intern-abroad">
+	    		<h4 style="padding-top:20px;padding-bottom:10px;">STEP 4</h4>
+	    		<p><i class="fa fa-money" style="font-size:48px;"></i></p>
+	    		<p>サポート費の<br>ご入金</p>
+	    	</div>
+	    </div>
+	</div>
+	<div class="row ins-intern-abroad-row">
+	    <div class="col-sm-12">
+	    	<div class="ins-intern-abroad">
+	    		<h4 style="padding-top:30px;padding-bottom:10px;">STEP 5</h4>
+	    		<p><i class="fa fa-plane" style="font-size:48px;"></i></p>
+	    		<p style="font-size:20px;">出発!</p>
+	    	</div>
+	    </div>
 	</div>
 	<br>
     <a class="remodal-cancel" href="#">閉じる</a>

@@ -75,7 +75,13 @@
 						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg4" type="button">このクラスに出席</a>';
 						}	
 					?>
-					<p class="p-center"><a href="#ins-apply">クラスに出席すると？>></a></p>
+					<?php
+					if($event['Event']['state'] == 3){
+						echo '<p class="p-center"><a href="#ins-apply-intern-abroad-sm">クラスに出席すると？>></a></p>';
+					}else{
+						echo '<p class="p-center"><a href="#ins-apply">クラスに出席すると？>></a></p>';
+					}
+					?>
 				</div>
 				<div class="col-sm-12 detail-info-table">
 					<h2 class="in-cnts-h2"><i class="glyphicon glyphicon-play"></i> もっと知る</h2>
@@ -149,6 +155,12 @@
 						echo '<a href="#event-apply"class="btn btn-primary btn-lg btn-lg4" type="button">このクラスに出席</a>';
 						}	
 					?>
-					<p class="p-center"><a href="#ins-apply">クラスに出席すると？>></a></p>
+					<?php
+					if($event['Event']['state'] == 3){
+						echo '<p class="p-center"><a href="#ins-apply-intern-abroad-sm">クラスに出席すると？>></a></p>';
+					}else{
+						echo '<p class="p-center"><a href="#ins-apply">クラスに出席すると？>></a></p>';
+					}
+					?>
 				</div>
 			</div>

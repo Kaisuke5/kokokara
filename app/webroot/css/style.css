@@ -24,6 +24,9 @@ a {
 .header-btn-lg-2{
 	border-bottom:5px solid #ced16b;
 }
+.header-btn-lg-2 a{
+	border-left:1px solid #ededed;
+}
 .header-btn-lg-3{
 	border-bottom:5px solid #9ad16b;
 }
@@ -42,6 +45,11 @@ a {
 .header-gal{
 	padding: 0 3px;
 	border-right:1px solid #ededed;
+}
+.kokologo-header{
+	padding-top:13px !important;
+	padding-bottom:8px !important;
+
 }
 footer{
 	border-top:1px solid #ededed;
