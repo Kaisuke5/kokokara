@@ -31,6 +31,7 @@
 		<?
 			$i = 0;
 			$kiji = 10;
+			rsort($events);
 			foreach ($events as $event){ 
 			if($i >= $kiji){
 			break;

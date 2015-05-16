@@ -187,7 +187,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-8 hidden-xs">
-			<? echo $this->element('event-cnts-sm')?>	
+			<? echo $this->element('event-cnts-sm')?>
 		</div>
 		<div class="col-sm-8 hidden-sm hidden-md hidden-lg">
 			<? echo $this->element('event-cnts-xs')?>		
