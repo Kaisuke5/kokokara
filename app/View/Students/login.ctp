@@ -30,8 +30,4 @@
 echo $this->Html->link('Facebookで簡単入学！', array('action' => 'signup'));
 ?>
 
-<h2>管理者画面</h2>
-<?php
-echo $this->Html->link('管理者画面', array('controller' => 'admin', 'index'));
-
 
