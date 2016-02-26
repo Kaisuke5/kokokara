@@ -1,3 +1,5 @@
+<!-- Hello! -->
+
 <?echo $this->Html->script("user.js");?>
 <?echo $this->Html->script("jquery-1.11.2.js");?>
 <? $this->Html->css('event-style', null, array('inline' => false)) ?>
