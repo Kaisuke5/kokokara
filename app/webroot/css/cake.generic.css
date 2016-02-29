@@ -22,98 +22,8 @@
 }
 
 /** General Style Info **/
-body {
-	background: #003d4c;
-	color: #fff;
-	font-size:90%;
-	margin: 0;
-}
-a {
-	color: #003d4c;
-	text-decoration: underline;
-	font-weight: bold;
-}
-a:hover {
-	color: #367889;
-	text-decoration:none;
-}
-a img {
-	border:none;
-}
-h1, h2, h3, h4 {
-	font-weight: normal;
-	margin-bottom:0.5em;
-}
-h1 {
-	background:#fff;
-	color: #003d4c;
-	font-size: 100%;
-}
-h2 {
-	background:#fff;
-	color: #e32;
-	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
-	font-size: 190%;
-}
-h3 {
-	color: #2c6877;
-	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
-	font-size: 165%;
-}
-h4 {
-	color: #993;
-	font-weight: normal;
-}
-ul, li {
-	
-}
-p {
-	margin: 0 0 1em 0;
-}
 
-/** Layout **/
-#container {
-	text-align: left;
-}
 
-/**
-#header{
-	padding: 10px 20px;
-}
-#header h1 {
-	line-height:20px;
-	background: #003d4c url('../img/cake.icon.png') no-repeat left;
-	color: #fff;
-	padding: 0px 30px;
-}
-#header h1 a {
-	color: #e0e0e0;
-	font-weight: normal;
-	text-decoration: none;
-}
-#header h1 a:hover {
-	color: #fff;
-	background: #003d4c;
-	text-decoration: underline;
-}
-**/
-#content{
-	clear: both;
-	color: #333;
-	padding: 80px 10px 40px 10px;
-	overflow: auto;
-	background-image:url("../img/gray-bgi2.png");
-}
-#footer {
-	clear: both;
-	padding: 6px 10px;
-}
-#header a, #footer a {
-	color: #303030;
-}
-#cake-powered {
-	float: right;
-}
 
 /** containers **/
 div.form,
@@ -259,12 +169,7 @@ dd {
 }
 
 /** Forms **/
-form {
-	clear: both;
-	margin-right: 20px;
-	padding: 0;
-	width: 95%;
-}
+
 fieldset {
 	border: none;
 	margin-bottom: 1em;
@@ -288,10 +193,7 @@ fieldset fieldset div {
 	margin: 0 20px;
 }
 form div {
-	clear: both;
-	margin-bottom: 1em;
-	padding: .5em;
-	vertical-align: text-top;
+	
 }
 form .input {
 	color: #444;
@@ -537,9 +439,7 @@ input[type=submit],
 }
 .actions ul li a:hover,
 .actions a:hover {
-	background: #ededed;
-	border-color: #acacac;
-	text-decoration: none;
+	
 }
 input[type=submit]:active,
 .actions ul li a:active,
