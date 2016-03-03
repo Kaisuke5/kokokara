@@ -1,4 +1,5 @@
 <? $this->Html->css('event-list', null, array('inline' => false)); ?>
+<? $this->Html->css('pages', null, array('inline' => false)); ?>
 	<div id="main">
       <div id="help-container">
         <div id="lists-search">
@@ -7,6 +8,9 @@
               <div class="col-xs-12 help-header">
                 <h1>こちらは、ヘルプセンターです</h1>
                 <h3>何かお困りですか？</h3>
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1 help-search-form"></div>
+                </div>
               </div>
             </div>
           </div>

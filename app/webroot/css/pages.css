@@ -1,23 +1,23 @@
 /*
 Error: Invalid CSS after "": expected selector, was "769"
         on line 25 of /Applications/MAMP/htdocs/kokokara/app/webroot/sass/_common.scss
-        from line 2 of /Applications/MAMP/htdocs/kokokara/app/webroot/sass/style.scss
+        from line 2 of /Applications/MAMP/htdocs/kokokara/app/webroot/sass/pages.scss
 
-20:     	font-size:18px;
-21:     	margin-top:0px;
-22:     	margin-bottom:30px;
-23:     } 
-24: 	@media #{$smartp}{
-25: 		height:420px;
-26: 		.col-sm-8{
-27: 			padding-top:100px;
-28: 			height:280px;
-29: 		}
-30: 		button{
+20:   background-repeat:no-repeat;
+21:   -moz-background-size:cover;
+22:   background-size:cover;
+23:   @media #{$smartp}{
+24:   	height:250px;
+25:   	padding-top:40px;
+26: 		h1{
+27: 			font-size:24px;
+28: 		}
+29: 		h3{
+30: 			font-size:18px;
 
 Backtrace:
 /Applications/MAMP/htdocs/kokokara/app/webroot/sass/_common.scss:25
-/Applications/MAMP/htdocs/kokokara/app/webroot/sass/style.scss:2
+/Applications/MAMP/htdocs/kokokara/app/webroot/sass/pages.scss:2
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1095:in `expr!'
@@ -75,4 +75,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"\": expected selector, was \"769\"\A         on line 25 of /Applications/MAMP/htdocs/kokokara/app/webroot/sass/_common.scss\A         from line 2 of /Applications/MAMP/htdocs/kokokara/app/webroot/sass/style.scss\A \A 20:     	font-size:18px;\A 21:     	margin-top:0px;\A 22:     	margin-bottom:30px;\A 23:     } \A 24: 	@media #{$smartp}{\A 25: 		height:420px;\A 26: 		.col-sm-8{\A 27: 			padding-top:100px;\A 28: 			height:280px;\A 29: 		}\A 30: 		button{"; }
+  content: "Error: Invalid CSS after \"\": expected selector, was \"769\"\A         on line 25 of /Applications/MAMP/htdocs/kokokara/app/webroot/sass/_common.scss\A         from line 2 of /Applications/MAMP/htdocs/kokokara/app/webroot/sass/pages.scss\A \A 20:   background-repeat:no-repeat;\A 21:   -moz-background-size:cover;\A 22:   background-size:cover;\A 23:   @media #{$smartp}{\A 24:   	height:250px;\A 25:   	padding-top:40px;\A 26: 		h1{\A 27: 			font-size:24px;\A 28: 		}\A 29: 		h3{\A 30: 			font-size:18px;"; }
