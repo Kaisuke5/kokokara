@@ -22,7 +22,6 @@ $middle-more: "only screen and (min-width:1200px)";
 $ori:100%;
 $sub:30px;
 
-769
 body {
     font-family: "ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
     line-height: 1.43;
@@ -71,6 +70,7 @@ hr{
 }
 .header-home{
 	position:absolute;
+	width:100vw;
 }
 .header-search-icon{
 	background:none; 
@@ -85,6 +85,9 @@ hr{
 	box-shadow:none;
 	height:36px;
 	width:200px;
+}
+.header-login{
+	float:right;
 }
 .nopadding {
     padding: 0 !important;

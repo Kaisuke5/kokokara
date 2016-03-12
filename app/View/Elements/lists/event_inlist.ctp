@@ -5,7 +5,7 @@
         </div>
         <div class="raw">
           <div class="col-xs-9 nopadding">
-              <h3>タイトルタイトルタイトルタイトルタイトル2行までokそれ以上は省略</h3>
+              <h3>タイトルタイトルタイトルタイトルタイトル一定以上省略</h3>
           </div>
           <div class="col-xs-3">
             <div class="list-box-circle list-comp-name" data-toggle="popover" data-placement="top"></div>

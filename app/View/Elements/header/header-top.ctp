@@ -12,12 +12,21 @@
         
         <a class="navbar-brand" href="/kokokara/" style="color:#ffffff;"><i class="fa fa-caret-square-o-right"></i>　kokokara</a>
       </div>
-
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
         <ul class="nav navbar-nav navbar-right">
-              
-        </ul>
+            <li class="header-login">
+              <?php
+                $myData=$this->Session->read("myData");
+                  if(!$myData){
+                     echo $this->Html->link('登校する', array('controller' => 'students', 'action' => 'login'));
+                  }else{
+                     echo $this->Html->link('下校する', array('controller' => 'students', 'action' => 'logout'));
+                }
+              ?>
+            </li> 
+        </ul>    
+        
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>

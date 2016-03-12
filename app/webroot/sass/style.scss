@@ -286,3 +286,27 @@
     	}
     }
 }
+.already-own{
+	form .submit input[type=submit] {
+		margin:10px 0;
+		color: #fff;
+	    background-color: #ff5a5f;
+	    border-color: #ff5a5f;
+	    border-bottom-color: #e00007;
+	    text-align: center;
+	    white-space: nowrap;
+	    vertical-align: middle;
+	    -ms-touch-action: manipulation;
+	    touch-action: manipulation;
+	    cursor: pointer;
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    background-image: none;
+	    border: 1px solid transparent;
+	    &:hover{
+	    	
+	    }
+	}
+}

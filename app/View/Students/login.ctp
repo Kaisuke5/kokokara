@@ -1,6 +1,7 @@
-<h2>ログイン</h2>
-<div class="row" style="margin-top:40px;">
-	<div class="col-sm-6 login-fb">
+<? $this->Html->css('style', null, array('inline' => false)) ?>
+<div class="row" style="background:#f3f3f3;padding-top:40px;padding-bottom:40px;">
+	<div class="col-sm-5 col-sm-offset-1 login-fb">
+		<h4>まだアカウントを持ってない方</h4>
 		<div class="row">
 			<div class="col-xs-6 col-xs-offset-3 login-fb-btn">
 				<?php
@@ -10,11 +11,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-6">
-		<h4>お持ちのアカウント情報を入力する事でもログインできます</h4>
+	<div class="col-sm-5 already-own">
+		<h4>既にアカウントをお持ちの方</h4>
 		<?php
 		echo $this->Form->create('Student');
-		echo $this->Form->input('email');
+		echo $this->Form->input('e-mail');
 		echo $this->Form->input('password');
 		echo $this->Form->end('ログインする');
 		?>
@@ -25,9 +26,10 @@
 	</div>
 </div>
 
-<h3 style="margin-top:80px;">アカウント（学生証）を持っていない方は</h3>
+<!--
 <?php
 echo $this->Html->link('Facebookで簡単入学！', array('action' => 'signup'));
 ?>
+-->
 
 

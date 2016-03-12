@@ -31,16 +31,9 @@ $(function(){
 });
 </script>
 <script type="text/javascript">
-if( $(window).width() > 769 && $(window).width() < 992 )
-  {
-    $.ajax({
-      url: 'news.ctp',
-      dataType: "script",
-      success: function() {
-          $('.show').show();
-      }
-    });
-  }
+$(window).resize(function(){
+    var w = $(window).width();
+});
 </script>
 
 <style>
@@ -56,10 +49,9 @@ if( $(window).width() > 769 && $(window).width() < 992 )
         <div id="lists-search">
           <div class="container-fluid nopadding">
             <div class="raw">
-              <div class="col-sm-3 visible-sm nopadding show" style="height:300px;overflow:scroll;">  
-                <?php
-                  echo $this->element('sidebar/eventlists-sb');
-                ?>      
+              <div class="col-sm-3 visible-sm nopadding show" style="height:300px;overflow:scroll;"> 
+              <script type="text/javascript">document.write(w);</script>
+              
               </div>
               <div class="col-xs-12 col-sm-9 col-md-12 lists-search-area map_canvas nopadding">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12638578.77386511!2d138.2286848874999!3d39.34286198780445!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1456821884580" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
